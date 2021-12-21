@@ -1,0 +1,19 @@
+/* mobile 320px~ */
+@media screen and (max-width: 720px) {
+  main {  }
+  main .container { width: inherit; padding: 40px; }
+  main .container .top { height: 202px; }
+  main .container .top h1 { margin-top: 0; right: 0px; }
+  main .container .top h1 img { width: 116px; margin: 65px 0 51px; }
+  main .container .main_content .main_left img { width: 99px; }
+  main .container .main_content .main_right { padding: 0 0 0 26px; }
+  main .container .main_content .main_right p, main .main_content .main_right p span { line-height: 1.24; font-size: 40px !important; }
+  main .container .main_content .main_right > span { margin-top: 56px; font-size: 30.5px; }
+  main .container .main_content .bottom_content { padding: 20px; }
+  main .container .main_content .bottom_content .bottom_text { }
+  main .container .main_content .bottom_content .bottom_text span { float: left; font-size: 28px; margin-left: 0; }
+  main .container .main_content .bottom_content .bottom_text span:last-child { font-size: 24px;}
+  main .container .main_content .bottom_content .bottom_text span:last-child em { font-weight: bold;}
+  main .container .main_content .bottom_content .img_wrap { float: right; margin-right: 37px; }
+  main .container .main_content .bottom_content .bottom_text .img_wrap img { width: 137px; }
+}

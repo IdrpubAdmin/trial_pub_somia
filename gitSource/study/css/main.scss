@@ -1,0 +1,108 @@
+// main
+
+main {
+    .container {
+        margin: 0 auto;
+        width: 640px;
+        .top {
+            position: relative;
+            height: 102px;
+            h1 {
+                margin-top: 34px;
+                position: absolute;
+                right: 7px;
+                img {
+                    width: 63px;
+                }
+            }
+        }
+        .line {
+            position: relative;
+            div {
+                background-color: #a91313;
+                width: 100%;
+            &:first-child {
+                position: absolute;
+                height: 2px;
+                top: 0px;
+            }
+            &:last-child {
+                position: absolute;
+                height: 1px;
+                top: 4px;
+            }
+            }
+        }
+        .main_content {
+            overflow: hidden;
+            padding-top: 54px;
+            .main_left {
+                float: left;
+                img {
+                    width: 120px;
+                }
+            }
+            .main_right {
+                overflow: hidden;
+                padding: 23px 0px 0px 26px;
+                p {
+                    text-indent: 1px;
+                    font-size: 34.5px;
+                    float: left;
+                    width: 100%;
+                    line-height: 1.2;
+                    color: #d41b1b;
+                    > span {
+                        font-weight: bold;
+                        font-size: 34.5px;
+                    }
+                }
+                > span {
+                    font-size: 20px;
+                    line-height: 30px;
+                    margin-top: 23px;
+                    display: inline-block;
+                }
+                .btn {
+                    a {
+                        display: block;
+                        background-color: #fff;
+                        margin-top: 22px;
+                        font-size: 14px;
+                        border: solid 1px #040000; 
+                        width: 140px;
+                        height: 100%;
+                        text-align: center;
+                        padding: 9px 0;
+                        box-sizing: border-box;
+                    }     
+                }
+            }
+            .bottom_content {
+                margin-top: 112px;
+                overflow: hidden;
+                background: #f2f2f2;
+                padding: 24px 0px 26px 63px;
+                .img_wrap {
+                    float: left;
+                    img {
+                    }
+                }
+                .bottom_text {
+                    span{
+                        float: left;
+                        margin-left: 20px;
+                        font-size: 16px;
+                        font-weight: 400;
+                        &:last-child {
+                            font-size: 14px;
+                            margin-top: 10px;
+                            color: #555555;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
