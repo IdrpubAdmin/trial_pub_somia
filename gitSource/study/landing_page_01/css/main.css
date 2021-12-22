@@ -1,0 +1,25 @@
+.top { position: relative; height: 102px; }
+.top h1 { position: absolute; right: 0; top: 34px; right: 7px; }
+.top img { width: 63px; }
+
+.line { position: relative; color: #d41b1b; }
+.line>div { position: absolute; background: #d41b1b; width: 100%; }
+.line .line_top { position: absolute; height: 2px; top: 0px;  }
+.line .line_bottom { position: absolute; height: 1px; top: 3px; }
+
+.main_content { position: relative; overflow: hidden; margin-top: 54px; font-size: 34.5px; line-height: 1.2; }
+.main_content .main_left { float: left; }
+.main_content .main_left img { width: 120px;  }
+.main_content .main_right { float: left; margin: 15px 0px 0px 26px; }
+.main_content .main_right p {  color: #d41b1b;  }
+.main_content .main_right p>span{ font-weight: bold;  }
+.main_content .main_right .main_right_bottom { }
+.main_content .main_right .main_right_bottom span { display: block; font-size: 20px; margin-top: 23px; }
+.main_content .main_right .main_right_bottom a { display: inline-block; margin-top: 22px; font-size: 14px; padding: 9px 17px; border: 1px solid #040000; }
+
+.main_bottom { margin-top: 112px; background: #f2f2f2; overflow: hidden; padding: 18px 60px 13px 63px; }
+.main_bottom .img_wrap { float: left;  }
+.main_bottom .img_wrap img { width: 67px; }
+.main_bottom .text_wrap { float: left; margin-left: 20px; }
+.main_bottom .text_wrap p { font-size: 16px; margin-top: 4px;}
+.main_bottom .text_wrap strong { font-size: 14px; color:#555; display: inline-block; margin-top: 10px; }

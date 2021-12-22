@@ -1,0 +1,41 @@
+/* pc */
+@media screen and (max-width: 1300px) {
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+}
+
+/* mobile 320px~ */
+@media screen and (max-width: 768px) {
+  .inner { width: inherit; padding: 0 40px; }
+  .top { height: 202px; }
+  .top h1 { right: 0; bottom: 51px; top: inherit; }
+  .top img { width: 116px; }
+
+  .main_content .main_left img { width: 99px; }
+  .main_content .main_right { margin: 0px 0px 0px 25px; float: inherit; margin: auto; }
+  .main_content .main_right p { line-height: 1.24; margin-left: 25px; display: inline-block; font-size: 40px; }
+  .main_content .main_right .main_right_bottom { text-align: center; }
+  .main_content .main_right .main_right_bottom>span { font-size: 30.5px; margin-top: 56px;  }
+  .main_content .main_right .main_right_bottom a { font-size: 27.5px; padding: 26px 95px 27px 95px; margin-top: 47px; }
+
+  .main_bottom { padding: inherit; }
+  .main_bottom .bottom_wrap { margin-top: 41px; margin: 41px 0; } 
+  .main_bottom .img_wrap { float: right; }
+  .main_bottom .img_wrap img { width: 137px; }
+  .main_bottom .text_wrap { float: inherit; margin-left: 0; }
+  .main_bottom .text_wrap p { font-size: 28px; }
+  .main_bottom .text_wrap strong { font-size: 24px; margin-top: 26px; }
+  .main_bottom .text_wrap strong em { font-weight: bold; }
+}
+
+@media screen and (max-width: 320px) {
+  .main_content .main_left img { text-align: center; }
+  .main_content .main_right .main_right_bottom>span {  font-size: 27.5px;}
+  .main_content .main_right { text-align: center; }
+  .main_content .main_right p { font-size: 31px; }
+  .main_content .main_right .main_right_bottom a { padding: 10px;}
+  .main_bottom .img_wrap img { width: 123px; }
+  
+}
