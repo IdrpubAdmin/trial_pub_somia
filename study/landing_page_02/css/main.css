@@ -1,10 +1,10 @@
 main { }
-.pop { background: #fff;  width: 49.2%; height: 61.2%; text-align: center; margin: 0 auto; padding: 0 7.5%; overflow: hidden; transform: translateY(21.4%);}
+.pop { background: #fff;  width: 49.2%; height: 61.2%; text-align: center; margin: 0 auto; padding: 0 47px 0 49px; overflow: hidden; transform: translateY(21.4%);}
 .pop .top h1 { margin-top: 55px; }
 .pop .top h1 img { width: 58px; }
 
 .content {}
-.content p { font-size: 2em; margin-top: 35px; }
+.content p { font-size: 2em; margin-top: 35px; text-indent: -12px;}
 .content p .point { color: var(--green); }
 .content > span { font-size: 1.125em; margin-top: 22px; display: inline-block; }
 
@@ -30,12 +30,12 @@ main { }
 
 .bottom {}
 .bottom .wait {}
-.bottom .wait span { display: block; margin-top: 31px; color: #666; font-size: 2.156em;  }
+.bottom .wait span { display: block; margin-top: 31px; color: #666; }
 .bottom .wait .time { display: block; margin-top: 8px;  }
-.bottom .wait em.roughly { font-size: 3.719em; margin-top: 8px;  }
-.bottom .wait em {font-size: 3.719em; color: var(--green); }
+.bottom .wait em.roughly { font-size: 1.625em; margin-top: 8px;  }
+.bottom .wait em {font-size: 1.875em; color: var(--green); }
 
 .count {}
 .count em { display: block; margin: 17px auto; line-height: 34px; background: #f0f0f0; width: 47.6%; border-radius: 14px; color: #666; }
-.count em > span { color: var(--green); font-weight: ; }
-.count em + span { margin-top: 11px; display: block; font-size: 1.563em; color: rgba(102, 102, 102, 0.8); margin-bottom: 52px; }
+.count em > span { color: var(--green); }
+.count em + span { margin-top: 11px; display: block; font-size: 0.750em; color: rgba(102, 102, 102, 0.8); margin-bottom: 52px; }

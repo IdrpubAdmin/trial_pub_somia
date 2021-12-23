@@ -1,24 +1,20 @@
 @media screen and (max-width: 768px) {
 
-    body { min-width: 360px; font-size: inherit; }
+    body { min-width: 360px; font-size: inherit; background: #fff; }
+    
+    .pop { width: inherit; transform: inherit; }
 
-    .pop .top h1 img { width: 16.1%; }
-
-    .content p { font-size: 4.375em; line-height: 1.31; margin-top: 7%; }
-    .content > span { font-size: 2.250em; }
+    .content p { line-height: 1.31; margin-top: 7%; }
+    .content > span { font-size: 1.125em; }
 
     .gagebar {}
-    .middle .gagebar, .middle .gagebar .gage { height: 24px; }
-    .middle .percent span { font-size: 1.327em;}
+    .middle .gagebar, .middle .gagebar .gage { height: 12px; }
+    .middle .percent { margin-left: inherit; }
+    .middle .percent span { font-size: 0.67em;}
     .middle .gagebar .percent { font-size: 1.313em; line-height: 19px; right: -66px;}
 
-    .count em { width: 100%; padding: 15px 0;}
+    .bottom .wait span { margin-top: 25px; }
+
+    .count em { width: 100%; }
+    .count em + span { display: inline-block; width: 190px; margin-top: inherit; line-height: 15.75px;}
 }
-
-/* @media screen and (max-width: 768px) {
-    body { font-size: 8px; }
-} */
-
-/* @media screen and (max-width: 460px) {
-    .gagebar { left: 0px; }
-} */
