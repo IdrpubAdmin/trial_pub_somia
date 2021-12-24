@@ -4,12 +4,13 @@ main { position: relative; }
 .pop .top h1 img { width: 58px; }
 
 .content {}
-.content p { font-family: 'nanumB'; font-size: 35px; margin-top: 35px; }
+.content p { font-weight: 700; font-size: 35px; margin-top: 35px; }
+.content p br.mobile { display: none; }
 .content p .point { color: var(--green); }
-.content > span { font-family: 'nanumB'; font-size: 1.125em; margin-top: 22px; display: inline-block; }
+.content > span { font-weight: 700; font-size: 1.125em; margin-top: 22px; display: inline-block; }
 
-.middle { width: 100%; overflow: hidden; margin-top: 43px; transform: translateX(5px); }
-.middle .gagebar { width: 500px; height: 14px; background: #f0f0f0; position: relative; border-radius: 7px; float: left;}
+.middle { width: 100%; overflow: hidden; margin-top: 43px; }
+.middle .gagebar { width: 93.5%; height: 14px; background: #f0f0f0; position: relative; border-radius: 7px; float: left;}
 .middle .gagebar .gage { width: 79.4%; height: 14px; background: #09ce58; margin-top: 43px; position: absolute; top: -43px; left: 0; border-radius: 7px;
                 animation-name: gage_green;
                 animation-duration: 4s;
@@ -25,8 +26,8 @@ main { position: relative; }
 	}
 }
 
-.middle .percent { overflow: hidden; float: left; margin-left: 1.5%; }
-.middle .percent span{ font-size: 0.750em; color: #010101; float: left; }
+.middle .percent { overflow: hidden; text-indent: 4.5px; }
+.middle .percent span{ font-size: 13px; color: #010101; float: left; }
 
 .bottom {}
 .bottom .wait {}
@@ -35,9 +36,10 @@ main { position: relative; }
 .bottom .wait em.roughly { font-size: 1.625em; margin-top: 8px;  }
 .bottom .wait p {font-size: 1.875em; display: inline-block; }
 .bottom .time { display: inline-block; color: var(--green); }
+.bottom .wait .time p em.minutes, .bottom .wait .time p em.seconds { font-weight: 900; }
 
 .count {}
 .count em { display: block; margin: 17px auto; line-height: 34px; background: #f0f0f0; width: 47.6%; border-radius: 14px; color: #666; }
-.count em > span { font-family: 'nanumEB'; color: var(--green); font-weight: bold;}
+.count em > span { font-weight: 900; color: var(--green); }
 .count em + span { margin-top: 11px; display: block; font-size: 0.750em; color: rgba(102, 102, 102, 0.8); margin-bottom: 52px;}
-.count em span.person { color: #080808; font-family: 'nanumR'; }
+.count em span.person { color: #080808; font-weight: 400; }
