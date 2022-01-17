@@ -1,41 +1,71 @@
-// main
+/* pc */
+@media screen and (max-width: 1300px) {
+
+} //지우지마
+
+/* tablet */
+@media screen and (max-width: 1100px) {
+body { padding: 0 100px; }
+.popup { display: none; }
 
 
-// notice
+} //지우지마
 
 
-/* 태블릿용 CSS */
+/* mobile 320px~ */
+@media screen and (max-width: 768px) {
+
+}
 
 @media all and (min-width:768px) {
-    /* 콘텐츠 영역 CSS */
-    .content_section {
-        padding: 2.5rem;
-    }
-    .board-table thead tr th:first-child,
-    .board-table thead tr th:nth-child(3),
-    .board-table thead tr th:nth-child(4),
-    .board-table tbody tr td:first-child,
-    .board-table tbody tr td:nth-child(3),
-    .board-table tbody tr td:nth-child(4) {
+    /* notice */
+    .notice .board-table thead tr th:first-child,
+    .notice .board-table thead tr th:nth-child(3),
+    .notice .board-table thead tr th:nth-child(4),
+    .notice .board-table tbody tr td:first-child,
+    .notice .board-table tbody tr td:nth-child(3),
+    .notice .board-table tbody tr td:nth-child(4) {
         display: table-cell;
     }
-    .board-table thead tr th:first-child {
+    .notice .board-table thead tr th:first-child {
         width: 10%;
     }
-    .board-table thead tr th:nth-child(2) {
+    .notice .board-table thead tr th:nth-child(2) {
         width: 55%;
     }
-    .board-table thead tr th:nth-child(3) {
+    .notice .board-table thead tr th:nth-child(3) {
         width: 15%;
     }
-    .board-table thead tr th:nth-child(4) {
+    .notice .board-table thead tr th:nth-child(4) {
         width: 10%;
     }
-    .board-table thead tr th:nth-child(5) {
+    .notice .board-table thead tr th:nth-child(5) {
         width: 10%;
     }
-    .board-table tbody tr td:nth-child(2) {
+    .notice .board-table tbody tr td:nth-child(2) {
         text-align: left;
+    }
+
+    // product
+    .product-review .board-table thead tr th:first-child,
+    .product-review .board-table thead tr th:nth-child(3),
+    .product-review .board-table thead tr th:nth-child(4),
+    .product-review .board-table tbody tr td:first-child,
+    .product-review .board-table tbody tr td:nth-child(3),
+    .product-review .board-table tbody tr td:nth-child(4) {
+        display: table-cell;
+    }
+    .product-review .board-table thead tr th:first-child {
+        width: 50%;
+    }
+    .product-review .board-table thead tr th:nth-child(2) {
+        width: 15%;
+    }
+    .product-review .board-table thead tr th:nth-child(3) {
+        width: 15%;
+    }
+    .product-review .board-table thead tr th:nth-child(4) {
+        width: 20%;
     }
 }
 
