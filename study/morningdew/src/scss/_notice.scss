@@ -1,0 +1,170 @@
+//notice
+.notice {
+    margin-top: 97px;
+    color: #555;
+    overflow: hidden;
+    >span {
+
+        line-height: 28px;
+        font-size: 12px; 
+        display: block;
+        text-align: right;
+    }
+    .notice-top-text {
+        text-align: center; 
+        margin-top: 39px;
+        h2 {
+            font-family: "nanum";
+            font-weight: 900;
+            letter-spacing: -0.9px;
+            font-size: 36px; 
+            margin-bottom: 27px;
+        }
+        .green-line {
+            width: 4%;
+            height: 2px;
+            background-color: #598527;
+            margin: 0 auto;
+
+        }
+        span {
+            color: #959595;
+            font-family: "nanum";
+            font-weight: 700;
+            font-size: 18px; 
+            display: block;
+            margin: 17px auto 34px;
+            margin-top: 17px;
+            display: block;
+            width: 100%;
+        }
+    }
+    .search {
+        border: 1px solid #ccc;
+        width: 150px;
+        float: right;
+        margin-bottom: 10px;
+        .search-term {
+            border: none;
+            padding: 8px 11px;
+            height: 20px;
+            outline: none;
+            width: 59%;
+            &::placeholder {
+                color: #ccc;
+                font-family: "Dotum";
+                font-weight: bold;
+                font-size: 12px;
+            }
+        }
+        .search-button {
+            width: 20px;
+            height: 20px;
+            border: none; 
+            text-align: center;
+            cursor: pointer;
+            background: url(../img/icon/ico-notice-search.png) no-repeat;
+            background-size: 16px;
+            vertical-align: middle;
+            background-color: none;
+
+        }
+    }
+}
+
+
+
+// notice board-wrap
+.board-wrap {
+    background: #fff;
+    .board-row {
+        .board-table {
+            width: 100%;
+            caption {
+            }
+        }
+    }
+}
+
+// notice board-table detail
+.board-table {
+    thead, tbody {
+        font-size: 0.813rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    thead {
+        color: #555;
+        background: rgb(241, 241, 241);
+        border-top: 2px solid #444;
+        border-bottom: 1px solid #aaa;
+        tr {
+            font-size: 12px;
+            th {
+                padding: 1.125rem 0;                
+            }
+        }
+    }
+    tbody, a {
+        color: #333;
+    }
+    tbody {
+        font-weight: auto;
+        border-bottom: 1px solid #aaa;
+        tr {
+            td {
+                padding: 1.375rem 0;
+                border-bottom: 1px solid #eee;    
+                font-size: 12px;        
+            }
+        }
+    }
+}
+
+// notice board-post-num
+.board-post-num {
+    position: relative;
+    .num-list {
+    text-align: center;
+    margin-top: 20px;
+        span {
+            font-size: 9px;
+            vertical-align: middle;
+            display: inline-block;
+            border: 1px soild #ccc;
+            position: relative;
+        }
+        a {
+            display: inline-block;
+            font-size: 0.813rem;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ccc;
+            color: #ccc;
+            transition: all 0.2s;
+            &:hover {
+                border: 1px solid #666;
+                color: #555;
+                font-weight: bold;
+            } 
+        }
+    }
+    .btn-write {
+        background-color: #333;
+        display: inline-block;
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        top: 0;
+        a {
+            padding: 0 15px;
+            display: block;
+            height: 100%;
+            font-size: 12px;
+            color: #fff;
+            font-family: "Dotum";
+            line-height: 30px; 
+
+        }
+    }
+}

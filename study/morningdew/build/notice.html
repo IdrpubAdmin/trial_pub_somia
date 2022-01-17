@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>morningdew</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="wrapper">
+<!-- start header.html-->
+<header>
+    <!-- popup -->
+    <div class="popup">
+        <img src="../img/pop/popup.jpg" alt="모닝듀에서는 유통마진 없이 온라인에서만 판매합니다 상단 팝업 광고">
+        <div class="btn-pop-wrap container">
+            <ul class="clear">
+                <li>
+                    <input type="checkbox" name="chkbox" value="checkbox">
+                </li>
+                <li>
+                    <span>오늘그만보기</span>
+                </li>
+                <li>
+                    <a href="javascript:closePop();" alt="닫기"><i class="xi-close"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //popup -->
+
+    <!-- header-wrap -->
+    <div class="header-wrap">
+        <div class="header-info container">
+            <div class="header-top-util clear">
+                <div class="header-top-util-left clear">
+                    <div class="search">
+                        <input type="text" class="search-term" placeholder="SEARCH">
+                        <button type="submit" class="search-button"></button>
+                     </div>
+                    <div class="bookmark">
+                        <a href="">
+                            <span><span class="aster">★</span> 즐겨찾기</span>
+                        </a>
+                    </div>
+                    <div class="shortcut">
+                        <a href="">
+                            <span><span class="aster">▤</span> 바로가기</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-top-util-right">
+                    <ul>
+                        <li class="bold">
+                            <a href="">로그인</a>
+                        </li>
+                        <li>
+                            <a href="">회원가입</a>
+                        </li>
+                        <li>
+                            <a href="">장바구니</a>
+                        </li>
+                        <li>
+                            <a href="">주문내역</a>
+                        </li>
+                        <li>
+                            <a href="">마이페이지</a>
+                        </li>
+                        <li class="line-not">
+                            <a href="">고객센터</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="header-logo clear">
+                    <h1>
+                        <a href=""><img src="../img/logo/logo.png" alt="모닝듀"></a>
+                    </h1>
+                    <div class="text-area">
+                        <span class="green">순수 100% 천연펄프 화장지</span>
+                        <span>중간마진 없는 모닝듀에서 바로 직구하세요!</span>
+                    </div>
+                </div>
+                <div class="sns">
+                    <ul>
+                        <li class="on">
+                            <a href=""><i class="xi-facebook-official"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="xi-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="xi-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="xi-blogger"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="xi-kakaostory"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //header-wrap  -->
+
+
+</header>
+<!-- end header.html-->
+<!-- start gnb.html-->
+    <nav class="gnb clear">
+        <div class="gnb-line container">
+            <h2 class="blind">메뉴</h2>
+            <ul class="dept01">
+                <li>
+                    <a href="" class="hover-green">매일매일 이벤트</a>
+                    <ul class="dept02">
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">상품후기</a></li>
+                        <li><a href="">QNA</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">천연펄프 화장지</a>
+                    <ul class="dept02">
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">상품후기</a></li>
+                        <li><a href="">QNA</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="hover-green">디스펜서·케이스</a>
+                    <ul class="dept02">
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">상품후기</a></li>
+                        <li><a href="">QNA</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="hover-green">친환경해충포획퇴치기</a>
+                    <ul class="dept02">
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">상품후기</a></li>
+                        <li><a href="">QNA</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="notice.html" class="hover-green">고객센터</a>
+                    <ul class="dept02">
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">상품후기</a></li>
+                        <li><a href="">QNA</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+<!-- end gnb.html-->
+
+<!-- @@block content -->
+<main>
+    <div class="contents container">
+        <div class="notice">
+            <span>Home > 매일매일이벤트</span>
+            <div class="notice-top-text">
+                <h2>Notice</h2>
+                <div class="green-line"></div>
+                <span>공지사항</span>
+            </div>
+            <div class="search">
+                <input type="text" class="search-term" placeholder="SEARCH">
+                <button type="submit" class="search-button"></button>
+            </div>
+            <section class="board-wrap">
+                <div class="board-row">
+                    <table class="board-table">
+                        <caption class="blind">문의사항 게시판</caption>
+                        <!-- 테이블 안에서는 제목을 캡션을 이용해서 적어야함 -->
+                        <thead>
+                            <tr>
+                                <th>번 호</th>
+                                <th>제 목</th>
+                                <th>작성자</th>
+                                <th>작성일</th>
+                                <th>조회</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody>
+                            <tr>
+                                <td>123</td>
+                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td>모닝듀</td>
+                                <td>2016-12-31</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>122</td>
+                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td>모닝듀</td>
+                                <td>2016-12-31</td>
+                                <td>32</td>
+                            </tr>
+                            <tr>
+                                <td>121</td>
+                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td>모닝듀</td>
+                                <td>2016-12-31</td>
+                                <td>67</td>
+                            </tr>
+                            <tr>
+                                <td>120</td>
+                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td>모닝듀</td>
+                                <td>2016-12-31</td>
+                                <td>96</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td>모닝듀</td>
+                                <td>2016-12-31</td>
+                                <td>123</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td>모닝듀</td>
+                                <td>2016-12-31</td>
+                                <td>123</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td>모닝듀</td>
+                                <td>2016-12-31</td>
+                                <td>123</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td>모닝듀</td>
+                                <td>2016-12-31</td>
+                                <td>123</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td>모닝듀</td>
+                                <td>2016-12-31</td>
+                                <td>123</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td>모닝듀</td>
+                                <td>2016-12-31</td>
+                                <td>123</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        
+                <div class="board-post-num">
+                    <div class="num-list">
+                        <span><i class="xi-angle-left"></i></span>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <span><i class="xi-angle-right"></i></span>
+                    </div>
+                    <div class="btn-write">
+                        <a href="">WRITE</a>
+                    </div>   
+                </div>
+                
+            </section>            
+        </div>
+    </div>
+</main>
+<!-- @@close-->
+
+<!-- start footer.html-->
+<footer> 
+    <div class="footer">
+
+        <!-- guid -->
+        <div class="guid container">
+            <h2 class="blind">가이드</h2>
+            <ul>
+                <li class="guid-list">
+                    <div class="cscenter">
+                        <h3><span class="underline">고객</span>센터<span class="en-name"> CS CENTER</span></h3>
+                        <div class="tel">
+                            <span>전화상담</span>
+                            <span>070.4245.0511</span>
+                        </div>
+                        <div class="time">
+                            <p>상담시간 : 09:00 ~ 17:00        점심시간 : 12:30 ~ 13:30<br>토, 일, 공휴일은 휴무입니다.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="guid-list">
+                    <div class="bankinfo">
+                        <h3><span class="underline">입금</span>정보<span class="en-name"> BANK INFO</span></h3>
+                        <div class="banklist">
+                            <span class="industrial">기업은행<em>492-016854-01-010</em><br>
+                            <span class="nh">농협은행<em>317000-21-70061</em></span><br>
+                            <span class="account">예금주<em>(주)모닝듀</em></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="guid-list">
+                    <div class="faq">
+                        <h3><span class="underline">자주</span> 묻는 질문<span class="en-name"> FAQ</span></h3>
+                        <ul class="faq-list">
+                            <li>
+                                <a href="">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <span class="time">2016-12-31</span>
+                            </li>
+                            <li>
+                                <a href="">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <span class="time">2016-12-31</span>
+                            </li>
+                            <li>
+                                <a href="">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <span class="time">2016-12-31</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- //guid -->
+        
+        <div class="footer-short">
+            <ul class="container">
+                <li><a href="">홈 </a></li>
+                <li><a href="">회사소개 </a></li>
+                <li><a href="">이용약관 </a></li>
+                <li class="bold"><a href="">개인정보취급방침 </a></li>
+                <li><a href="">이용안내 </a></li>
+            </ul>
+        </div>
+        <div class="footer-info-wrap">
+            <div class="footer-info container">
+                <div class="about">
+                    <img src="../img/logo/logo_g.png" alt="모닝듀 로고">
+                    <p>(주)모닝듀 | 대표 : 김영효(김기준) | 소재지 : 72852 경기도 남양주시 수동면 비룡로 654-38 주식회사 모닝듀<br>
+                        전화 : 070-4245-0511 | 팩스 : 031-592-2263 | 개인정보관리책임자 : 김영효(kkkj0511@naver.com)<br>
+                        사업자등록번호 : 132-81-89238 | 통신판매업신고 : 제2010-경기남양주-0486호 [사업자정보확인]<br>
+                        Copyright © 2015 기본 쇼핑몰. All rights reserved.
+                    </p>
+                </div>
+                <div class="lg-service">
+                    <img src="../img/banner/lg_service.png" alt="LG U+ 매매보호(에스크로) 서비스">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer.html-->
+<!-- @@close-->
+</div>
+</body>
+</html>

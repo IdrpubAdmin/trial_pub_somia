@@ -1,0 +1,51 @@
+// main
+
+
+// notice
+
+
+/* 태블릿용 CSS */
+
+@media all and (min-width:768px) {
+    /* 콘텐츠 영역 CSS */
+    .content_section {
+        padding: 2.5rem;
+    }
+    .board-table thead tr th:first-child,
+    .board-table thead tr th:nth-child(3),
+    .board-table thead tr th:nth-child(4),
+    .board-table tbody tr td:first-child,
+    .board-table tbody tr td:nth-child(3),
+    .board-table tbody tr td:nth-child(4) {
+        display: table-cell;
+    }
+    .board-table thead tr th:first-child {
+        width: 10%;
+    }
+    .board-table thead tr th:nth-child(2) {
+        width: 55%;
+    }
+    .board-table thead tr th:nth-child(3) {
+        width: 15%;
+    }
+    .board-table thead tr th:nth-child(4) {
+        width: 10%;
+    }
+    .board-table thead tr th:nth-child(5) {
+        width: 10%;
+    }
+    .board-table tbody tr td:nth-child(2) {
+        text-align: left;
+    }
+}
+
+
+/* PC용 CSS */
+
+@media all and (min-width:960px) {
+    /* 기본 CSS */
+    #wrap {
+        position: relative;
+        width: 90%;
+    }
+}

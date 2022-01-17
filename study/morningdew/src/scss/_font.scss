@@ -1,0 +1,45 @@
+// _font
+
+// @font-face {
+//     font-family: 'dotum';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('../fonts/폰트명.eot');
+//     src: local(※),
+//          url('../fonts/폰트명.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/폰트명.woff') format('woff'),
+//          url('../fonts/폰트명.ttf') format('truetype');
+// }
+
+@font-face {
+    font-family: 'nanum';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/NanumSquareR.eot');
+    src: local(※),
+         url('../fonts/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/NanumSquareR.woff') format('woff'),
+         url('../fonts/NanumSquareR.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'nanum';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/NanumSquareB.eot');
+    src: local(※),
+         url('../fonts/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/NanumSquareB.woff') format('woff'),
+         url('../fonts/NanumSquareB.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'nanum';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/NanumSquareEB.eot');
+    src: local(※),
+         url('../fonts/NanumSquareEB.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/NanumSquareEB.woff') format('woff'),
+         url('../fonts/NanumSquareEB.ttf') format('truetype');
+}
