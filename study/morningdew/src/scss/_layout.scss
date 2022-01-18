@@ -177,7 +177,7 @@ html { font-size: 62.5%; }
                     }
                 }
                 li.on {
-                    background: orange;
+                    background: #ffce1a;
                 }
             }
         }
@@ -193,38 +193,37 @@ html { font-size: 62.5%; }
     border-top: 2px solid #669900;
     color: #464646;
     text-align: center;
-    position: relative;
+    line-height: 50px;
+    position: relative; 
     ul.dept01 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        overflow: hidden; 
         li {
-            width: calc( 100% / 5);
-            line-height: 47px;
+            float: left;
+            overflow: hidden;
+            width: calc(100% / 5);
             a {
-                display: block;
-                width: 100%;
             }
-            ul.dept02 {
+            .dept-bg {
+                background-color: #333;
+                color: #d7d7d7;
                 position: absolute;
-                top: 47px;
+                width: 100%;
+                top: 50px;
                 left: 0;
-                display: none;
+                visibility: hidden;
+                opacity: 1;
                 z-index: 10;
-                width: 100vw;
-                li {
-                    float: left;
-                    background: #333;
-                    a {
-                        display: block;
-                        color: #fff;
+                ul.dept02 {
+                    
+                    margin-right: 30px;
+                    >li {
+                        width: 5%;
                     }
                 }
             }
         }
     }
 }
-
 
 
 

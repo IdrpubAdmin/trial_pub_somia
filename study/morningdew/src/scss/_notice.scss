@@ -130,9 +130,10 @@
         span {
             font-size: 9px;
             vertical-align: middle;
+            position: relative;
             display: inline-block;
             border: 1px soild #ccc;
-            position: relative;
+            padding: 8px; 
         }
         a {
             display: inline-block;

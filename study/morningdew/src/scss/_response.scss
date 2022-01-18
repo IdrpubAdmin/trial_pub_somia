@@ -5,8 +5,15 @@
 
 /* tablet */
 @media screen and (max-width: 1100px) {
-body { padding: 0 100px; }
+.container { padding: 0 30px; }
 .popup { display: none; }
+.header-info .header-top-util .header-top-util-left .search { border-left: inherit; }
+.review .review-wrap .best-text { padding: 25px 20px 0px 20px; }
+.review .review-slider { max-width: 900px; }
+
+.footer-short>ul { margin-left: 20px; }
+.footer .footer-info-wrap .footer-info { padding: 0 50px; }
+.footer .footer-info-wrap .footer-info .about p { margin: 20px 0;}
 
 
 } //지우지마

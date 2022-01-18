@@ -33,13 +33,13 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 });
 
-$(function(){
+// $(function(){
 
-  $(".dept01 li").hover(function() {
+//   $(".dept01 li").hover(function() {
 
-    $(this).children("ul").stop().slideToggle(300)
+//     $(this).children("ul").stop().slideToggle(300)
 
-  })
+//   })
 
-});
+// });
   
