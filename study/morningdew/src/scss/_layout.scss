@@ -7,6 +7,8 @@ html { font-size: 62.5%; }
 .popup {
     img {
         width: 100%;
+        height: 100px;
+        object-fit: cover;
     }
     .btn-pop-wrap {
         position: relative;
@@ -82,6 +84,16 @@ html { font-size: 62.5%; }
             }
         }
         .header-top-util-right {
+            .user {
+                display: none;
+                i {
+                    font-size: 26px;
+                    position: absolute;
+                    top: 7px;
+                    right: 0;
+                    color: #9e9e9e;
+                }
+            }
             ul {
                 position: absolute;
                 top: 0;
@@ -244,6 +256,7 @@ html { font-size: 62.5%; }
         padding: 8px 28px 18px 23px;
         width: calc(( 100% - 50px )/3);
         margin-right: 25px;
+        height: 160px; 
         &:last-child {
             margin-right: 0; 
         }
@@ -316,35 +329,26 @@ html { font-size: 62.5%; }
                 letter-spacing: -0.35px;
                 color: #898989;
                 display: inline-block;
-                &:nth-child(1) {
-                    margin-top: 20px;
-                }
-                &:nth-child(n+2) {
-                    margin-top: 12px; 
-                }
-                em {
-                    font-weight: 900;
-                    font-size: 20px;
-                    margin-left: 28px;
-                    display: inline-block;
-                }
+                width: 30%;
             }
-            span.industrial {
-                em {
-                    color: #0072bc;
-                }
+            em {
+                font-weight: 900;
+                font-size: 20px;
+                display: inline-block;
+                width: 70%; 
             }
-            span.nh {
-                em {
-                    color: #598527;
-                }
+            em.industrial {
+                color: #0072bc;
+                margin-top: 12px; 
             }
-            span.account {
-                text-indent: 7px;
-                em {
-                    color: #464646;
-                    font-size: 14px;
-                }
+            em.nh {
+                color: #598527;
+                margin-top: 12px; 
+            }
+            em.account {
+                font-size: 14px;
+                color: #464646;
+                margin-top: 17px; 
             }
         }
     }
@@ -360,7 +364,7 @@ html { font-size: 62.5%; }
                 letter-spacing: -0.3px;
                 color: #898989;
                 &:first-child {
-                    margin-top: 24px;
+                    margin-top: 12px;
                 }
                 a {
                     font-family: "Dotum";

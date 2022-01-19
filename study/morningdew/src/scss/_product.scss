@@ -33,11 +33,13 @@
             }
         }
         .img-list-btn {
-            border: 1px soild #ddd;
             display: flex;
             justify-content: space-between;
             margin-top: 15px; 
             padding: 0 20px; 
+            height: 40px;
+            border-collapse:collapse;
+            border: 1px solid #ddd !important;
             a {
                 line-height: 40px; 
                 color: #999;

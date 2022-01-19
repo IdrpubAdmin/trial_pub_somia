@@ -1,88 +1,146 @@
-/* pc */
+// index page
+
 @media screen and (max-width: 1300px) {
+    body {min-width: 320px;}
+} // pc 기본 지우지마
 
-} //지우지마
-
-/* tablet */
 @media screen and (max-width: 1100px) {
-.container { padding: 0 30px; }
+.container { padding: 0 20px; }
 .popup { display: none; }
 .header-info .header-top-util .header-top-util-left .search { border-left: inherit; }
-.review .review-wrap .best-text { padding: 25px 20px 0px 20px; }
+.review .review-wrap .best-text { padding: 0 20px; }
 .review .review-slider { max-width: 900px; }
+
+.best .event-item-list ul li a .btn-detail, .event .event-item-list ul li a .btn-detail { font-size: 11px;}
+
+.guid ul li.guid-list { height: 180px; }
+.guid .cscenter .tel span:nth-child(2) { font-size: 27px;}
+.guid .cscenter .time p { font-size: 11px; }
+.guid .faq .faq-list li .time { display: none; }
+.guid .bankinfo .banklist em { font-size: 18px;}
 
 .footer-short>ul { margin-left: 20px; }
 .footer .footer-info-wrap .footer-info { padding: 0 50px; }
 .footer .footer-info-wrap .footer-info .about p { margin: 20px 0;}
 
+} //지우지마
 
+@media screen and (max-width: 1024px) {
+
+} // 태블릿 기본 지우지마
+
+@media screen and (max-width: 986px) {
+.review .review-slider { max-width: 750px;}
+.review .review-hover-effect .detail-view { display: none; }
+} //지우지마
+
+@media screen and (max-width: 910px) {
+.guid ul li.guid-list { width: 100%; margin-top: 20px; } 
+.guid .faq .faq-list li .time { display:  block;}
+.guid .bankinfo .banklist em { text-align: right; }
+.footer .footer-info-wrap .footer-info .lg-service { display: none; }
+.footer .footer-info-wrap .footer-info .about { text-align: center; }
+} //지우지마
+
+@media screen and (max-width: 768px) {
+
+} //모바일 기본 지우지마
+
+@media screen and (max-width: 861px) {
+.header-middle .container .header-logo .text-area { display: none; }
+.header-info .header-top-util .header-top-util-left .bookmark, .header-info .header-top-util .header-top-util-left .shortcut { display: none; }
+.header-info .header-top-util .header-top-util-right ul { display: none; }
+.header-info .header-top-util .header-top-util-right .user { display: block; }
+.best .best-item-list ul li { width: calc((100% - 60px)/3); margin-right: 30px; }
+.best .best-item-list ul li:nth-child(3n+0) { margin-right: 0px; }
+.best .best-item-list ul li:nth-child(4n+0) { margin-right: 20px; }
+.best .best-item-list ul li:nth-child(n+4) { margin-top: 50px; }
+.best .event-item-list ul li a .btn-detail, .event .event-item-list ul li a .btn-detail { display: none; }
+
+.gnb ul.dept01 li { font-size: 14px;}
+.review { height: 230px;}
+.review .review-slider { max-width: 650px;} 
+.review .review-slider-btn-wrap { height: 120px; }
+.best .best-item-list ul li { width: calc((100% - 60px)/3); }
+.best .best-item-list ul li:nth-child(3n+0) { margin-right: 0px; }
+.best .best-item-list ul li:nth-child(4n+0) { margin-right: 20px; }
+.best .best-item-list ul li:nth-child(n+4) { margin-top: 50px; }
+} //지우지마
+
+@media screen and (max-width: 450px) {
+.best .event-item-list ul li, .event .event-item-list ul li { width: inherit; margin: 10px 0; }
+} //지우지마
+
+@media screen and (max-width: 333px) {
+.guid ul li.guid-list { height: 180px; }
+.guid .cscenter .tel span:nth-child(2) { font-size: 24px; }
+.guid .bankinfo .banklist em { font-size: 16px;}
+.guid .faq .faq-list li { font-size: 11px; }
+.footer-short>ul { margin-left: 0; }
 } //지우지마
 
 
-/* mobile 320px~ */
-@media screen and (max-width: 768px) {
+
+// product page 
+@media screen and (max-width: 1100px) { 
+.detail-view { margin-top: 70px; }
+.detail-view .detail-img-wrap img { width: 100%; }
+} //지우지마
+
+@media screen and (max-width: 975px) { 
+.product-order .product-option h3 { line-height: 53px; }
+.product-order .product-option .product-select .product-first .select2-quantity span.del, .product-order .product-option .product-select .product-second .select2-quantity span.del { margin-left: 0; }
+.product-order .product-option .product-select .product-first .select3-price em, .product-order .product-option .product-select .product-second .select3-price em { font-size: 13px; }
+.product-order .product-option .product-btn .btn-other a { font-size: 13px;}
+}
+
+@media screen and (max-width: 921px) { 
+.product-order { flex-wrap: wrap; justify-content: center; }
+.product-order .product-option { margin-top: 30px; }
+.product-order .product-img { margin-right: 0; width: 100%; }
+.product-order .product-img .img-wrap img { width: 100%; }
+.product-order .product-option { width: 100%;}
+.product-order .product-option h3 { text-indent: 10px; }
+}
+
+@media screen and (max-width: 430px) { 
+.product>span { margin-top: 50px; }
+.product-order .product-img .img-list { display: none; }
+.product-review .board-wrap, .qna .qna-board { padding: 0; }
+.product-review .board-wrap .board-row .board-table tbody tr td:first-child { padding-left: 10px; }
+}
+
+@media screen and (max-width: 371px) { 
+.product-order .product-img .img-list { display: none; }
+.product-order .product-option h3 { font-size: 23px;}
+.product-order .product-option .product-option-price ul li span:nth-child(1) { width: 29%;}
+.product-order .product-option .product-color-option span { width: 29%; }
+.product-order .product-option .product-notice em, .product-order .product-option .product-notice strong { font-size: 11px; }
+}
+
+@media screen and (max-width: 357px) {
+.product-order .product-img .img-list-btn { padding: 0 10px;}
+.product-order .product-img .img-list-btn a { font-size: 11px }
+.product-order .product-option .product-select .product-first span, .product-order .product-option .product-select .product-second span { display: none; }
+.product-order .product-option .product-notice img { display: none; }
+}
+
+@media screen and (max-width: 354px) {
 
 }
 
-@media all and (min-width:768px) {
-    /* notice */
-    .notice .board-table thead tr th:first-child,
-    .notice .board-table thead tr th:nth-child(3),
-    .notice .board-table thead tr th:nth-child(4),
-    .notice .board-table tbody tr td:first-child,
-    .notice .board-table tbody tr td:nth-child(3),
-    .notice .board-table tbody tr td:nth-child(4) {
-        display: table-cell;
-    }
-    .notice .board-table thead tr th:first-child {
-        width: 10%;
-    }
-    .notice .board-table thead tr th:nth-child(2) {
-        width: 55%;
-    }
-    .notice .board-table thead tr th:nth-child(3) {
-        width: 15%;
-    }
-    .notice .board-table thead tr th:nth-child(4) {
-        width: 10%;
-    }
-    .notice .board-table thead tr th:nth-child(5) {
-        width: 10%;
-    }
-    .notice .board-table tbody tr td:nth-child(2) {
-        text-align: left;
-    }
+@media screen and (max-width: 334px) {
+.header-middle .container .header-logo { top: 64px;}
 
-    // product
-    .product-review .board-table thead tr th:first-child,
-    .product-review .board-table thead tr th:nth-child(3),
-    .product-review .board-table thead tr th:nth-child(4),
-    .product-review .board-table tbody tr td:first-child,
-    .product-review .board-table tbody tr td:nth-child(3),
-    .product-review .board-table tbody tr td:nth-child(4) {
-        display: table-cell;
-    }
-    .product-review .board-table thead tr th:first-child {
-        width: 50%;
-    }
-    .product-review .board-table thead tr th:nth-child(2) {
-        width: 15%;
-    }
-    .product-review .board-table thead tr th:nth-child(3) {
-        width: 15%;
-    }
-    .product-review .board-table thead tr th:nth-child(4) {
-        width: 20%;
-    }
-}
+.product-order .product-img .img-list-btn { padding: 0 10px;}
+.product-order .product-img .img-list-btn a { font-size: 11px }
+.product-order .product-option .product-notice strong { display: inherit; }
+.product-order .product-option .product-select .product-first, .product-order .product-option .product-select .product-second { line-height: 24px; }
+.product-order .product-option .product-select .product-first span, .product-order .product-option .product-select .product-second span { display: none; }
+.product-order .product-option .product-select .product-first .select3-price em, .product-order .product-option .product-select .product-second .select3-price em { font-size:  12px; }
+.product-order .product-option .product-btn { font-size: 17px; }
 
+.delivery .delivery-contents, .return .return-contents { padding: 0 20px; }
 
-/* PC용 CSS */
-
-@media all and (min-width:960px) {
-    /* 기본 CSS */
-    #wrap {
-        position: relative;
-        width: 90%;
-    }
+.guid .faq .faq-list li .time { display: none; }
 }
