@@ -216,21 +216,41 @@ html { font-size: 62.5%; }
             a {
             }
             .dept-bg {
-                background-color: #333;
-                color: #d7d7d7;
-                position: absolute;
-                width: 100%;
-                top: 50px;
-                left: 0;
-                visibility: hidden;
-                opacity: 1;
-                z-index: 10;
-                ul.dept02 {
-                    
+                // background-color: #333;
+                // color: #d7d7d7;
+                // position: absolute;
+                // width: 100%;
+                // top: 50px;
+                // left: 0;
+                // z-index: 10;
+                ul#dropdown {
                     margin-right: 30px;
+                    z-index: 10;
+                    width: 400px;
+                    top: 50px;
+                    left: 20%; 
+
+                    overflow: hidden;
+                    position: absolute;
+                    // background: red;
                     >li {
-                        width: 5%;
+                        float: left;
                     }
+                }
+                ul.gnb0 {
+                    left: 29%;
+                }
+                ul.gnb1 {
+                    left: 38%;
+                }
+                ul.gnb2 {
+                    left: 47%;
+                }
+                ul.gnb3 {
+                    left: 56%;
+                }
+                ul.gnb3 {
+                    left: 65%;
                 }
             }
         }
@@ -264,7 +284,7 @@ html { font-size: 62.5%; }
     }
     h3 {
         font-weight: 900;
-        line-height: 45px;
+        line-height: 36px;
         font-size: 18px;
         color: #252525;
         span.underline {

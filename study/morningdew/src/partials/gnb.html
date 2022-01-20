@@ -3,10 +3,10 @@
             <h2 class="blind">메뉴</h2>
             <ul class="dept01 container">
                 <li>
-                    <a href="" class="hover-green">매일매일 이벤트</a>
+                    <a class="hover-green" onclick="dp_menu()">매일매일 이벤트</a>
                     <div class="dept-bg">
-                        <ul class="dept02 container">
-                            <li><a href="#">공지사항</a></li>
+                        <ul id="dropdown" class="gnb0" style="display: none;">
+                            <li><a href="#">공지사항0</a></li>
                             <li><a href="#">이벤트</a></li>
                             <li><a href="#">상품후기</a></li>
                             <li><a href="#">QNA</a></li>
@@ -15,10 +15,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#">천연펄프 화장지</a>
+                    <a onclick="dp_menu()">천연펄프 화장지</a>
                     <div class="dept-bg">
-                        <ul class="dept02 container">
-                            <li><a href="#">공지사항</a></li>
+                        <ul id="dropdown" class="gnb1" style="display: none;">
+                            <li><a href="#">공지사항1</a></li>
                             <li><a href="#">이벤트</a></li>
                             <li><a href="#">상품후기</a></li>
                             <li><a href="#">QNA</a></li>
@@ -27,10 +27,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="" class="hover-green">디스펜서·케이스</a>
+                    <a onclick="dp_menu()" class="hover-green">디스펜서·케이스</a>
                     <div class="dept-bg">
-                        <ul class="dept02 container">
-                            <li><a href="#">공지사항</a></li>
+                        <ul id="dropdown" class="gnb2" style="display: none;">
+                            <li><a href="#">공지사항2</a></li>
                             <li><a href="#">이벤트</a></li>
                             <li><a href="#">상품후기</a></li>
                             <li><a href="#">QNA</a></li>
@@ -39,10 +39,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="" class="hover-green">친환경해충포획퇴치기</a>
+                    <a onclick="dp_menu()" class="hover-green">친환경해충포획퇴치기</a>
                     <div class="dept-bg">
-                        <ul class="dept02 container">
-                            <li><a href="#">공지사항</a></li>
+                        <ul id="dropdown" class="gnb3" style="display: none;">
+                            <li><a href="#">공지사항3</a></li>
                             <li><a href="#">이벤트</a></li>
                             <li><a href="#">상품후기</a></li>
                             <li><a href="#">QNA</a></li>
@@ -51,10 +51,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="notice.html" class="hover-green">고객센터</a>
+                    <a onclick="dp_menu()" class="hover-green">고객센터</a>
                     <div class="dept-bg">
-                        <ul class="dept02">
-                            <li><a href="#">공지사항</a></li>
+                        <ul id="dropdown" class="gnb4" style="display: none;">
+                            <li><a href="#">공지사항4</a></li>
                             <li><a href="#">이벤트</a></li>
                             <li><a href="#">상품후기</a></li>
                             <li><a href="#">QNA</a></li>
@@ -64,5 +64,18 @@
                 </li>
             </ul>
         </div>
+
+        <script>
+            function dp_menu(){
+                let click = document.getElementById("dropdown");
+                if(click.style.display === "none"){
+                    click.style.display = "block";
+    
+                }else{
+                    click.style.display = "none";
+    
+                }
+            }
+        </script>
     </nav>
     

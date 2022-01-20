@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="header-top-util-right">
-                    <a href="#" class="user"><i class="xi-user"></i></a>
+                    <a href="" class="user"><i class="xi-user"></i></a>
                     <ul>
                         <li class="bold">
                             <a href="#">로그인</a>
@@ -126,10 +126,10 @@
             <h2 class="blind">메뉴</h2>
             <ul class="dept01 container">
                 <li>
-                    <a href="#" class="hover-green">매일매일 이벤트</a>
+                    <a class="hover-green" onclick="dp_menu()">매일매일 이벤트</a>
                     <div class="dept-bg">
-                        <ul class="dept02 container">
-                            <li><a href="#">공지사항</a></li>
+                        <ul id="dropdown" class="gnb0" style="display: none;">
+                            <li><a href="#">공지사항0</a></li>
                             <li><a href="#">이벤트</a></li>
                             <li><a href="#">상품후기</a></li>
                             <li><a href="#">QNA</a></li>
@@ -138,10 +138,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#">천연펄프 화장지</a>
+                    <a onclick="dp_menu()">천연펄프 화장지</a>
                     <div class="dept-bg">
-                        <ul class="dept02 container">
-                            <li><a href="#">공지사항</a></li>
+                        <ul id="dropdown" class="gnb1" style="display: none;">
+                            <li><a href="#">공지사항1</a></li>
                             <li><a href="#">이벤트</a></li>
                             <li><a href="#">상품후기</a></li>
                             <li><a href="#">QNA</a></li>
@@ -150,10 +150,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="hover-green">디스펜서·케이스</a>
+                    <a onclick="dp_menu()" class="hover-green">디스펜서·케이스</a>
                     <div class="dept-bg">
-                        <ul class="dept02 container">
-                            <li><a href="#">공지사항</a></li>
+                        <ul id="dropdown" class="gnb2" style="display: none;">
+                            <li><a href="#">공지사항2</a></li>
                             <li><a href="#">이벤트</a></li>
                             <li><a href="#">상품후기</a></li>
                             <li><a href="#">QNA</a></li>
@@ -162,10 +162,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="hover-green">친환경해충포획퇴치기</a>
+                    <a onclick="dp_menu()" class="hover-green">친환경해충포획퇴치기</a>
                     <div class="dept-bg">
-                        <ul class="dept02 container">
-                            <li><a href="#">공지사항</a></li>
+                        <ul id="dropdown" class="gnb3" style="display: none;">
+                            <li><a href="#">공지사항3</a></li>
                             <li><a href="#">이벤트</a></li>
                             <li><a href="#">상품후기</a></li>
                             <li><a href="#">QNA</a></li>
@@ -174,10 +174,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="notice.html" class="hover-green">고객센터</a>
+                    <a onclick="dp_menu()" class="hover-green">고객센터</a>
                     <div class="dept-bg">
-                        <ul class="dept02">
-                            <li><a href="#">공지사항</a></li>
+                        <ul id="dropdown" class="gnb4" style="display: none;">
+                            <li><a href="#">공지사항4</a></li>
                             <li><a href="#">이벤트</a></li>
                             <li><a href="#">상품후기</a></li>
                             <li><a href="#">QNA</a></li>
@@ -187,6 +187,19 @@
                 </li>
             </ul>
         </div>
+
+        <script>
+            function dp_menu(){
+                let click = document.getElementById("dropdown");
+                if(click.style.display === "none"){
+                    click.style.display = "block";
+    
+                }else{
+                    click.style.display = "none";
+    
+                }
+            }
+        </script>
     </nav>
     
 <!-- end gnb.html-->
@@ -195,7 +208,7 @@
 <main>
     <div class="contents">
         <!-- main-slide -->
-        <div class="swiper main-slide container">
+        <div class="swiper1 main-slide">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="../img/banner/banner01.jpg" alt="유통마진제로 모닝듀 직거래">
@@ -209,7 +222,11 @@
             </div>
             <div class="swiper-button-prev btn"></div>        
             <div class="swiper-button-next btn"></div>
-            <div class="swiper-pagination"></div>    
+            <div class="swiper-pagination"></div>  
+            <div class="bg">
+                <div class="bg-left"></div>
+                <div class="bg-right"></div>
+            </div> 
         </div>
         <!-- //main-slide -->
 
@@ -564,6 +581,43 @@
 
 </div>
 
-    
+<script>
+var swiper = new Swiper('.main-slide', {
+    navigation: {
+      nextEl: ".main-slide .swiper-button-next",
+      prevEl: ".main-slide .swiper-button-prev",
+    },
+    pagination: {
+      el: ".main-slide .swiper-pagination",
+    },
+    autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+  });
+
+  var swiper2 = new Swiper('.review-slider', {
+    navigation: {
+      nextEl: ".review-slider-btn-wrap .swiper-button-next",
+      prevEl: ".review-slider-btn-wrap .swiper-button-prev",
+    },
+    autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+    },
+    // breakpoints : { 
+    //     1920 : {
+    //         slidesPerView : 3,
+    //     },
+    // },
+    slidesPerView: 5,
+    spaceBetween: 36,
+    loop: true,
+  });
+</script>
 </body>
 </html>

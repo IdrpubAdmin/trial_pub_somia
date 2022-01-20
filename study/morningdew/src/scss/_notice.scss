@@ -115,7 +115,14 @@
             td {
                 padding: 1.375rem 0;
                 border-bottom: 1px solid #eee;    
-                font-size: 12px;        
+                font-size: 12px;
+                &:last-child {
+                    img {
+                        width: 16px;
+                        height: 14px;
+                        object-fit: cover;
+                    }
+                }     
             }
         }
     }

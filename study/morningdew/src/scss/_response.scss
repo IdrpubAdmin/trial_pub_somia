@@ -1,5 +1,9 @@
 // index page
 
+@media screen and (max-width: 2549px) {
+    .main-slide .bg .bg-left, .main-slide .bg .bg-right { display: none; }
+}
+
 @media screen and (max-width: 1300px) {
     body {min-width: 320px;}
 } // pc 기본 지우지마
@@ -137,7 +141,8 @@
 .product-order .product-option .product-notice strong { display: inherit; }
 .product-order .product-option .product-select .product-first, .product-order .product-option .product-select .product-second { line-height: 24px; }
 .product-order .product-option .product-select .product-first span, .product-order .product-option .product-select .product-second span { display: none; }
-.product-order .product-option .product-select .product-first .select3-price em, .product-order .product-option .product-select .product-second .select3-price em { font-size:  12px; }
+.product-order .product-option .product-select .product-first .select1-name span { font-size: 11px;}
+.product-order .product-option .product-select .product-first .select3-price em, .product-order .product-option .product-select .product-second .select3-price em { font-size:  11px; }
 .product-order .product-option .product-btn { font-size: 17px; }
 
 .delivery .delivery-contents, .return .return-contents { padding: 0 20px; }

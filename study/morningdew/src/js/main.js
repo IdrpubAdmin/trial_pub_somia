@@ -1,45 +1,26 @@
-document.addEventListener("DOMContentLoaded", function(){
 
-  const swiper = new Swiper('.main-slide', {
-    navigation: {
-      nextEl: ".main-slide .swiper-button-next",
-      prevEl: ".main-slide .swiper-button-prev",
-    },
-    pagination: {
-      el: ".main-slide .swiper-pagination",
-    },
-    autoplay: {
-        delay: 5500,
-        disableOnInteraction: false,
-    },
-    loop: true,
-  });
-  
+// swiper 위치 수정값
+jQuery(document).ready(function() { 
+  var main_W = jQuery(".main-slide").width();
+  if(main_W <= 1280){
+    $('.main-slide .swiper-button-next').css('right','120px');
+    $('.main-slide .swiper-button-prev-').css('left','120px');
+  }else{
+    var w_change = (main_W - 1280)/2;
+    $('.main-slide .swiper-button-next').css('right',120+ w_change + 'px');
+    $('.main-slide .swiper-button-prev').css('left',120+ w_change + 'px');
+  }		
+
+  $(window).resize(function(){
+    var main_W = jQuery(".main-slide").width();
+    if(main_W <= 1280){
+      $('.main-slide .swiper-button-next').css('right','10px');
+      $('.main-slide .swiper-button-prev').css('left','10px');
+    }else{
+      var w_change = (main_W - 1280)/2;
+      $('.main-slide .swiper-button-next').css('right',10+ w_change + 'px');
+      $('.main-slide .swiper-button-prev').css('left',10+ w_change + 'px');
+    }
+
+
 });
-
-document.addEventListener("DOMContentLoaded", function(){ 
-  const swiper = new Swiper('.review-slider', {
-    navigation: {
-      nextEl: ".review-slider-btn-wrap .swiper-button-next",
-      prevEl: ".review-slider-btn-wrap .swiper-button-prev",
-    },
-    autoplay: {
-        delay: 5500,
-        disableOnInteraction: false,
-    },
-    slidesPerView: 5,
-    spaceBetween: 36,
-    loop: true,
-  });
-});
-
-// $(function(){
-
-//   $(".dept01 li").hover(function() {
-
-//     $(this).children("ul").stop().slideToggle(300)
-
-//   })
-
-// });
-  

@@ -23,7 +23,7 @@
 <main>
     <div class="contents">
         <!-- main-slide -->
-        <div class="swiper main-slide container">
+        <div class="swiper1 main-slide">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="../img/banner/banner01.jpg" alt="유통마진제로 모닝듀 직거래">
@@ -37,7 +37,11 @@
             </div>
             <div class="swiper-button-prev btn"></div>        
             <div class="swiper-button-next btn"></div>
-            <div class="swiper-pagination"></div>    
+            <div class="swiper-pagination"></div>  
+            <div class="bg">
+                <div class="bg-left"></div>
+                <div class="bg-right"></div>
+            </div> 
         </div>
         <!-- //main-slide -->
 
@@ -313,6 +317,43 @@
 
 </div>
 
-    
+<script>
+var swiper = new Swiper('.main-slide', {
+    navigation: {
+      nextEl: ".main-slide .swiper-button-next",
+      prevEl: ".main-slide .swiper-button-prev",
+    },
+    pagination: {
+      el: ".main-slide .swiper-pagination",
+    },
+    autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+  });
+
+  var swiper2 = new Swiper('.review-slider', {
+    navigation: {
+      nextEl: ".review-slider-btn-wrap .swiper-button-next",
+      prevEl: ".review-slider-btn-wrap .swiper-button-prev",
+    },
+    autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+    },
+    // breakpoints : { 
+    //     1920 : {
+    //         slidesPerView : 3,
+    //     },
+    // },
+    slidesPerView: 5,
+    spaceBetween: 36,
+    loop: true,
+  });
+</script>
 </body>
 </html>
