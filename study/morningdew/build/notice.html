@@ -22,7 +22,7 @@
     <div class="header">
         <!-- popup -->
         <div class="popup">
-            <img src="../img/pop/popup.jpg" alt="모닝듀에서는 유통마진 없이 온라인에서만 판매합니다 상단 팝업 광고">
+            <img src="img/pop/popup.jpg" alt="모닝듀에서는 유통마진 없이 온라인에서만 판매합니다 상단 팝업 광고">
             <div class="btn-pop-wrap container">
                 <ul class="clear">
                     <li>
@@ -88,7 +88,7 @@
                 <div class="container">
                     <div class="header-logo clear">
                         <h1>
-                            <a href="index.html"><img src="../img/logo/logo.png" alt="모닝듀"></a>
+                            <a href="index.html"><img src="img/logo/logo.png" alt="모닝듀"></a>
                         </h1>
                         <div class="text-area">
                             <span class="green">순수 100% 천연펄프 화장지</span>
@@ -184,34 +184,35 @@
         </div>
 
         <script>
-            // 클래스는 동시에 돌아가게 하려면 for문이 필요. id의 경우 하나만 돌아감
-            const menuhover = document.getElementsByClassName("menuhover");
-            const dropdown = document.getElementsByClassName("dropdown");
-            const bggray = document.getElementsByClassName("dep2-bg");
+            // 클래스는 동시에 돌아가게 하려면 for문이 필요. id의 경우 하나만 돌아감. getel~ 말고 querySelectorAll
+            const menuhover = document.querySelectorAll(".menuhover");
+            const dropdown = document.querySelectorAll(".dropdown");
+            const bggray = document.querySelectorAll(".dep2-bg");
 
-                // for문 안에 이벤트 등록을 해줘야만함
-                // 초기화; 조건식; 증감식 -> 조건식이 true일 때 실행될 명령 
-                // 0으로 초기화, i가 5보다 작으면 명령반복 
-                for (var i = 0; i <5; i++) test(i);
-
-                    function test(i){
-                        menuhover[i].addEventListener(
-                        "mouseover",
-                        () => (
+            //bggray는 하나니까 i 필요없음
+            //js에서 직접적으로 style을 변경하는 것이 아닌 classList.add, classList.remove 를 사용하는 방법 사용
+            function test(i){
+                menuhover[i].addEventListener("mouseover", () => (
                         (dropdown[i].style.display = "block"),
-                        (bggray[i].style.display = "block")
-                        )
-                    );
+                        (bggray[0].style.display = "block")
+                    )
+                );
 
-                        menuhover[i].addEventListener(
-                        "mouseout",
-                        () => (
+                menuhover[i].addEventListener("mouseout", () => (
                         (dropdown[i].style.display = "none"),
                         (bggray[i].style.display = "none")
-                        )
-                    );
-                }
-                
+                    )
+                );
+            }
+
+            // for문 안에 이벤트 등록을 해줘야만함
+            // 초기화; 조건식; 증감식 -> 조건식이 true일 때 실행될 명령 
+            // 0으로 초기화, i가 5보다 작으면 명령반복 
+            // 위에서 선언 후 밑에서 for 실행, for (){} 문장 지키기
+            for (var i = 0; i <5; i++) {
+                test(i); 
+            }
+            
         </script>
     </nav>
     
@@ -414,7 +415,7 @@
         <div class="footer-info-wrap">
             <div class="footer-info container">
                 <div class="about">
-                    <img src="../img/logo/logo_g.png" alt="모닝듀 로고">
+                    <img src="img/logo/logo_g.png" alt="모닝듀 로고">
                     <p>(주)모닝듀 | 대표 : 김영효(김기준) | 소재지 : 72852 경기도 남양주시 수동면 비룡로 654-38 주식회사 모닝듀<br>
                         전화 : 070-4245-0511 | 팩스 : 031-592-2263 | 개인정보관리책임자 : 김영효(kkkj0511@naver.com)<br>
                         사업자등록번호 : 132-81-89238 | 통신판매업신고 : 제2010-경기남양주-0486호 [사업자정보확인]<br>
@@ -422,7 +423,7 @@
                     </p>
                 </div>
                 <div class="lg-service">
-                    <img src="../img/banner/lg_service.png" alt="LG U+ 매매보호(에스크로) 서비스">
+                    <img src="img/banner/lg_service.png" alt="LG U+ 매매보호(에스크로) 서비스">
                 </div>
             </div>
         </div>

@@ -209,6 +209,7 @@ html { font-size: 62.5%; }
     position: relative; 
     ul.dept01 { 
         overflow-x: auto;
+        overflow-y: hidden;
         white-space:nowrap;
         width: 100%;
         height: 50px; 
@@ -216,9 +217,13 @@ html { font-size: 62.5%; }
             float: left;
             overflow: hidden;
             width: calc(100% / 5);
-            &:hover {
-                color: $green;
-                transition: .2s;
+            a{
+                display: block;
+                height: 100%;
+                &:hover {
+                    color: $green;
+                    transition: .2s;
+                }
             }
             a.menuhover {
                 width: 100%;
@@ -266,11 +271,7 @@ html { font-size: 62.5%; }
     }
 }
 
-
-
 // footer
-
-
 
 //guid
 
