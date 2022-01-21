@@ -2,80 +2,90 @@
         <div class="gnb-line">
             <h2 class="blind">메뉴</h2>
             <ul class="dept01 container">
-                <li>
-                    <a class="hover-green" onclick="dp_menu()">매일매일 이벤트</a>
-                    <div class="dept-bg">
-                        <ul id="dropdown" class="gnb0" style="display: none;">
-                            <li><a href="#">공지사항0</a></li>
-                            <li><a href="#">이벤트</a></li>
-                            <li><a href="#">상품후기</a></li>
-                            <li><a href="#">QNA</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
+                <li class="menuhover">
+                    <a class="hover-green" href="#">매일매일 이벤트</a>
+                    <ul class="dropdown gnb0" >
+                        <li><a href="#">공지사항0</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">상품후기</a></li>
+                        <li><a href="#">QNA</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
                 </li>
-                <li>
-                    <a onclick="dp_menu()">천연펄프 화장지</a>
-                    <div class="dept-bg">
-                        <ul id="dropdown" class="gnb1" style="display: none;">
-                            <li><a href="#">공지사항1</a></li>
-                            <li><a href="#">이벤트</a></li>
-                            <li><a href="#">상품후기</a></li>
-                            <li><a href="#">QNA</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
+                <li class="menuhover">
+                    <a href="#">천연펄프 화장지</a>
+                    <ul class="dropdown gnb1" >
+                        <li><a href="#">공지사항1</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">상품후기</a></li>
+                        <li><a href="#">QNA</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
                 </li>
-                <li>
-                    <a onclick="dp_menu()" class="hover-green">디스펜서·케이스</a>
-                    <div class="dept-bg">
-                        <ul id="dropdown" class="gnb2" style="display: none;">
-                            <li><a href="#">공지사항2</a></li>
-                            <li><a href="#">이벤트</a></li>
-                            <li><a href="#">상품후기</a></li>
-                            <li><a href="#">QNA</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
+                <li class="menuhover">
+                    <a href="#">디스펜서·케이스</a>
+                    <ul class="dropdown gnb2" >
+                        <li><a href="#">공지사항2</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">상품후기</a></li>
+                        <li><a href="#">QNA</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
                 </li>
-                <li>
-                    <a onclick="dp_menu()" class="hover-green">친환경해충포획퇴치기</a>
-                    <div class="dept-bg">
-                        <ul id="dropdown" class="gnb3" style="display: none;">
-                            <li><a href="#">공지사항3</a></li>
-                            <li><a href="#">이벤트</a></li>
-                            <li><a href="#">상품후기</a></li>
-                            <li><a href="#">QNA</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
+                <li class="menuhover">
+                    <a href="#">친환경해충포획퇴치기</a>
+                    <ul class="dropdown gnb3" >
+                        <li><a href="#">공지사항3</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">상품후기</a></li>
+                        <li><a href="#">QNA</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
                 </li>
-                <li>
-                    <a onclick="dp_menu()" class="hover-green">고객센터</a>
-                    <div class="dept-bg">
-                        <ul id="dropdown" class="gnb4" style="display: none;">
-                            <li><a href="#">공지사항4</a></li>
-                            <li><a href="#">이벤트</a></li>
-                            <li><a href="#">상품후기</a></li>
-                            <li><a href="#">QNA</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
+                <li class="menuhover">
+                    <a href="#">고객센터</a>
+                    <ul class="dropdown gnb4" >
+                        <li><a href="#">공지사항4</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">상품후기</a></li>
+                        <li><a href="#">QNA</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
                 </li>
             </ul>
+            <div class="dep2-bg">
+            </div>
         </div>
 
         <script>
-            function dp_menu(){
-                let click = document.getElementById("dropdown");
-                if(click.style.display === "none"){
-                    click.style.display = "block";
-    
-                }else{
-                    click.style.display = "none";
-    
+            // 클래스는 동시에 돌아가게 하려면 for문이 필요. id의 경우 하나만 돌아감
+            const menuhover = document.getElementsByClassName("menuhover");
+            const dropdown = document.getElementsByClassName("dropdown");
+            const bggray = document.getElementsByClassName("dep2-bg");
+
+                // for문 안에 이벤트 등록을 해줘야만함
+                // 초기화; 조건식; 증감식 -> 조건식이 true일 때 실행될 명령 
+                // 0으로 초기화, i가 5보다 작으면 명령반복 
+                for (var i = 0; i <5; i++) test(i);
+
+                    function test(i){
+                        menuhover[i].addEventListener(
+                        "mouseover",
+                        () => (
+                        (dropdown[i].style.display = "block"),
+                        (bggray[i].style.display = "block")
+                        )
+                    );
+
+                        menuhover[i].addEventListener(
+                        "mouseout",
+                        () => (
+                        (dropdown[i].style.display = "none"),
+                        (bggray[i].style.display = "none")
+                        )
+                    );
                 }
-            }
+                
         </script>
     </nav>
     

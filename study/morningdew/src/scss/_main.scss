@@ -123,7 +123,7 @@
         position: absolute;
         width: 4.8%;
         height: 2px;
-        background-color: #749b06;
+        background-color: $green;
         top: 40px; 
     }
 }
@@ -239,7 +239,7 @@
                 color: #252525; 
                 font-size: 18px;
                 span.underline {
-                    border-bottom: 2px solid #749b06; 
+                    border-bottom: 2px solid $green; 
                     display: inline-block;
                 }
                 span {

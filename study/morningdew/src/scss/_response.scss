@@ -46,22 +46,18 @@
 .footer .footer-info-wrap .footer-info .about { text-align: center; }
 } //지우지마
 
-@media screen and (max-width: 768px) {
-
-} //모바일 기본 지우지마
-
 @media screen and (max-width: 861px) {
 .header-middle .container .header-logo .text-area { display: none; }
 .header-info .header-top-util .header-top-util-left .bookmark, .header-info .header-top-util .header-top-util-left .shortcut { display: none; }
 .header-info .header-top-util .header-top-util-right ul { display: none; }
 .header-info .header-top-util .header-top-util-right .user { display: block; }
+.gnb ul.dept01>li ul.dropdown { display: none; }
 .best .best-item-list ul li { width: calc((100% - 60px)/3); margin-right: 30px; }
 .best .best-item-list ul li:nth-child(3n+0) { margin-right: 0px; }
 .best .best-item-list ul li:nth-child(4n+0) { margin-right: 20px; }
 .best .best-item-list ul li:nth-child(n+4) { margin-top: 50px; }
 .best .event-item-list ul li a .btn-detail, .event .event-item-list ul li a .btn-detail { display: none; }
 
-.gnb ul.dept01 li { font-size: 14px;}
 .review { height: 230px;}
 .review .review-slider { max-width: 650px;} 
 .review .review-slider-btn-wrap { height: 120px; }
@@ -70,6 +66,21 @@
 .best .best-item-list ul li:nth-child(4n+0) { margin-right: 20px; }
 .best .best-item-list ul li:nth-child(n+4) { margin-top: 50px; }
 } //지우지마
+
+@media screen and (max-width: 768px) {
+
+    // IE & edge / firefox scrollbar
+    .gnb { -ms-overflow-style: none; scrollbar-width: none;}
+
+    // chrome, safari, opera scrollbar
+    .gnb ul.dept01::-webkit-scrollbar { display: none !important; position: absolute; top: 0; }
+
+    .gnb ul.dept01>li { float: none; width: auto; margin-right: 50px; display: inline-block;}
+    .gnb ul.dept01>li ul.dropdown {display: none !important; }
+    .gnb .dep2-bg { display: none !important; }
+
+} //모바일 기본 지우지마
+
 
 @media screen and (max-width: 450px) {
 .best .event-item-list ul li, .event .event-item-list ul li { width: inherit; margin: 10px 0; }
@@ -82,7 +93,6 @@
 .guid .faq .faq-list li { font-size: 11px; }
 .footer-short>ul { margin-left: 0; }
 } //지우지마
-
 
 
 // product page 
@@ -134,6 +144,7 @@
 }
 
 @media screen and (max-width: 334px) {
+.header-warp .header-info { padding: 0 !important}
 .header-middle .container .header-logo { top: 64px;}
 
 .product-order .product-img .img-list-btn { padding: 0 10px;}

@@ -79,7 +79,7 @@ html { font-size: 62.5%; }
                 padding: 14px 11px;
                 border-right: 1px solid #ccc;
                 span.aster {
-                    color:#82bd04
+                    color: $green;
                 }
             }
         }
@@ -147,7 +147,7 @@ html { font-size: 62.5%; }
                     display: block;
                     font-family: "nanum";
                     &:first-child {
-                        color: #74a901;
+                        color: $green;
                         display: block;
                         font-size: 14px; 
                         font-weight: 700;
@@ -202,58 +202,67 @@ html { font-size: 62.5%; }
     font-weight: 700;
     font-size: 16px;
     letter-spacing: -0.4px;
-    border-top: 2px solid #669900;
+    border-top: 2px solid $green;
     color: #464646;
     text-align: center;
     line-height: 50px;
     position: relative; 
-    ul.dept01 {
-        overflow: hidden; 
-        li {
+    ul.dept01 { 
+        overflow-x: auto;
+        white-space:nowrap;
+        width: 100%;
+        height: 50px; 
+        >li {
             float: left;
             overflow: hidden;
             width: calc(100% / 5);
-            a {
+            &:hover {
+                color: $green;
+                transition: .2s;
             }
-            .dept-bg {
-                // background-color: #333;
-                // color: #d7d7d7;
-                // position: absolute;
-                // width: 100%;
-                // top: 50px;
-                // left: 0;
-                // z-index: 10;
-                ul#dropdown {
-                    margin-right: 30px;
-                    z-index: 10;
-                    width: 400px;
-                    top: 50px;
-                    left: 20%; 
-
-                    overflow: hidden;
-                    position: absolute;
-                    // background: red;
-                    >li {
-                        float: left;
+            a.menuhover {
+                width: 100%;
+                display: block; 
+            }
+            ul.dropdown {
+                position: absolute;
+                z-index: 10;
+                top: 50px;
+                display: none;
+                background: rgb(39, 39, 39);
+                padding: 0 20px;
+                >li {
+                    float: left;
+                    margin-right: 34px;
+                    color: #d7d7d7;
+                    font-size: 14px;
+                    &:hover {
+                        color: #fff200;
                     }
                 }
-                ul.gnb0 {
-                    left: 29%;
-                }
-                ul.gnb1 {
-                    left: 38%;
-                }
-                ul.gnb2 {
-                    left: 47%;
-                }
-                ul.gnb3 {
-                    left: 56%;
-                }
-                ul.gnb3 {
-                    left: 65%;
-                }
+            }
+            ul.gnb0 {
+            }
+            ul.gnb1 {
+            }
+            ul.gnb2 {
+            }
+            ul.gnb3 {
+                left: 50%;
+            }
+            ul.gnb4 {
+                left: 55%;
             }
         }
+    }
+    .dep2-bg {
+        background: rgb(39, 39, 39);
+        height: 50px;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        display: none;
+        z-index: 9;
     }
 }
 
@@ -323,7 +332,7 @@ html { font-size: 62.5%; }
                     font-weight: 900;
                     font-size: 30px;
                     letter-spacing: -0.3px;
-                    color: #669900;
+                    color: $green;
                 }
             }
         }
@@ -362,7 +371,7 @@ html { font-size: 62.5%; }
                 margin-top: 12px; 
             }
             em.nh {
-                color: #598527;
+                color: $green;
                 margin-top: 12px; 
             }
             em.account {

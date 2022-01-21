@@ -21,6 +21,5 @@ jQuery(document).ready(function() {
       $('.main-slide .swiper-button-next').css('right',10+ w_change + 'px');
       $('.main-slide .swiper-button-prev').css('left',10+ w_change + 'px');
     }
-
-
-});
+  });
+}); //지우지마
