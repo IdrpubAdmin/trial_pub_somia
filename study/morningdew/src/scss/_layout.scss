@@ -241,8 +241,10 @@ html { font-size: 62.5%; }
                     margin-right: 34px;
                     color: #d7d7d7;
                     font-size: 14px;
-                    &:hover {
-                        color: #fff200;
+                    a {
+                        &:hover {
+                            color: #fff200;
+                        }
                     }
                 }
             }
