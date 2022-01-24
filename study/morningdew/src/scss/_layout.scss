@@ -325,18 +325,16 @@ html { font-size: 62.5%; }
             margin-top: 10px;
             span {
                 display: inline-block;
-                &:nth-child(1) {
-                    font-weight: 700;
-                    color: #898989;
-                    letter-spacing: -0.35px;
-                    font-size: 14px;
-                }
-                &:nth-child(2) {
-                    font-weight: 900;
-                    font-size: 30px;
-                    letter-spacing: -0.3px;
-                    color: $green;
-                }
+                font-weight: 700;
+                color: #898989;
+                letter-spacing: -0.35px;
+                font-size: 14px;
+            }
+            a {
+                font-weight: 900;
+                font-size: 30px;
+                letter-spacing: -0.3px;
+                color: $green;
             }
         }
         .time {
@@ -392,7 +390,7 @@ html { font-size: 62.5%; }
         .faq-list {
             li {
                 font-size: 12px;
-                line-height: 25px;
+                line-height: 28px;
                 letter-spacing: -0.3px;
                 color: #898989;
                 &:first-child {

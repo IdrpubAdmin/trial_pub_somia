@@ -4,6 +4,10 @@
     .main-slide .bg .bg-left, .main-slide .bg .bg-right { display: none; }
 }
 
+@media screen and (max-width: 1540px) {
+    .guid ul li.guid-list { height: 180px; }
+}
+
 @media screen and (max-width: 1300px) {
     body {min-width: 320px;}
 } // pc 기본 지우지마
