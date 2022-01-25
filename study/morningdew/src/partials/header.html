@@ -2,70 +2,117 @@
 
     <div class="header">
         <!-- popup -->
-        <div class="popup">
+        <div id="divpop1" class="popup divpop">
             <img src="img/pop/popup.jpg" alt="모닝듀에서는 유통마진 없이 온라인에서만 판매합니다 상단 팝업 광고">
             <div class="btn-pop-wrap container">
                 <ul class="clear">
                     <li>
-                        <input type="checkbox" name="chkbox" value="checkbox">
+                        <input type="checkbox" name="chkbox" id="doNotOpen" value="Y">
                     </li>
                     <li>
                         <span>오늘그만보기</span>
                     </li>
                     <li>
-                        <a href="javascript:closePop();" alt="닫기"><i class="xi-close"></i></a>
+                        <a href="#none" alt="닫기" class="pop-close" onclick="javascript:closeWin(1);"><i class="xi-close"></i></a>
                     </li>
                 </ul>
             </div>
         </div>
         <!-- //popup -->
 
+
+<script>
+    function setCookie( name, value, expiredays ) {
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    document.cookie = name + '=' + escape( value ) + '; path=/; expires=' + todayDate.toGMTString() + ';'
+    }
+
+    //쿠키 불러오기
+    function getCookie(name) 
+    { 
+        var obj = name + "="; 
+        var x = 0; 
+        while ( x <= document.cookie.length ) 
+        { 
+            var y = (x+obj.length); 
+            if ( document.cookie.substring( x, y ) == obj ) 
+            { 
+                if ((endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
+                    endOfCookie = document.cookie.length;
+                return unescape( document.cookie.substring( y, endOfCookie ) ); 
+            } 
+            x = document.cookie.indexOf( " ", x ) + 1; 
+            
+            if ( x == 0 ) break; 
+        } 
+        return ""; 
+    }
+
+    //닫기 버튼 클릭시
+    function closeWin(key)
+    {
+        if($("#doNotOpen").prop("checked"))
+        {
+            setCookie('divpop'+key, 'Y' , 1 );
+        }
+        $("#divpop"+key+"").hide();
+    }
+  
+    $(function(){    
+        if(getCookie("divpop1") !="Y"){
+            $("#divpop1").show();
+        }
+    });
+</script>
+
+
         <!-- header-info -->
         <div class="header-wrap">
             <div class="header-info container">
-                <div class="header-top-util clear">
-                    <div class="header-top-util-left clear">
+                <div class="header-top clear">
+                    <div class="header-top-short-menu clear">
                         <div class="search">
                             <input type="text" class="search-term" placeholder="SEARCH">
                             <button type="submit" class="search-button"></button>
                         </div>
                         <div class="bookmark">
-                            <a href="#">
+                            <a href="#none">
                                 <span><span class="aster">★</span> 즐겨찾기</span>
                             </a>
                         </div>
                         <div class="shortcut">
-                            <a href="#">
+                            <a href="#none">
                                 <span><span class="aster">▤</span> 바로가기</span>
                             </a>
                         </div>
                     </div>
-                    <div class="header-top-util-right">
-                        <a href="#" class="user"><i class="xi-user"></i></a>
+                    <div class="header-top-util">
+                        <a href="#none" class="user"><i class="xi-user"></i></a>
                         <ul>
                             <li class="bold">
-                                <a href="#">로그인</a>
+                                <a href="#none">로그인</a>
                             </li>
                             <li>
-                                <a href="#">회원가입</a>
+                                <a href="#none">회원가입</a>
                             </li>
                             <li>
-                                <a href="#">장바구니</a>
+                                <a href="#none">장바구니</a>
                             </li>
                             <li>
-                                <a href="#">주문내역</a>
+                                <a href="#none">주문내역</a>
                             </li>
                             <li>
-                                <a href="#">마이페이지</a>
+                                <a href="#none">마이페이지</a>
                             </li>
                             <li class="line-not">
-                                <a href="#">고객센터</a>
+                                <a href="#none">고객센터</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="header-middle">
+            <div class="header-main">
                 <div class="container">
                     <div class="header-logo clear">
                         <h1>
@@ -79,19 +126,19 @@
                     <div class="sns">
                         <ul>
                             <li class="on">
-                                <a href="#"><i class="xi-facebook-official"></i></a>
+                                <a href="#none"><i class="xi-facebook-official"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-twitter"></i></a>
+                                <a href="#none"><i class="xi-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-instagram"></i></a>
+                                <a href="#none"><i class="xi-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-blogger"></i></a>
+                                <a href="#none"><i class="xi-blogger"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-kakaostory"></i></a>
+                                <a href="#none"><i class="xi-kakaostory"></i></a>
                             </li>
                         </ul>
                     </div>

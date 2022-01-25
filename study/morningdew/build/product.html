@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>morningdew</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -20,70 +21,117 @@
 
     <div class="header">
         <!-- popup -->
-        <div class="popup">
+        <div id="divpop1" class="popup divpop">
             <img src="img/pop/popup.jpg" alt="모닝듀에서는 유통마진 없이 온라인에서만 판매합니다 상단 팝업 광고">
             <div class="btn-pop-wrap container">
                 <ul class="clear">
                     <li>
-                        <input type="checkbox" name="chkbox" value="checkbox">
+                        <input type="checkbox" name="chkbox" id="doNotOpen" value="Y">
                     </li>
                     <li>
                         <span>오늘그만보기</span>
                     </li>
                     <li>
-                        <a href="javascript:closePop();" alt="닫기"><i class="xi-close"></i></a>
+                        <a href="#none" alt="닫기" class="pop-close" onclick="javascript:closeWin(1);"><i class="xi-close"></i></a>
                     </li>
                 </ul>
             </div>
         </div>
         <!-- //popup -->
 
+
+<script>
+    function setCookie( name, value, expiredays ) {
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    document.cookie = name + '=' + escape( value ) + '; path=/; expires=' + todayDate.toGMTString() + ';'
+    }
+
+    //쿠키 불러오기
+    function getCookie(name) 
+    { 
+        var obj = name + "="; 
+        var x = 0; 
+        while ( x <= document.cookie.length ) 
+        { 
+            var y = (x+obj.length); 
+            if ( document.cookie.substring( x, y ) == obj ) 
+            { 
+                if ((endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
+                    endOfCookie = document.cookie.length;
+                return unescape( document.cookie.substring( y, endOfCookie ) ); 
+            } 
+            x = document.cookie.indexOf( " ", x ) + 1; 
+            
+            if ( x == 0 ) break; 
+        } 
+        return ""; 
+    }
+
+    //닫기 버튼 클릭시
+    function closeWin(key)
+    {
+        if($("#doNotOpen").prop("checked"))
+        {
+            setCookie('divpop'+key, 'Y' , 1 );
+        }
+        $("#divpop"+key+"").hide();
+    }
+  
+    $(function(){    
+        if(getCookie("divpop1") !="Y"){
+            $("#divpop1").show();
+        }
+    });
+</script>
+
+
         <!-- header-info -->
         <div class="header-wrap">
             <div class="header-info container">
-                <div class="header-top-util clear">
-                    <div class="header-top-util-left clear">
+                <div class="header-top clear">
+                    <div class="header-top-short-menu clear">
                         <div class="search">
                             <input type="text" class="search-term" placeholder="SEARCH">
                             <button type="submit" class="search-button"></button>
                         </div>
                         <div class="bookmark">
-                            <a href="#">
+                            <a href="#none">
                                 <span><span class="aster">★</span> 즐겨찾기</span>
                             </a>
                         </div>
                         <div class="shortcut">
-                            <a href="#">
+                            <a href="#none">
                                 <span><span class="aster">▤</span> 바로가기</span>
                             </a>
                         </div>
                     </div>
-                    <div class="header-top-util-right">
-                        <a href="#" class="user"><i class="xi-user"></i></a>
+                    <div class="header-top-util">
+                        <a href="#none" class="user"><i class="xi-user"></i></a>
                         <ul>
                             <li class="bold">
-                                <a href="#">로그인</a>
+                                <a href="#none">로그인</a>
                             </li>
                             <li>
-                                <a href="#">회원가입</a>
+                                <a href="#none">회원가입</a>
                             </li>
                             <li>
-                                <a href="#">장바구니</a>
+                                <a href="#none">장바구니</a>
                             </li>
                             <li>
-                                <a href="#">주문내역</a>
+                                <a href="#none">주문내역</a>
                             </li>
                             <li>
-                                <a href="#">마이페이지</a>
+                                <a href="#none">마이페이지</a>
                             </li>
                             <li class="line-not">
-                                <a href="#">고객센터</a>
+                                <a href="#none">고객센터</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="header-middle">
+            <div class="header-main">
                 <div class="container">
                     <div class="header-logo clear">
                         <h1>
@@ -97,19 +145,19 @@
                     <div class="sns">
                         <ul>
                             <li class="on">
-                                <a href="#"><i class="xi-facebook-official"></i></a>
+                                <a href="#none"><i class="xi-facebook-official"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-twitter"></i></a>
+                                <a href="#none"><i class="xi-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-instagram"></i></a>
+                                <a href="#none"><i class="xi-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-blogger"></i></a>
+                                <a href="#none"><i class="xi-blogger"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-kakaostory"></i></a>
+                                <a href="#none"><i class="xi-kakaostory"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -130,89 +178,57 @@
                 <li class="menuhover">
                     <a class="hover-green" href="#">매일매일 이벤트</a>
                     <ul class="dropdown gnb0" >
-                        <li><a href="#">공지사항0</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">상품후기</a></li>
-                        <li><a href="#">QNA</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#none">공지사항0</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="menuhover">
-                    <a href="#">천연펄프 화장지</a>
+                    <a href="#none">천연펄프 화장지</a>
                     <ul class="dropdown gnb1" >
-                        <li><a href="#">공지사항1</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">상품후기</a></li>
-                        <li><a href="#">QNA</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#none">공지사항1</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="menuhover">
-                    <a href="#">디스펜서·케이스</a>
+                    <a href="#none">디스펜서·케이스</a>
                     <ul class="dropdown gnb2" >
-                        <li><a href="#">공지사항2</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">상품후기</a></li>
-                        <li><a href="#">QNA</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#none">공지사항2</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="menuhover">
-                    <a href="#">친환경해충포획퇴치기</a>
+                    <a href="#none">친환경해충포획퇴치기</a>
                     <ul class="dropdown gnb3" >
-                        <li><a href="#">공지사항3</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">상품후기</a></li>
-                        <li><a href="#">QNA</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#none">공지사항3</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="menuhover">
-                    <a href="#">고객센터</a>
+                    <a href="#none">고객센터</a>
                     <ul class="dropdown gnb4" >
-                        <li><a href="#">공지사항4</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">상품후기</a></li>
-                        <li><a href="#">QNA</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#none">공지사항4</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="dep2-bg">
             </div>
         </div>
-
-        <script>
-            // 클래스는 동시에 돌아가게 하려면 for문이 필요. id의 경우 하나만 돌아감. getel~ 말고 querySelectorAll
-            const menuhover = document.querySelectorAll(".menuhover");
-            const dropdown = document.querySelectorAll(".dropdown");
-            const bggray = document.querySelectorAll(".dep2-bg");
-
-            //bggray는 하나니까 i 필요없음
-            //js에서 직접적으로 style을 변경하는 것이 아닌 classList.add, classList.remove 를 사용하는 방법 사용
-            function test(i){
-                menuhover[i].addEventListener("mouseover", () => (
-                        (dropdown[i].style.display = "block"),
-                        (bggray[0].style.display = "block")
-                    )
-                );
-
-                menuhover[i].addEventListener("mouseout", () => (
-                        (dropdown[i].style.display = "none"),
-                        (bggray[i].style.display = "none")
-                    )
-                );
-            }
-
-            // for문 안에 이벤트 등록을 해줘야만함
-            // 초기화; 조건식; 증감식 -> 조건식이 true일 때 실행될 명령 
-            // 0으로 초기화, i가 5보다 작으면 명령반복 
-            // 위에서 선언 후 밑에서 for 실행, for (){} 문장 지키기
-            for (var i = 0; i <5; i++) {
-                test(i); 
-            }
-            
-        </script>
     </nav>
     
 <!-- end gnb.html-->
@@ -239,9 +255,9 @@
                     <img src="img/content/product_list.png" alt="화장지 디테일 이미지">
                 </div>
                 <div class="img-list-btn">
-                    <a href="#" class="btn prev"><i class="xi-angle-left"></i>이전상품</a>
-                    <a href="#" class="btn extension"><i class="xi-search"></i>확대보기</a>
-                    <a href="#" class="btn next">다음상품<i class="xi-angle-right"></i></a>
+                    <a href="#none" class="btn prev"><i class="xi-angle-left"></i>이전상품</a>
+                    <a href="#none" class="btn extension"><i class="xi-search"></i>확대보기</a>
+                    <a href="#none" class="btn next">다음상품<i class="xi-angle-right"></i></a>
                 </div>
             </div>
             <div class="product-option">
@@ -320,12 +336,12 @@
                 </div>
                 <div class="product-btn">
                     <div class="btn-total">
-                        <a href="#">총 상품금액(수량):<span>78,000</span>(2개)</a>
+                        <a href="#none">총 상품금액(수량):<span>78,000</span>(2개)</a>
                     </div>
                     <div class="btn-other">
-                        <a href="#" class="on">바로 구매하기</a>
-                        <a href="#">장바구니 담기</a>
-                        <a href="#">관심상품 등록</a>
+                        <a href="#none" class="on">바로 구매하기</a>
+                        <a href="#none">장바구니 담기</a>
+                        <a href="#none">관심상품 등록</a>
                     </div>
                 </div>
             </div>
@@ -333,7 +349,7 @@
         <!-- //product-order -->
     
         <div class="detail-view">
-            <div class="detail-view-text">
+            <div class="detail-view-text product-title-bg">
                 <em>상품상세</em>
                 <span>Detail View</span>
             </div>
@@ -344,7 +360,7 @@
 
         <!-- delivery -->
         <div class="delivery">
-            <div class="delivery-text">
+            <div class="delivery-text product-title-bg">
                 <em>배송안내</em>
                 <span>Delivery</span>
             </div>
@@ -362,7 +378,7 @@
 
         <!-- return -->
         <div class="return">
-            <div class="return-text">
+            <div class="return-text product-title-bg">
                 <em>교환 및 반품정보</em>
                 <span>Return</span>
             </div>
@@ -397,7 +413,7 @@
         <!-- product-review -->
         <div class="product-review clear">
             <h2 class="blind">게시판</h2>
-            <div class="review-text">
+            <div class="review-text product-title-bg">
                 <em>사용후기</em>
                 <span>Review</span>
             </div>
@@ -415,7 +431,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="#">적극 추천합니다.</a></td>
+                                <td><a href="#none">적극 추천합니다.</a></td>
                                 <td>손선**</td>
                                 <td>2016-12-31</td>
                                 <td>
@@ -427,7 +443,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><a href="#">적극 추천합니다.</a></td>
+                                <td><a href="#none">적극 추천합니다.</a></td>
                                 <td>손선**</td>
                                 <td>2016-12-31</td>
                                 <td>
@@ -443,15 +459,15 @@
                 </div>
             </section>
             <div class="btn-wrap">
-                <a href="#">상품후기쓰기</a>
-                <a href="#">모두보기</a>
+                <a href="#none">상품후기쓰기</a>
+                <a href="#none">모두보기</a>
             </div>
         </div>
         <!-- //producy-review -->
 
         <!-- qna -->
         <div class="qna">
-            <div class="qna-text">
+            <div class="qna-text product-title-bg">
                 <em>상품문의</em>
                 <span>Q&A</span>
             </div>
@@ -459,8 +475,8 @@
                 <span>게시물이 없습니다.</span>
             </div>
             <div class="btn-wrap">
-                <a href="#">상품문의하기</a>
-                <a href="#">모두보기</a>
+                <a href="#none">상품문의하기</a>
+                <a href="#none">모두보기</a>
             </div>
         </div>
         <!-- //qna -->
@@ -487,7 +503,7 @@
                             <a href='tel:010-0000-0000'>070.4245.0511</a>
                         </div>
                         <div class="time">
-                            <p>상담시간 : 09:00 ~ 17:00&nbsp;&nbsp;&nbsp;&nbsp;점심시간 : 12:30 ~ 13:30<br>토, 일, 공휴일은 휴무입니다.</p>
+                            <p>상담시간 : 09:00 ~ 17:00 <span>점심시간 : 12:30 ~ 13:30</span><br>토, 일, 공휴일은 휴무입니다.</p>
                         </div>
                     </div>
                 </li>
@@ -506,15 +522,15 @@
                         <h3><span class="underline">자주</span> 묻는 질문<span class="en-name"> FAQ</span></h3>
                         <ul class="faq-list">
                             <li>
-                                <a href="#">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <a href="#none">· 세금계산서를 발급 받고 싶습니다.</a>
                                 <span class="time">2016-12-31</span>
                             </li>
                             <li>
-                                <a href="#">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <a href="#none">· 세금계산서를 발급 받고 싶습니다.</a>
                                 <span class="time">2016-12-31</span>
                             </li>
                             <li>
-                                <a href="#">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <a href="#none">· 세금계산서를 발급 받고 싶습니다.</a>
                                 <span class="time">2016-12-31</span>
                             </li>
                         </ul>
@@ -527,11 +543,11 @@
         <!-- footer-short -->
         <div class="footer-short">
             <ul class="container">
-                <li><a href="#">홈 </a></li>
-                <li><a href="#">회사소개 </a></li>
-                <li><a href="#">이용약관 </a></li>
-                <li class="bold"><a href="#">개인정보취급방침 </a></li>
-                <li><a href="#">이용안내 </a></li>
+                <li><a href="#none">홈 </a></li>
+                <li><a href="#none">회사소개 </a></li>
+                <li><a href="#none">이용약관 </a></li>
+                <li class="bold"><a href="#none">개인정보취급방침 </a></li>
+                <li><a href="#none">이용안내 </a></li>
             </ul>
         </div>
         <!-- //footer-short -->

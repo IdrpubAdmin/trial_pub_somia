@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>morningdew</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -21,70 +22,117 @@
 
     <div class="header">
         <!-- popup -->
-        <div class="popup">
+        <div id="divpop1" class="popup divpop">
             <img src="img/pop/popup.jpg" alt="모닝듀에서는 유통마진 없이 온라인에서만 판매합니다 상단 팝업 광고">
             <div class="btn-pop-wrap container">
                 <ul class="clear">
                     <li>
-                        <input type="checkbox" name="chkbox" value="checkbox">
+                        <input type="checkbox" name="chkbox" id="doNotOpen" value="Y">
                     </li>
                     <li>
                         <span>오늘그만보기</span>
                     </li>
                     <li>
-                        <a href="javascript:closePop();" alt="닫기"><i class="xi-close"></i></a>
+                        <a href="#none" alt="닫기" class="pop-close" onclick="javascript:closeWin(1);"><i class="xi-close"></i></a>
                     </li>
                 </ul>
             </div>
         </div>
         <!-- //popup -->
 
+
+<script>
+    function setCookie( name, value, expiredays ) {
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    document.cookie = name + '=' + escape( value ) + '; path=/; expires=' + todayDate.toGMTString() + ';'
+    }
+
+    //쿠키 불러오기
+    function getCookie(name) 
+    { 
+        var obj = name + "="; 
+        var x = 0; 
+        while ( x <= document.cookie.length ) 
+        { 
+            var y = (x+obj.length); 
+            if ( document.cookie.substring( x, y ) == obj ) 
+            { 
+                if ((endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
+                    endOfCookie = document.cookie.length;
+                return unescape( document.cookie.substring( y, endOfCookie ) ); 
+            } 
+            x = document.cookie.indexOf( " ", x ) + 1; 
+            
+            if ( x == 0 ) break; 
+        } 
+        return ""; 
+    }
+
+    //닫기 버튼 클릭시
+    function closeWin(key)
+    {
+        if($("#doNotOpen").prop("checked"))
+        {
+            setCookie('divpop'+key, 'Y' , 1 );
+        }
+        $("#divpop"+key+"").hide();
+    }
+  
+    $(function(){    
+        if(getCookie("divpop1") !="Y"){
+            $("#divpop1").show();
+        }
+    });
+</script>
+
+
         <!-- header-info -->
         <div class="header-wrap">
             <div class="header-info container">
-                <div class="header-top-util clear">
-                    <div class="header-top-util-left clear">
+                <div class="header-top clear">
+                    <div class="header-top-short-menu clear">
                         <div class="search">
                             <input type="text" class="search-term" placeholder="SEARCH">
                             <button type="submit" class="search-button"></button>
                         </div>
                         <div class="bookmark">
-                            <a href="#">
+                            <a href="#none">
                                 <span><span class="aster">★</span> 즐겨찾기</span>
                             </a>
                         </div>
                         <div class="shortcut">
-                            <a href="#">
+                            <a href="#none">
                                 <span><span class="aster">▤</span> 바로가기</span>
                             </a>
                         </div>
                     </div>
-                    <div class="header-top-util-right">
-                        <a href="#" class="user"><i class="xi-user"></i></a>
+                    <div class="header-top-util">
+                        <a href="#none" class="user"><i class="xi-user"></i></a>
                         <ul>
                             <li class="bold">
-                                <a href="#">로그인</a>
+                                <a href="#none">로그인</a>
                             </li>
                             <li>
-                                <a href="#">회원가입</a>
+                                <a href="#none">회원가입</a>
                             </li>
                             <li>
-                                <a href="#">장바구니</a>
+                                <a href="#none">장바구니</a>
                             </li>
                             <li>
-                                <a href="#">주문내역</a>
+                                <a href="#none">주문내역</a>
                             </li>
                             <li>
-                                <a href="#">마이페이지</a>
+                                <a href="#none">마이페이지</a>
                             </li>
                             <li class="line-not">
-                                <a href="#">고객센터</a>
+                                <a href="#none">고객센터</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="header-middle">
+            <div class="header-main">
                 <div class="container">
                     <div class="header-logo clear">
                         <h1>
@@ -98,19 +146,19 @@
                     <div class="sns">
                         <ul>
                             <li class="on">
-                                <a href="#"><i class="xi-facebook-official"></i></a>
+                                <a href="#none"><i class="xi-facebook-official"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-twitter"></i></a>
+                                <a href="#none"><i class="xi-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-instagram"></i></a>
+                                <a href="#none"><i class="xi-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-blogger"></i></a>
+                                <a href="#none"><i class="xi-blogger"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="xi-kakaostory"></i></a>
+                                <a href="#none"><i class="xi-kakaostory"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -131,89 +179,57 @@
                 <li class="menuhover">
                     <a class="hover-green" href="#">매일매일 이벤트</a>
                     <ul class="dropdown gnb0" >
-                        <li><a href="#">공지사항0</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">상품후기</a></li>
-                        <li><a href="#">QNA</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#none">공지사항0</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="menuhover">
-                    <a href="#">천연펄프 화장지</a>
+                    <a href="#none">천연펄프 화장지</a>
                     <ul class="dropdown gnb1" >
-                        <li><a href="#">공지사항1</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">상품후기</a></li>
-                        <li><a href="#">QNA</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#none">공지사항1</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="menuhover">
-                    <a href="#">디스펜서·케이스</a>
+                    <a href="#none">디스펜서·케이스</a>
                     <ul class="dropdown gnb2" >
-                        <li><a href="#">공지사항2</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">상품후기</a></li>
-                        <li><a href="#">QNA</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#none">공지사항2</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="menuhover">
-                    <a href="#">친환경해충포획퇴치기</a>
+                    <a href="#none">친환경해충포획퇴치기</a>
                     <ul class="dropdown gnb3" >
-                        <li><a href="#">공지사항3</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">상품후기</a></li>
-                        <li><a href="#">QNA</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#none">공지사항3</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="menuhover">
-                    <a href="#">고객센터</a>
+                    <a href="#none">고객센터</a>
                     <ul class="dropdown gnb4" >
-                        <li><a href="#">공지사항4</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">상품후기</a></li>
-                        <li><a href="#">QNA</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#none">공지사항4</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="dep2-bg">
             </div>
         </div>
-
-        <script>
-            // 클래스는 동시에 돌아가게 하려면 for문이 필요. id의 경우 하나만 돌아감. getel~ 말고 querySelectorAll
-            const menuhover = document.querySelectorAll(".menuhover");
-            const dropdown = document.querySelectorAll(".dropdown");
-            const bggray = document.querySelectorAll(".dep2-bg");
-
-            //bggray는 하나니까 i 필요없음
-            //js에서 직접적으로 style을 변경하는 것이 아닌 classList.add, classList.remove 를 사용하는 방법 사용
-            function test(i){
-                menuhover[i].addEventListener("mouseover", () => (
-                        (dropdown[i].style.display = "block"),
-                        (bggray[0].style.display = "block")
-                    )
-                );
-
-                menuhover[i].addEventListener("mouseout", () => (
-                        (dropdown[i].style.display = "none"),
-                        (bggray[i].style.display = "none")
-                    )
-                );
-            }
-
-            // for문 안에 이벤트 등록을 해줘야만함
-            // 초기화; 조건식; 증감식 -> 조건식이 true일 때 실행될 명령 
-            // 0으로 초기화, i가 5보다 작으면 명령반복 
-            // 위에서 선언 후 밑에서 for 실행, for (){} 문장 지키기
-            for (var i = 0; i <5; i++) {
-                test(i); 
-            }
-            
-        </script>
     </nav>
     
 <!-- end gnb.html-->
@@ -251,70 +267,70 @@
                         <tbody>
                             <tr>
                                 <td>123</td>
-                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td><a href="#none">회원가입 후 샘플을 신청해보세요.</a></td>
                                 <td>모닝듀</td>
                                 <td>2016-12-31</td>
                                 <td>21</td>
                             </tr>
                             <tr>
                                 <td>122</td>
-                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td><a href="#none">회원가입 후 샘플을 신청해보세요.</a></td>
                                 <td>모닝듀</td>
                                 <td>2016-12-31</td>
                                 <td>32</td>
                             </tr>
                             <tr>
                                 <td>121</td>
-                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td><a href="#none">회원가입 후 샘플을 신청해보세요.</a></td>
                                 <td>모닝듀</td>
                                 <td>2016-12-31</td>
                                 <td>67</td>
                             </tr>
                             <tr>
                                 <td>120</td>
-                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td><a href="#none">회원가입 후 샘플을 신청해보세요.</a></td>
                                 <td>모닝듀</td>
                                 <td>2016-12-31</td>
                                 <td>96</td>
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td><a href="#none">회원가입 후 샘플을 신청해보세요.</a></td>
                                 <td>모닝듀</td>
                                 <td>2016-12-31</td>
                                 <td>123</td>
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td><a href="#none">회원가입 후 샘플을 신청해보세요.</a></td>
                                 <td>모닝듀</td>
                                 <td>2016-12-31</td>
                                 <td>123</td>
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td><a href="#none">회원가입 후 샘플을 신청해보세요.</a></td>
                                 <td>모닝듀</td>
                                 <td>2016-12-31</td>
                                 <td>123</td>
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td><a href="#none">회원가입 후 샘플을 신청해보세요.</a></td>
                                 <td>모닝듀</td>
                                 <td>2016-12-31</td>
                                 <td>123</td>
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td><a href="#none">회원가입 후 샘플을 신청해보세요.</a></td>
                                 <td>모닝듀</td>
                                 <td>2016-12-31</td>
                                 <td>123</td>
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td><a href="#">회원가입 후 샘플을 신청해보세요.</a></td>
+                                <td><a href="#none">회원가입 후 샘플을 신청해보세요.</a></td>
                                 <td>모닝듀</td>
                                 <td>2016-12-31</td>
                                 <td>123</td>
@@ -326,15 +342,15 @@
                 <div class="board-post-num">
                     <div class="num-list">
                         <a href="" class="list-btn"><i class="xi-angle-left"></i></a>
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
+                        <a href="#none">1</a>
+                        <a href="#none">2</a>
+                        <a href="#none">3</a>
+                        <a href="#none">4</a>
+                        <a href="#none">5</a>
                         <a href="" class="list-btn"><i class="xi-angle-right"></i></a>
                     </div>
                     <div class="btn-write">
-                        <a href="#">WRITE</a>
+                        <a href="#none">WRITE</a>
                     </div>   
                 </div>
                 
@@ -362,7 +378,7 @@
                             <a href='tel:010-0000-0000'>070.4245.0511</a>
                         </div>
                         <div class="time">
-                            <p>상담시간 : 09:00 ~ 17:00&nbsp;&nbsp;&nbsp;&nbsp;점심시간 : 12:30 ~ 13:30<br>토, 일, 공휴일은 휴무입니다.</p>
+                            <p>상담시간 : 09:00 ~ 17:00 <span>점심시간 : 12:30 ~ 13:30</span><br>토, 일, 공휴일은 휴무입니다.</p>
                         </div>
                     </div>
                 </li>
@@ -381,15 +397,15 @@
                         <h3><span class="underline">자주</span> 묻는 질문<span class="en-name"> FAQ</span></h3>
                         <ul class="faq-list">
                             <li>
-                                <a href="#">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <a href="#none">· 세금계산서를 발급 받고 싶습니다.</a>
                                 <span class="time">2016-12-31</span>
                             </li>
                             <li>
-                                <a href="#">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <a href="#none">· 세금계산서를 발급 받고 싶습니다.</a>
                                 <span class="time">2016-12-31</span>
                             </li>
                             <li>
-                                <a href="#">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <a href="#none">· 세금계산서를 발급 받고 싶습니다.</a>
                                 <span class="time">2016-12-31</span>
                             </li>
                         </ul>
@@ -402,11 +418,11 @@
         <!-- footer-short -->
         <div class="footer-short">
             <ul class="container">
-                <li><a href="#">홈 </a></li>
-                <li><a href="#">회사소개 </a></li>
-                <li><a href="#">이용약관 </a></li>
-                <li class="bold"><a href="#">개인정보취급방침 </a></li>
-                <li><a href="#">이용안내 </a></li>
+                <li><a href="#none">홈 </a></li>
+                <li><a href="#none">회사소개 </a></li>
+                <li><a href="#none">이용약관 </a></li>
+                <li class="bold"><a href="#none">개인정보취급방침 </a></li>
+                <li><a href="#none">이용안내 </a></li>
             </ul>
         </div>
         <!-- //footer-short -->

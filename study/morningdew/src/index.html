@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width==device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>morningdew</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -14,7 +15,6 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-
 <div class="wrapper">
 <!-- @@include partials/header.html -->
 <!-- @@include partials/gnb.html -->
@@ -36,12 +36,15 @@
                     <img src="img/banner/banner01.jpg" alt="유통마진제로 모닝듀 직거래">
                 </div>
             </div>
-            <div class="swiper-button-prev btn"></div>        
-            <div class="swiper-button-next btn"></div>
+            
+            <div class="swiper-btn-wrap container">
+                <div class="swiper-button-prev btn"></div>        
+                <div class="swiper-button-next btn container"></div>
+            </div>
             <div class="swiper-pagination"></div>  
             <div class="bg">
-                <div class="bg-left"></div>
-                <div class="bg-right"></div>
+                <div class="swiper-bg-prev"></div>
+                <div class="swiper-bg-next"></div>
             </div> 
         </div>
         <!-- //main-slide -->
@@ -49,28 +52,28 @@
         <!-- event -->
         <div class="event container">
             <div class="event-text">
-                <h2>EVENT<span> 상품</span></h2>
-                <a href="#"><i class="xi-plus-min"></i>more</a>
+                <h2>EVENT<span>상품</span></h2>
+                <a href="#none"><i class="xi-plus-min"></i>more</a>
             </div>
             <div class="event-item-list">
                 <ul>
                     <li>
-                        <a href="#"><img src="img/content/event01.jpg" alt="우리집 복땡이 화장지"><span class="btn-detail">자세히보기</span></a>
+                        <a href="#none"><img src="img/content/event01.jpg" alt="우리집 복땡이 화장지"><span class="btn-detail">자세히보기</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="img/content/event02.jpg" alt="점보롤 화장지"><span class="btn-detail">자세히보기</span></a>
+                        <a href="#none"><img src="img/content/event02.jpg" alt="점보롤 화장지"><span class="btn-detail">자세히보기</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="img/content/event03.jpg" alt="핸드타올 화장지"><span class="btn-detail">자세히보기</span></a>
+                        <a href="#none"><img src="img/content/event03.jpg" alt="핸드타올 화장지"><span class="btn-detail">자세히보기</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="img/content/event04.jpg" alt="점보롤 화장지"><span class="btn-detail">자세히보기</span></a>
+                        <a href="#none"><img src="img/content/event04.jpg" alt="점보롤 화장지"><span class="btn-detail">자세히보기</span></a>
                     </li>
                     <li class="event-small">
-                        <a href="#"><img src="img/content/event05_sample.jpg" alt="컬러케이스 + 천연펄프 무료체험"></a>
+                        <a href="#none"><img src="img/content/event05_sample.jpg" alt="컬러케이스 + 천연펄프 무료체험"></a>
                     </li>
                     <li class="event-small">
-                        <a href="#"><img src="img/content/event06_service.jpg" alt="모닝듀 사후관리 서비스. 컬러케이스 무상교체"></a>
+                        <a href="#none"><img src="img/content/event06_service.jpg" alt="모닝듀 사후관리 서비스. 컬러케이스 무상교체"></a>
                     </li>
                 </ul>
             </div>
@@ -82,8 +85,8 @@
         <!-- best -->
         <div class="best container">
             <div class="best-text">
-                <h2>BEST<span> 상품</span></h2>
-                <a href="#"><i class="xi-plus-min"></i>more</a>
+                <h2>BEST<span>상품</span></h2>
+                <a href="#none"><i class="xi-plus-min"></i>more</a>
             </div>
             <div class="best-item-list">
                 <ul>
@@ -228,19 +231,19 @@
             </div>
         <!-- //best -->
         </div>
-
+        
         <!-- review -->
         <div class="review">
             <div class="review-wrap container">
                 <div class="best-text">
-                    <h2><span class="underline">REVIEW</span><span> 상품후기</span></h2>
-                    <a href="#"><i class="xi-plus-min"></i>more</a>
+                    <h2><span class="underline">REVIEW</span><span>상품후기</span></h2>
+                    <a href="#none"><i class="xi-plus-min"></i>more</a>
                 </div>
                 <div class="underline"></div>
                 <div class="swiper review-slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="#">
+                            <a href="#none">
                                 <div class="review-hover-effect">
                                     <div class="img-wrap">
                                             <img src="img/banner/banner02_review_slide01.png" alt="화장지">
@@ -252,7 +255,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#">
+                            <a href="#none">
                                 <div class="review-hover-effect">
                                     <div class="img-wrap">
                                             <img src="img/banner/banner02_review_slide02.png" alt="화장지">
@@ -264,7 +267,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#">
+                            <a href="#none">
                                 <div class="review-hover-effect">
                                     <div class="img-wrap">
                                             <img src="img/banner/banner02_review_slide03.png" alt="화장지">
@@ -276,7 +279,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#">
+                            <a href="#none">
                                 <div class="review-hover-effect">
                                     <div class="img-wrap">
                                             <img src="img/banner/banner02_review_slide04.png" alt="화장지">
@@ -288,7 +291,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#">
+                            <a href="#none">
                                 <div class="review-hover-effect">
                                     <div class="img-wrap">
                                             <img src="img/banner/banner02_review_slide05.png" alt="화장지">
@@ -316,39 +319,5 @@
 <!-- @@include partials/footer.html -->
 <!-- @@close-->
 
-<script>
-    var swiper = new Swiper('.main-slide', {
-        navigation: {
-        nextEl: ".main-slide .swiper-button-next",
-        prevEl: ".main-slide .swiper-button-prev",
-        },
-        pagination: {
-        el: ".main-slide .swiper-pagination",
-        },
-        autoplay: {
-            delay: 5500,
-            disableOnInteraction: false,
-        },
-        loop: true,
-        loopAdditionalSlides: 1,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-    });
-
-    var swiper2 = new Swiper('.review-slider', {
-        navigation: {
-        nextEl: ".review-slider-btn-wrap .swiper-button-next",
-        prevEl: ".review-slider-btn-wrap .swiper-button-prev",
-        },
-        autoplay: {
-            delay: 5500,
-            disableOnInteraction: false,
-        },
-        slidesPerView: 5,
-        spaceBetween: 36,
-        loop: true,
-    });
-    
-</script>
 </body>
 </html>

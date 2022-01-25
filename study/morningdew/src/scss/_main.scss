@@ -36,7 +36,7 @@
         }
     }
     .bg {
-        .bg-left, .bg-right {
+        .swiper-bg-prev, .swiper-bg-next {
             position: absolute;
             background: rgba(255, 255, 255, 0.5);
             height: 100%;
@@ -44,12 +44,20 @@
             top: 0;
             z-index: 2;
         }
-        .bg-left {
+        .swiper-bg-prev {
             left: -21.6%;
         }
-        .bg-right {
+        .swiper-bg-prev {
             right: -21.63%;
         }
+    }
+}
+
+//main-slide prev, next btn position change 
+.main-slide {
+    .swiper-btn-wrap {
+        position: relative;
+        top: -50%;
     }
 }
 
@@ -70,6 +78,7 @@
             span{
                 font-weight: 400;
                 color: #464646;
+                margin-left: 6px;
             }
         }
         a {
@@ -245,6 +254,7 @@
                 span {
                     color: #464646;
                     font-weight: 700;
+                    margin-left: 6px;
                 }
             }
             a {

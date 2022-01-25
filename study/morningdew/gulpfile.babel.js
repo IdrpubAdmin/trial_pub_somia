@@ -29,6 +29,11 @@ const routes = {
         watch: "src/js/**/*.js",
         src: "src/js/main.js", 
         dest: "build/js"
+    },
+    font: {
+        watch:"src/fonts/*.{ttf,woff2,woff,eot}",
+        src: "src/fonts/*.{ttf,woff2,woff,eot}",
+        dest: "build/fonts"
     }
 };
 
@@ -70,6 +75,11 @@ const js = () =>
         )
         .pipe(gulp.dest(routes.js.dest));
 
+
+const fonts = () =>
+    gulp.src(routes.font.src)
+        .pipe(gulp.dest(routes.font.dest));
+
 const watch = () => {
     gulp.watch(routes.html.watch, html);
     gulp.watch(routes.img.src, img);
@@ -78,7 +88,7 @@ const watch = () => {
 };
 
          
-const prepare = gulp.series([clean, img]); 
+const prepare = gulp.series([clean, img, fonts]); 
 
 const assets = gulp.series([html, styles, js]);
 

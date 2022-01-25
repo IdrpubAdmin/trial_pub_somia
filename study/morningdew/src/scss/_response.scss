@@ -1,7 +1,7 @@
 // index page
 
 @media screen and (max-width: 2549px) {
-    .main-slide .bg .bg-left, .main-slide .bg .bg-right { display: none; }
+    .main-slide .bg .swiper-bg-prev, .main-slide .bg .swiper-bg-next { display: none; }
 }
 
 @media screen and (max-width: 1540px) {
@@ -51,10 +51,10 @@
 } //지우지마
 
 @media screen and (max-width: 861px) {
-.header-middle .container .header-logo .text-area { display: none; }
-.header-info .header-top-util .header-top-util-left .bookmark, .header-info .header-top-util .header-top-util-left .shortcut { display: none; }
-.header-info .header-top-util .header-top-util-right ul { display: none; }
-.header-info .header-top-util .header-top-util-right .user { display: block; }
+.header-main .container .header-logo .text-area { display: none; }
+.header-info .header-top .header-top-short-menu .bookmark, .header-info .header-top .header-top-short-menu .shortcut { display: none; }
+.header-info .header-top .header-top-util ul { display: none; }
+.header-info .header-top .header-top-util .user { display: block; }
 .gnb ul.dept01>li ul.dropdown { display: none; }
 .best .best-item-list ul li { width: calc((100% - 60px)/3); margin-right: 30px; }
 .best .best-item-list ul li:nth-child(3n+0) { margin-right: 0px; }
