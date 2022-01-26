@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/ispin/dist/ispin.css">
     
     <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="https://unpkg.com/ispin"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
 <div class="wrapper">
 <!-- start header.html-->
+<!-- header -->
 <header>
 
     <div class="header">
@@ -169,9 +172,11 @@
 
 
 </header>
+<!-- //header -->
 <!-- end header.html-->
 <!-- start gnb.html-->
-    <nav class="gnb clear">
+<!-- gnb -->
+ <nav class="gnb clear">
         <div class="gnb-line">
             <h2 class="blind">메뉴</h2>
             <ul class="dept01 container">
@@ -229,11 +234,14 @@
             <div class="dep2-bg">
             </div>
         </div>
-    </nav>
+</nav>
+<!-- //gnb -->
     
 <!-- end gnb.html-->
 
 <!-- @@block content -->
+
+<!-- main -->
 <main>
     
     <!-- product -->
@@ -294,7 +302,7 @@
                     <span>케이스색상</span>
                     <div class="select-box">
                         <select>
-                            <option>Value 1</option> 
+                            <option>- [필수] 옵션을 선택해 주세요 -</option> 
                             <option>Value 2</option>
                             <option>Value 3</option>
                         </select>
@@ -302,7 +310,10 @@
                 </div>
                 <div class="product-notice">
                     <em>최소주문수량 1개 이상</em>
-                    <img src="img/icon/attention.png" alt="경고"><strong>위 옵션 선택박스를 선택하시면, 아래에 상품이 추가됩니다.</strong>
+                    <div class="product-notice-option-alert">
+                         <em class="attention"></em>
+                         <strong>위 옵션 선택박스를 선택하시면, 아래에 상품이 추가됩니다.</strong>
+                    </div>    
                 </div>
                 <div class="product-select">
                     <div class="product-first">
@@ -310,11 +321,14 @@
                             <span>모닝듀 점보롤 화장지<span class="color">색상 : 바닐라옐로우</span></span>
                         </div>
                         <div class="select2-quantity">
-                            <input type="text" name="p_num1" id="p_num1" size="2" maxlength="4" class="p_num" value="2">
-                            <span><i class="xi-caret-up-min"></i></span>
-                            <span><i class="xi-caret-down-min"></i></span>
-                            <span class="del"><i class="xi-close-min"></i></span>
+                            <input type="text" class="form-control" value="42">
+                            <div class="select-quantity-updown">
+                                <button type="button" class="btn up"><i class="xi-caret-up-min"></i></button>
+                                <button type="button" class="btn down"><i class="xi-caret-down-min"></i></button>
+                            </div>
+                            <a href="#none" class="del"><i class="xi-close-min"></i></a>
                         </div>
+
                         <div class="select3-price">
                             <em>39,000 원</em>
                         </div>
@@ -324,11 +338,14 @@
                             <span>모닝듀 점보롤 화장지<span class="color">색상 : 바닐라옐로우</span></span>
                         </div>
                         <div class="select2-quantity">
-                            <input type="text" name="p_num1" id="p_num1" size="2" maxlength="4" class="p_num" value="2">
-                            <span><i class="xi-caret-up-min"></i></span>
-                            <span><i class="xi-caret-down-min"></i></span>
-                            <span class="del"><i class="xi-close-min"></i></span>
+                            <input type="text" class="form-control" value="42">
+                            <div class="select-quantity-updown">
+                                <button type="button" class="up"><i class="xi-caret-up-min"></i></button>
+                                <button type="button" class="down"><i class="xi-caret-down-min"></i></button>
+                            </div>
+                            <a href="#none" class="del"><i class="xi-close-min"></i></a>
                         </div>
+
                         <div class="select3-price">
                             <em>39,000 원</em>
                         </div>
@@ -417,47 +434,47 @@
                 <em>사용후기</em>
                 <span>Review</span>
             </div>
-            <section class="board-wrap">
+            <div class="board-wrap">
                 <div class="board-row">
-                    <table class="board-table">
-                        <caption class="blind">문의사항 게시판</caption>
-                        <thead>
-                            <tr>
-                                <th>제 목</th>
-                                <th>작성자</th>
-                                <th>작성일</th>
-                                <th>별점</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="#none">적극 추천합니다.</a></td>
-                                <td>손선**</td>
-                                <td>2016-12-31</td>
-                                <td>
-                                    <img src="img/icon/star.png" alt="별점">
-                                    <img src="img/icon/star.png" alt="별점">
-                                    <img src="img/icon/star.png" alt="별점">
-                                    <img src="img/icon/star.png" alt="별점">
-                                    <img src="img/icon/star.png" alt="별점">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#none">적극 추천합니다.</a></td>
-                                <td>손선**</td>
-                                <td>2016-12-31</td>
-                                <td>
-                                    <img src="img/icon/star.png" alt="별점">
-                                    <img src="img/icon/star.png" alt="별점">
-                                    <img src="img/icon/star.png" alt="별점">
-                                    <img src="img/icon/star.png" alt="별점">
-                                    <img src="img/icon/star.png" alt="별점">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="board-table">
+                        <h2 class="blind">문의사항 게시판</h2>
+                        <!-- title -->
+                        <ul class="board-title">
+                            <li class="w50 fl">제 목</li>
+                            <li class="w50-3 fl">작성자</li>
+                            <li class="w50-3 fl">작성일</li>
+                            <li class="w50-3 fl">별점</li>
+                        </ul>
+                        <!-- //title -->
+                        <!-- list -->
+                        <ul class="board-contents"> 
+                            <li class="w50 fl"><a href="#none">적극 추천합니다.</a></li>
+                            <li class="w50-3 fl">손선**</li>
+                            <li class="w50-3 fl">2016-12-31</li>
+                            <li class="w50-3 fl">
+                                <img src="img/icon/star.png" alt="별점">
+                                <img src="img/icon/star.png" alt="별점">
+                                <img src="img/icon/star.png" alt="별점">
+                                <img src="img/icon/star.png" alt="별점">
+                                <img src="img/icon/star.png" alt="별점">
+                            </li>
+                        </ul>
+                        <ul class="board-contents">
+                            <li class="w50 fl"><a href="#none">적극 추천합니다.</a></li>
+                            <li class="w50-3 fl">손선**</li>
+                            <li class="w50-3 fl">2016-12-31</li>
+                            <li class="w50-3 fl">
+                                <img src="img/icon/star.png" alt="별점">
+                                <img src="img/icon/star.png" alt="별점">
+                                <img src="img/icon/star.png" alt="별점">
+                                <img src="img/icon/star.png" alt="별점">
+                                <img src="img/icon/star.png" alt="별점">
+                            </li>
+                        </ul>
+                        <!-- //list -->
+                    </div>
                 </div>
-            </section>
+            </div>
             <div class="btn-wrap">
                 <a href="#none">상품후기쓰기</a>
                 <a href="#none">모두보기</a>
@@ -471,9 +488,19 @@
                 <em>상품문의</em>
                 <span>Q&A</span>
             </div>
-            <div class="qna-board">
-                <span>게시물이 없습니다.</span>
-            </div>
+            <ul class="board-title">
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+            <ul class="board-contents">
+                <li class=""><a href="#none"></a></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""><span>게시물이 없습니다</span></li>
+            </ul>
             <div class="btn-wrap">
                 <a href="#none">상품문의하기</a>
                 <a href="#none">모두보기</a>
@@ -485,9 +512,12 @@
     <!-- //product -->
 
 </main>
+<!-- //main -->
+
 <!-- @@close-->
 
 <!-- start footer.html-->
+<!-- footer -->
 <footer> 
     <div class="footer">
 
@@ -572,6 +602,7 @@
         
     </div>
 </footer>
+<!-- //footer -->
 <!-- end footer.html-->
 <!-- @@close-->
 </div>

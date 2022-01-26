@@ -12,7 +12,7 @@
     }
     .notice-top-text {
         text-align: center; 
-        margin-top: 39px;
+        margin: 39px 0 34px;
         h2 {
             font-family: "nanum";
             font-weight: 900;
@@ -31,43 +31,44 @@
             color: #959595;
             font-family: "nanum";
             font-weight: 700;
-            font-size: 18px; 
+            font-size: 1.8rem; 
             display: block;
-            margin: 17px auto 34px;
+            margin: 17px auto 0 0;
             margin-top: 17px;
             display: block;
-            width: 100%;
         }
     }
-    .search {
-        border: 1px solid #ccc;
-        width: 150px;
-        float: right;
-        margin-bottom: 10px;
-        .search-term {
-            border: none;
-            padding: 8px 11px;
-            height: 20px;
-            outline: none;
-            width: 59%;
-            &::placeholder {
-                color: #ccc;
-                font-family: "Dotum";
-                font-weight: bold;
-                font-size: 12px;
+    .search-wrap {
+        height: 50px;
+        .search {
+            border: 1px solid #ccc;
+            width: 150px;
+            float: right;
+            .search-term {
+                border: none;
+                padding: 8px 11px;
+                height: 20px;
+                outline: none;
+                width: 59%;
+                &::placeholder {
+                    color: #ccc;
+                    font-family: "Dotum";
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
             }
-        }
-        .search-button {
-            width: 20px;
-            height: 20px;
-            border: none; 
-            text-align: center;
-            cursor: pointer;
-            background: url(../img/icon/ico-notice-search.png) no-repeat;
-            background-size: 16px;
-            vertical-align: middle;
-            background-color: none;
+            .search-button {
+                width: 20px;
+                height: 20px;
+                border: none; 
+                text-align: center;
+                cursor: pointer;
+                background: url(../img/icon/ico-notice-search.png) no-repeat;
+                background-size: 16px;
+                vertical-align: middle;
+                background-color: none;
 
+            }
         }
     }
 }
@@ -88,42 +89,38 @@
 
 // notice board-table detail
 .board-table {
-    thead, tbody {
+    ul.board-title, ul.board-contents {
         font-size: 0.813rem;
         text-align: center;
         font-weight: bold;
+        overflow: hidden;
     }
-    thead {
+    ul.board-title {
         color: #555;
         background: rgb(241, 241, 241);
         border-top: 2px solid #444;
         border-bottom: 1px solid #aaa;
-        tr {
-            font-size: 12px;
-            th {
-                padding: 1.125rem 0;                
-            }
+        li {
+            font-size: 1.2rem;
+            padding: 1.125rem 0;                
         }
     }
-    tbody, a {
+    ul.board-contents, a {
         color: #333;
     }
-    tbody {
+    ul.board-contents {
         font-weight: auto;
         border-bottom: 1px solid #aaa;
-        tr {
-            td {
-                padding: 1.375rem 0;
-                border-bottom: 1px solid #eee;    
-                font-size: 12px;
-                &:last-child {
-                    img {
-                        width: 16px;
-                        height: 14px;
-                        object-fit: cover;
-                    }
-                }     
-            }
+        li {
+            padding: 1.375rem 0;
+            font-size: 1.2rem;
+            &:last-child {
+                img {
+                    width: 16px;
+                    height: 14px;
+                    object-fit: cover;
+                }
+            }     
         }
     }
 }
@@ -160,7 +157,7 @@
             padding: 0 15px;
             display: block;
             height: 100%;
-            font-size: 12px;
+            font-size: 1.2rem;
             color: #fff;
             font-family: "Dotum";
             line-height: 30px; 

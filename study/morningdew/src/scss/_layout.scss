@@ -1,6 +1,6 @@
 // body
 
-html { font-size: 62.5%; }
+html, body { font-size: 62.5%; }
 .wrapper { width: 100%; margin: 0 auto; font-family: "돋움", Dotum;}
 
 //popup
@@ -24,7 +24,7 @@ html { font-size: 62.5%; }
                } 
             }
                 span {
-                    font-size: 12px;
+                    font-size: 1.2rem;
                     color: #fff;
                     vertical-align: sub;
                 }
@@ -32,7 +32,7 @@ html { font-size: 62.5%; }
                     display: block;
                     height: 100%;
                     i {
-                        font-size: 10px;
+                        font-size: 1rem;
                         color: white;
                         margin-left: 6px;
                         vertical-align: sub;
@@ -77,7 +77,7 @@ html { font-size: 62.5%; }
                 background-color: none;
             }
             .bookmark, .shortcut {
-                font-size: 12px;
+                font-size: 1.2rem;
                 padding: 14px 11px;
                 border-right: 1px solid #ccc;
                 span.aster {
@@ -89,7 +89,7 @@ html { font-size: 62.5%; }
             .user {
                 display: none;
                 i {
-                    font-size: 26px;
+                    font-size: 2.6rem;
                     position: absolute;
                     top: 7px;
                     right: 0;
@@ -102,7 +102,7 @@ html { font-size: 62.5%; }
                 right: 0;
                 display: flex;
                 li {
-                    font-size: 12px;
+                    font-size: 1.2rem;
                     margin-right: 7px;
                     line-height: 40px; 
                     &:not(:last-child):after {
@@ -151,13 +151,13 @@ html { font-size: 62.5%; }
                     &:first-child {
                         color: $green;
                         display: block;
-                        font-size: 14px; 
+                        font-size: 1.4rem; 
                         font-weight: 700;
                         letter-spacing: -0.7px;
                     }
                     &:last-child {
                         color: #999;
-                        font-size: 12px;
+                        font-size: 1.2rem;
                         font-weight: 400; 
                         letter-spacing: -0.6px;
                         margin-top: 4px;
@@ -182,7 +182,7 @@ html { font-size: 62.5%; }
                         width: 100%;
                         height: 100%;
                         i {
-                            font-size: 15px;
+                            font-size: 1.5rem;
                             line-height: 26px;
                             text-align: center;
                             color: #fff;
@@ -202,7 +202,7 @@ html { font-size: 62.5%; }
 .gnb {
     font-family: "nanum";
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1.6rem;
     letter-spacing: -0.4px;
     border-top: 2px solid $green;
     color: #464646;
@@ -242,7 +242,7 @@ html { font-size: 62.5%; }
                     float: left;
                     margin-right: 34px;
                     color: #d7d7d7;
-                    font-size: 14px;
+                    font-size: 1.4rem;
                     a {
                         &:hover {
                             color: #fff200;
@@ -299,7 +299,7 @@ html { font-size: 62.5%; }
     h3 {
         font-weight: 900;
         line-height: 36px;
-        font-size: 18px;
+        font-size: 1.8rem;
         color: #252525;
         span.underline {
             border-bottom: 1px solid #d7d7d7;
@@ -307,7 +307,7 @@ html { font-size: 62.5%; }
         }
         span.en-name {
             font-weight: 700;
-            font-size: 14px;
+            font-size: 1.4rem;
             color: #d7d7d7;
         }
     }
@@ -330,11 +330,11 @@ html { font-size: 62.5%; }
                 font-weight: 700;
                 color: #898989;
                 letter-spacing: -0.35px;
-                font-size: 14px;
+                font-size: 1.4rem;
             }
             a {
                 font-weight: 900;
-                font-size: 30px;
+                font-size: 3rem;
                 letter-spacing: -0.3px;
                 color: $green;
             }
@@ -342,7 +342,7 @@ html { font-size: 62.5%; }
         .time {
             p {
                 font-family: "Dotum";
-                font-size: 12px;
+                font-size: 1.2rem;
                 color: #898989;
                 line-height: 22px;
                 margin-top: 15px;
@@ -359,7 +359,7 @@ html { font-size: 62.5%; }
     .bankinfo {
         .banklist {
             span {
-                font-size: 14px;
+                font-size: 1.4rem;
                 font-weight: 700;
                 letter-spacing: -0.35px;
                 color: #898989;
@@ -368,7 +368,7 @@ html { font-size: 62.5%; }
             }
             em {
                 font-weight: 900;
-                font-size: 20px;
+                font-size: 2rem;
                 display: inline-block;
                 width: 70%; 
             }
@@ -381,7 +381,7 @@ html { font-size: 62.5%; }
                 margin-top: 12px; 
             }
             em.account {
-                font-size: 14px;
+                font-size: 1.4rem;
                 color: #464646;
                 margin-top: 17px; 
             }
@@ -394,7 +394,7 @@ html { font-size: 62.5%; }
     .faq {
         .faq-list {
             li {
-                font-size: 12px;
+                font-size: 1.2rem;
                 line-height: 28px;
                 letter-spacing: -0.3px;
                 color: #898989;
@@ -421,7 +421,7 @@ html { font-size: 62.5%; }
         ul {
             overflow: hidden; 
             li {
-                font-size: 12px;
+                font-size: 1.2rem;
                 float: left;
                 line-height: 40px;
                 margin-right: 7px;
@@ -456,11 +456,10 @@ html { font-size: 62.5%; }
                 }
                 p {
                     display: inline-block;
-                    font-size: 12px;
+                    font-size: 1.2rem;
                     color: #78797b;
                     margin-left: 39px;
                     line-height: 25px;
-                    margin-bottom: 60px;
                 }
             }
             .lg-service {

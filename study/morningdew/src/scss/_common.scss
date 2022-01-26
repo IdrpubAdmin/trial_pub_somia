@@ -16,7 +16,14 @@
 .product-title-bg { 
     font-family: "nanum";
     border-bottom: 1px solid #ddd;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 40px; 
     background-color: rgb(241, 241, 241);
 }
+
+.fl { float: left; }
+.oh { overflow: hidden; }
+.w10 { width: 10%; }
+.w50 { width: 50%; }
+.w60 { width: 60%; }
+.w50-3 { width: calc( 50% / 3) }
