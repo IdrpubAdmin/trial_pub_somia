@@ -74,8 +74,23 @@ document.addEventListener('DOMContentLoaded', function() {
         delay: 5500,
         disableOnInteraction: false,
     },
-    slidesPerView: 5,
-    spaceBetween: 36,
+    breakpoints: {
+      320 : {
+        slidesPerView: 1,
+      },
+      768 : {
+        slidesPerView: 3,
+        spaceBetween: 16
+      },
+      1024 : {
+        slidesPerView: 4,
+        spaceBetween: 26
+      },
+      1300 : {
+        slidesPerView: 5,
+        spaceBetween: 36
+      },
+    },
     loop: true,
   });
 });

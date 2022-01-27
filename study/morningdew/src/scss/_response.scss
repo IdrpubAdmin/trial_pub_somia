@@ -183,18 +183,25 @@
 @media screen and (max-width: 1024px) {
     html { font-size: 0.55rem;}
     .container { padding: 0 20px;}
+    .swiper-slide {  max-width: 800px;}
+
 
     // index
     .popup img { height: inherit; }
     .popup .btn-pop-wrap ul { right: 20px; }
     .guid .cscenter .time p { line-height: 19px; }
+    
+    .review .review-slider { max-width: 870px; }
+    .review .review-slider .swiper-wrapper .swiper-slide .review-hover-effect { background: transparent; border-radius: inherit; }
+    .review .review-slider .swiper-wrapper .swiper-slide .review-hover-effect .detail-view { display: none; }
+    .review .review-slider-btn-wrap { height: 190px; }
     // end index
 
     // product
     // end product
 }
 
-/* mobile 320px~ */
+/* mobile */
 @media screen and (max-width: 768px) {
     html { font-size: 0.5rem;}
 
@@ -204,6 +211,9 @@
     .best .best-item-list ul li { width: calc((100% - 30px)/2); margin: 0 30px 20px 0; }
     .best .best-item-list ul li:nth-child(n+5) { margin-top: auto;}
     .best .best-item-list ul li:nth-child(2n+0) { margin-right: 0; }
+
+    .review .review-slider { max-width: 620px; }
+    .review .review-slider-btn-wrap { height: 190px; }
 
     .guid ul li.guid-list { float: none; margin-bottom: 20px; width: 100%; }
     .guid ul li.guid-list:last-child { margin-bottom: 0; }
@@ -222,6 +232,7 @@
 @media screen and (max-width: 320px) {
     html { font-size: 0.5rem;}
 
+    .review .review-slider { max-width: 170px; } 
     // product
     // end product
 
