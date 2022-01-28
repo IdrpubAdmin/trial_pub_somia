@@ -78,6 +78,7 @@
 // notice board-wrap
 .board-wrap {
     background: #fff;
+    position: relative;
     .board-row {
         .board-table {
             width: 100%;
@@ -152,13 +153,16 @@
             } 
         }
     }
+}
+
+.notice {
     .btn-write {
         background-color: #333;
         display: inline-block;
         font-weight: bold;
         position: absolute;
         right: 0;
-        top: 0;
+        bottom: 0;
         a {
             padding: 0 15px;
             display: block;
