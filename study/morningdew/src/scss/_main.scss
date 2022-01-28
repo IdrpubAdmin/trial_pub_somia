@@ -227,20 +227,22 @@
 //review
 .review {
     margin-top: 61px;
-    height: 300px;
+    // height: 300px;
     background: url(../img/banner/banner02_review.jpg) no-repeat;
     background-size: cover;
-    overflow: hidden;
+    // overflow: hidden;
     >img {
         width: 100%;
     }
     .review-wrap {
         position: relative;
+        padding-bottom:34px;
         .best-text {
             display: flex;
             align-content: space-between;
             justify-content: space-between;
             padding-top: 25px;
+            margin-bottom: 20px; 
             h2 {
                 font-family: 'nanum';
                 font-weight: 900;
@@ -277,13 +279,9 @@
 .review {
     position: relative;
     .review-slider {
-        position: absolute;
-        top: 32%;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 1000px;
         .swiper-wrapper {
             .swiper-slide {
+                width:170px;
                 .review-hover-effect {
                     position: relative;
                     background: #000;
@@ -329,14 +327,15 @@
         }
     }
     .review-slider-btn-wrap {
-        position: relative;
-        max-width: 1100px;
-        height: 220px;
+        .swiper-button-next,
         .swiper-button-prev {
-            left: auto;
+            margin-top:0;
+        }
+        .swiper-button-prev {
+            left: -40px;
         }
         .swiper-button-next {
-            right: 0;
+            right: -40px;
         }
         .swiper-button-next:after, .swiper-button-prev:after {
             color: rgb(163, 163, 163);
