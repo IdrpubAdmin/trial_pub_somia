@@ -45,6 +45,13 @@
 //     });
 
 // });
+// cookiedata = document.cookie;   
+// if ( cookiedata.indexOf("maindiv=done") < 0 ){     
+//     document.all['layer_popup'].style.visibility = "visible";
+// }
+// else {
+//     document.all['layer_popup'].style.visibility = "hidden";
+// }
 
 
 document.addEventListener('DOMContentLoaded', function() { 
@@ -83,6 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 'auto',
         spaceBetween: 70
       },
+      390 : {
+        spaceBetween: 90
+      },
+      500 : {
+        spaceBetween: 150        
+      },
       768 : {
         spaceBetween: 70
       },
@@ -99,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// pc gnb
 document.addEventListener('DOMContentLoaded', function() {  
   // 클래스는 동시에 돌아가게 하려면 for문이 필요. id의 경우 하나만 돌아감. getel~ 말고 querySelectorAll
   const menuhover = document.querySelectorAll(".menuhover");
@@ -130,14 +144,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function(e) {
-  e.preventDefault();
+// mobile gnb
+document.addEventListener('DOMContentLoaded', function() {
 
   const bars = document.querySelector(".xi-bars");
   const momenu = document.querySelector("#moMenu");
+  const moBg = document.querySelector("#mo-bg");
 
   function onClick() {
     momenu.classList.toggle("l100");
+    moBg.classList.toggle("mo-bg");
   }
 
   bars.addEventListener("click", onClick);

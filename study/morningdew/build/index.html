@@ -13,6 +13,58 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        
+        //쿠키 저장
+        function setCookie(key, value, expiredays) {
+            var todayDate = new Date();
+            // 현재시각 + 일 단위로 쿠키 만료 날짜 변경
+            todayDate.setDate(todayDate.getDate() + expiredays);
+            document.cookie = key + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+        }       
+    
+        //쿠키 불러오기
+        function getCookie(key) 
+        { 
+            var obj = name + "="; 
+            var x = 0; 
+            while ( x <= document.cookie.length ) 
+            { 
+                var y = (x+obj.length); 
+                if ( document.cookie.substring( x, y ) == obj ) 
+                { 
+                    if ((endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
+                        endOfCookie = document.cookie.length;
+                    return unescape( document.cookie.substring( y, endOfCookie ) ); 
+                } 
+                x = document.cookie.indexOf( " ", x ) + 1; 
+                
+                if ( x == 0 ) break; 
+            } 
+            return ""; 
+        }
+
+        setCookie('key', 'value', 1);
+    
+        //닫기 버튼 클릭시
+        function closeWin(key)
+        {
+            if($("#doNotOpen").prop("checked"))
+            {
+                setCookie('divpop'+key, 'Y' , 1 );
+            }
+            $("#divpop"+key+"").slideUp();
+        }
+      
+        $(function(){    
+            if(getCookie("divpop1") !="Y"){
+                $("#divpop1").slideDown();
+            }
+        });
+        
+    </script>
+
 </head>
 <body>
 <div class="wrapper">
@@ -27,7 +79,7 @@
             <div class="btn-pop-wrap container">
                 <ul class="clear">
                     <li>
-                        <input type="checkbox" name="chkbox" id="doNotOpen" value="Y">
+                        <input type='checkbox' name='chkbox' id='doNotOpen' value='Y'>
                     </li>
                     <li>
                         <span>오늘그만보기</span>
@@ -39,53 +91,6 @@
             </div>
         </div>
         <!-- //popup -->
-
-
-<script>
-    function setCookie( name, value, expiredays ) {
-    var todayDate = new Date();
-    todayDate.setDate( todayDate.getDate() + expiredays );
-    document.cookie = name + '=' + escape( value ) + '; path=/; expires=' + todayDate.toGMTString() + ';'
-    }
-
-    //쿠키 불러오기
-    function getCookie(name) 
-    { 
-        var obj = name + "="; 
-        var x = 0; 
-        while ( x <= document.cookie.length ) 
-        { 
-            var y = (x+obj.length); 
-            if ( document.cookie.substring( x, y ) == obj ) 
-            { 
-                if ((endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
-                    endOfCookie = document.cookie.length;
-                return unescape( document.cookie.substring( y, endOfCookie ) ); 
-            } 
-            x = document.cookie.indexOf( " ", x ) + 1; 
-            
-            if ( x == 0 ) break; 
-        } 
-        return ""; 
-    }
-
-    //닫기 버튼 클릭시
-    function closeWin(key)
-    {
-        if($("#doNotOpen").prop("checked"))
-        {
-            setCookie('divpop'+key, 'Y' , 1 );
-        }
-        $("#divpop"+key+"").hide();
-    }
-  
-    $(function(){    
-        if(getCookie("divpop1") !="Y"){
-            $("#divpop1").show();
-        }
-    });
-</script>
-
 
         <!-- header-info -->
         <div class="header-wrap">
@@ -188,6 +193,8 @@
                     <li><a href="">친환경해충포획퇴치기</a></li>
                     <li><a href="">고객센터</a></li>
                 </ul>
+            </div>
+            <div id="mo-bg">
             </div>
             <ul class="dept01 container">
                 <li class="menuhover">
