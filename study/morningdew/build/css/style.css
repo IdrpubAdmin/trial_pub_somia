@@ -1628,7 +1628,8 @@ html, body {
         padding: inherit;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis; }
+        text-overflow: ellipsis;
+        text-align: center; }
         .product-review .board-wrap .board-row .board-table ul.board-contents li:first-child {
           text-align: left;
           padding-left: 40px; }
