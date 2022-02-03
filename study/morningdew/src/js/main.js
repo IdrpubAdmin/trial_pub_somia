@@ -1,58 +1,32 @@
-//popup js 
-// document.addEventListener('DOMContentLoaded', function() {
+//cookie
+function setCookie( name, value, expiredays ) {
+  var todayDate = new Date();
+  todayDate.setDate( todayDate.getDate() + expiredays );
+  document.cookie = name + '=' + escape( value ) + '; path=/; expires=' + todayDate.toGMTString() + ';'
+}
 
-//     function setCookie( name, value, expiredays ) {
-//     var todayDate = new Date();
-//     todayDate.setDate( todayDate.getDate() + expiredays );
-//     document.cookie = name + '=' + escape( value ) + '; path=/; expires=' + todayDate.toGMTString() + ';'
-//     }
+function closeWin() {
+  if(document.getElementById("doNotOpen").checked){
+  setCookie( "ncookie", "done" , 1 );
+  }
+  divpop1.classList.add("din")
+} 
 
-//     //쿠키 불러오기
-//     function getCookie(name) 
-//     { 
-//         var obj = name + "="; 
-//         var x = 0; 
-//         while ( x <= document.cookie.length ) 
-//         { 
-//             var y = (x+obj.length); 
-//             if ( document.cookie.substring( x, y ) == obj ) 
-//             { 
-//                 if ((endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
-//                     endOfCookie = document.cookie.length;
-//                 return unescape( document.cookie.substring( y, endOfCookie ) ); 
-//             } 
-//             x = document.cookie.indexOf( " ", x ) + 1; 
-            
-//             if ( x == 0 ) break; 
-//         } 
-//         return ""; 
-//     }
 
-//     //닫기 버튼 클릭시
-//     function closeWin(key)
-//     {
-//         if($("#doNotOpen").prop("checked"))
-//         {
-//             setCookie('divpop'+key, 'Y' , 1 );
-//         }
-//         $("#divpop"+key+"").hide();
-//     }
-  
-//     $(function(){    
-//         if(getCookie("divpop1") !="Y"){
-//             $("#divpop1").show();
-//         }
-//     });
+document.addEventListener('DOMContentLoaded', function() {
 
-// });
-// cookiedata = document.cookie;   
-// if ( cookiedata.indexOf("maindiv=done") < 0 ){     
-//     document.all['layer_popup'].style.visibility = "visible";
-// }
-// else {
-//     document.all['layer_popup'].style.visibility = "hidden";
-// }
+  cookiedata = document.cookie;
 
+  if (cookiedata.indexOf("ncookie=done") < 0){
+
+  divpop1.classList.remove("din")
+  divpop1.classList.add("dib");
+  } else {
+  divpop1.classList.remove("dib")
+  divpop1.classList.add("din");
+  }
+
+});
 
 document.addEventListener('DOMContentLoaded', function() { 
   var swiper = new Swiper('.main-slide', {

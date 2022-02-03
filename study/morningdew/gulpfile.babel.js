@@ -3,9 +3,9 @@ import del from "del";
 import ws from "gulp-webserver";
 import image from "gulp-image";
 import autop from "gulp-autoprefixer";
-import miniCSS from "gulp-csso";
-import bro from "gulp-bro";
-import babelify from "babelify";
+// import miniCSS from "gulp-csso";
+// import bro from "gulp-bro";
+// import babelify from "babelify";
 import extender from "gulp-html-extend"
 
 const sass = require("gulp-sass")(require("node-sass"));
@@ -59,22 +59,25 @@ const styles = () =>
         .src(routes.scss.src)
         .pipe(sass().on('error', sass.logError))
         .pipe(autop())
-        .pipe(miniCSS())
+        // .pipe(miniCSS())
         .pipe(gulp.dest(routes.scss.dest));
 
-const js = () =>
-    gulp
-        .src(routes.js.src)
-        .pipe(
-            bro({
-                transform: [
-                    babelify.configure({ presets: ['@babel/preset-env'] }),
-                    [ 'uglifyify', { global: true }]
-                ]
-            })
-        )
-        .pipe(gulp.dest(routes.js.dest));
+// const js = () =>
+//     gulp
+//         .src(routes.js.src)
+//         .pipe(
+//             bro({
+//                 transform: [
+//                     babelify.configure({ presets: ['@babel/preset-env'] }),
+//                     [ 'uglifyify', { global: true }]
+//                 ]
+//             })
+//         )
+//         .pipe(gulp.dest(routes.js.dest));
 
+const js = () =>
+    gulp.src(routes.js.src)
+        .pipe(gulp.dest(routes.js.dest));
 
 const fonts = () =>
     gulp.src(routes.font.src)

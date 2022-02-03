@@ -14,57 +14,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
-        
-        //쿠키 저장
-        function setCookie(key, value, expiredays) {
-            var todayDate = new Date();
-            // 현재시각 + 일 단위로 쿠키 만료 날짜 변경
-            todayDate.setDate(todayDate.getDate() + expiredays);
-            document.cookie = key + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-        }       
-    
-        //쿠키 불러오기
-        function getCookie(key) 
-        { 
-            var obj = name + "="; 
-            var x = 0; 
-            while ( x <= document.cookie.length ) 
-            { 
-                var y = (x+obj.length); 
-                if ( document.cookie.substring( x, y ) == obj ) 
-                { 
-                    if ((endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
-                        endOfCookie = document.cookie.length;
-                    return unescape( document.cookie.substring( y, endOfCookie ) ); 
-                } 
-                x = document.cookie.indexOf( " ", x ) + 1; 
-                
-                if ( x == 0 ) break; 
-            } 
-            return ""; 
-        }
-
-        setCookie('key', 'value', 1);
-    
-        //닫기 버튼 클릭시
-        function closeWin(key)
-        {
-            if($("#doNotOpen").prop("checked"))
-            {
-                setCookie('divpop'+key, 'Y' , 1 );
-            }
-            $("#divpop"+key+"").slideUp();
-        }
-      
-        $(function(){    
-            if(getCookie("divpop1") !="Y"){
-                $("#divpop1").slideDown();
-            }
-        });
-        
-    </script>
-
 </head>
 <body>
 <div class="wrapper">
@@ -79,13 +28,13 @@
             <div class="btn-pop-wrap container">
                 <ul class="clear">
                     <li>
-                        <input type='checkbox' name='chkbox' id='doNotOpen' value='Y'>
+                        <input type='checkbox' name='chkbox' id='doNotOpen'>
                     </li>
                     <li>
                         <span>오늘그만보기</span>
                     </li>
                     <li>
-                        <a href="#none" alt="닫기" class="pop-close" onclick="javascript:closeWin(1);"><i class="xi-close"></i></a>
+                        <a href="javascript:closeWin();" alt="닫기" class="pop-close"><i class="xi-close"></i></a>
                     </li>
                 </ul>
             </div>

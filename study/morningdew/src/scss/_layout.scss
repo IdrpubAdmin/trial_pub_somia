@@ -5,6 +5,7 @@ html, body { font-size: 62.5%; }
 
 //popup
 .popup {
+    display: none;
     img {
         width: 100%;
         height: 100px;
@@ -391,8 +392,8 @@ html, body { font-size: 62.5%; }
                 font-family: "Dotum";
                 font-size: 1.2rem;
                 color: #898989;
-                line-height: 22px;
-                margin-top: 15px;
+                line-height: 18px;
+                margin-top: 10px;
                 span {
                     margin-left: 17px;
                 }
