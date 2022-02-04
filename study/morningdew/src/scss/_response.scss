@@ -1,6 +1,5 @@
 /* tablet */
 @media screen and (max-width: 1024px) {
-    html { font-size: 0.6rem;}
     .container { padding: 0 20px;}
     .swiper-slide {  width: 77%; } 
 
@@ -11,8 +10,8 @@
     .review-slider { margin-top: 30px; } 
 
     .guid ul li.guid-list { height: 180px; padding: 16px 28px 18px 23px; }
+    .guid .cscenter .tel span { font-size: 1.4rem; }
     .guid .cscenter .time p { line-height: 19px; }
-    .guid .bankinfo .banklist em { font-size: 1.8rem; }
 
     .review .review-slider-btn-wrap .swiper-button-prev { left: 10px; }
     .review .review-slider-btn-wrap .swiper-button-next { right: 10px; }
@@ -43,7 +42,8 @@
 
 /* mobile */
 @media screen and (max-width: 768px) {
-    html { font-size: 0.55rem;}
+
+    body { }
 
     // index
     .popup img { display: none; }
@@ -68,8 +68,9 @@
 
     .guid ul li.guid-list { float: none; margin-bottom: 20px; width: 100%; }
     .guid ul li.guid-list:last-child { margin-bottom: 0; }
-    .guid .cscenter .tel a { margin-left: 2px; }
-    .guid .bankinfo .banklist em { text-align: right; }
+    .guid .banklist { margin-top: 10px; }
+    .guid .cscenter .tel a { margin-left: 2px; font-size: 2.5rem;}
+    .guid .bankinfo .banklist em { text-align: right;  font-size: 1.4rem;}
 
     .footer .footer-short ul li { line-height: 27px; }
     .footer .footer-info-wrap .footer-info .about { margin: 27px 0; width: 100%; text-align: center;  }
@@ -100,11 +101,10 @@
 
     // notice
 
-    .board-table ul.board-title li:nth-child(4), .board-table ul.board-title li:nth-child(5),
-    .board-table ul.board-contents li:nth-child(4), .board-table ul.board-contents li:nth-child(5), 
+    .board-table .board-title span:nth-child(4), .board-table .board-title span:nth-child(5),
+    .board-table .board-contents span:nth-child(4), .board-table .board-contents span:nth-child(5), 
     { display: none; }
-    .board-table ul.board-title li:nth-child(3), .board-table ul.board-contents li:nth-child(3) { width: 30%; }
-
+    .board-table .board-title span:nth-child(3), .board-table .board-contents span:nth-child(3) { width: 30%; }
 
     .notice .btn-write { top: -50px; left: 0; width: 23%; height: 38px; text-align: center; }
     .notice .btn-write a { line-height: 38px; }

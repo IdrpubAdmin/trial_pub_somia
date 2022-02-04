@@ -19,7 +19,7 @@
     border-bottom: 1px solid #ddd;
     font-size: 1.8rem;
     line-height: 40px; 
-    background-color: rgb(241, 241, 241);
+    background-color: #ddd;
 }
 
 // basic style
@@ -30,7 +30,10 @@
 .dn { display: none; }
 .din { display: none !important; }
 .l100 { left: 0 !important; transition: .5s;}
-.w10 { width: 10%; }
-.w50 { width: 50%; }
-.w60 { width: 60%; }
-.w50-3 { width: calc( 50% / 3) }
+.scroll-disable { overflow: hidden; height: 100%; }
+
+// basic style - board class
+.w-notice-title { width: 60%; }
+.w-notice-title-other { width: 10%; }
+.w-product-title { width: 50%; }
+.w-product-title-other { width: calc( 50% / 3) }

@@ -414,7 +414,7 @@ img {
   border-bottom: 1px solid #ddd;
   font-size: 1.8rem;
   line-height: 40px;
-  background-color: #f1f1f1; }
+  background-color: #ddd; }
 
 .fl {
   float: left; }
@@ -439,16 +439,20 @@ img {
   -webkit-transition: .5s;
   transition: .5s; }
 
-.w10 {
-  width: 10%; }
+.scroll-disable {
+  overflow: hidden;
+  height: 100%; }
 
-.w50 {
-  width: 50%; }
-
-.w60 {
+.w-notice-title {
   width: 60%; }
 
-.w50-3 {
+.w-notice-title-other {
+  width: 10%; }
+
+.w-product-title {
+  width: 50%; }
+
+.w-product-title-other {
   width: calc( 50% / 3); }
 
 html, body {
@@ -707,7 +711,7 @@ html, body {
   left: -100%; }
   .gnb #moMenu ul {
     text-align: left;
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     line-height: 100px;
     padding-top: 100px; }
     .gnb #moMenu ul li {
@@ -1226,43 +1230,45 @@ html, body {
 .board-wrap {
   background: #fff;
   position: relative; }
-  .board-wrap .board-row .board-table {
-    width: 100%; }
 
-.board-table ul.board-title, .board-table ul.board-contents {
+.board-table .board-title, .board-table .board-contents {
   font-size: 0.813rem;
   text-align: center;
   font-weight: bold;
   overflow: hidden; }
 
-.board-table ul.board-title {
+.board-table .board-title {
   color: #555;
   background: #f1f1f1;
   border-top: 2px solid #444;
-  border-bottom: 1px solid #aaa; }
-  .board-table ul.board-title li {
+  border-bottom: 1px solid #aaa;
+  font-size: 0; }
+  .board-table .board-title span {
     font-size: 1.2rem;
-    padding: 1.125rem 0; }
+    padding: 1.125rem 0;
+    display: inline-block;
+    vertical-align: top; }
 
-.board-table ul.board-contents, .board-table a {
+.board-table .board-contents, .board-table a {
   color: #333; }
 
-.board-table ul.board-contents {
-  font-weight: auto;
-  border-bottom: 1px solid #aaa; }
-  .board-table ul.board-contents li {
+.board-table .board-contents {
+  border-bottom: 1px solid #aaa;
+  font-size: 0; }
+  .board-table .board-contents span {
     padding: 1.375rem 0;
     font-size: 1.2rem;
     white-space: nowrap;
     overflow: hidden;
+    display: inline-block;
     text-overflow: ellipsis; }
-    .board-table ul.board-contents li:last-child img {
+    .board-table .board-contents span:last-child img {
       width: 16px;
       height: 14px;
       -o-object-fit: cover;
          object-fit: cover; }
-    .board-table ul.board-contents li:nth-child(2) {
-      text-align: left; }
+  .board-table .board-contents a span {
+    text-align: left; }
 
 .board-post-num {
   position: relative; }
@@ -1423,20 +1429,18 @@ html, body {
     font-size: 1.2rem; }
     .product-order .product-option .product-notice em {
       color: #999;
-      display: block;
       line-height: 36px; }
-    .product-order .product-option .product-notice em.attention {
-      width: 20px;
-      height: 20px;
-      background: url(../img/icon/attention.png) no-repeat 100% bottom; }
     .product-order .product-option .product-notice strong {
       color: #ed1c24;
       margin-bottom: 18px;
       display: inline-block; }
-    .product-order .product-option .product-notice .product-notice-option-alert {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
+    .product-order .product-option .product-notice .product-notice-option-alert span.attention {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      background-color: lawngreen;
+      background: url(../img/icon/attention.png) no-repeat 100% bottom; }
   .product-order .product-option .product-select {
     border-top: 1px solid #999; }
     .product-order .product-option .product-select .product-first, .product-order .product-option .product-select .product-second {
@@ -1554,19 +1558,14 @@ html, body {
 .product-select .select2-quantity .select-quantity-updown a.down {
   top: 7px; }
 
-.detail-view .detail-view-text, .detail-view .delivery-text, .detail-view .return-text, .detail-view .review-text, .detail-view .qna-text, .delivery .detail-view-text, .delivery .delivery-text, .delivery .return-text, .delivery .review-text, .delivery .qna-text, .return .detail-view-text, .return .delivery-text, .return .return-text, .return .review-text, .return .qna-text, .product-review .detail-view-text, .product-review .delivery-text, .product-review .return-text, .product-review .review-text, .product-review .qna-text, .qna .detail-view-text, .qna .delivery-text, .qna .return-text, .qna .review-text, .qna .qna-text {
-  font-family: "nanum";
-  border-bottom: 1px solid #ddd;
+.detail-view .detail-view-text em, .detail-view .delivery-text em, .detail-view .return-text em, .detail-view .review-text em, .detail-view .qna-text em, .delivery .detail-view-text em, .delivery .delivery-text em, .delivery .return-text em, .delivery .review-text em, .delivery .qna-text em, .return .detail-view-text em, .return .delivery-text em, .return .return-text em, .return .review-text em, .return .qna-text em, .product-review .detail-view-text em, .product-review .delivery-text em, .product-review .return-text em, .product-review .review-text em, .product-review .qna-text em, .qna .detail-view-text em, .qna .delivery-text em, .qna .return-text em, .qna .review-text em, .qna .qna-text em {
   font-size: 1.8rem;
-  line-height: 40px;
-  background-color: #f1f1f1; }
-  .detail-view .detail-view-text em, .detail-view .delivery-text em, .detail-view .return-text em, .detail-view .review-text em, .detail-view .qna-text em, .delivery .detail-view-text em, .delivery .delivery-text em, .delivery .return-text em, .delivery .review-text em, .delivery .qna-text em, .return .detail-view-text em, .return .delivery-text em, .return .return-text em, .return .review-text em, .return .qna-text em, .product-review .detail-view-text em, .product-review .delivery-text em, .product-review .return-text em, .product-review .review-text em, .product-review .qna-text em, .qna .detail-view-text em, .qna .delivery-text em, .qna .return-text em, .qna .review-text em, .qna .qna-text em {
-    font-size: 1.8rem;
-    color: #555;
-    font-weight: 700;
-    margin-left: 18px; }
-  .detail-view .detail-view-text span, .detail-view .delivery-text span, .detail-view .return-text span, .detail-view .review-text span, .detail-view .qna-text span, .delivery .detail-view-text span, .delivery .delivery-text span, .delivery .return-text span, .delivery .review-text span, .delivery .qna-text span, .return .detail-view-text span, .return .delivery-text span, .return .return-text span, .return .review-text span, .return .qna-text span, .product-review .detail-view-text span, .product-review .delivery-text span, .product-review .return-text span, .product-review .review-text span, .product-review .qna-text span, .qna .detail-view-text span, .qna .delivery-text span, .qna .return-text span, .qna .review-text span, .qna .qna-text span {
-    color: #ccc; }
+  color: #555;
+  font-weight: 700;
+  margin-left: 18px; }
+
+.detail-view .detail-view-text span, .detail-view .delivery-text span, .detail-view .return-text span, .detail-view .review-text span, .detail-view .qna-text span, .delivery .detail-view-text span, .delivery .delivery-text span, .delivery .return-text span, .delivery .review-text span, .delivery .qna-text span, .return .detail-view-text span, .return .delivery-text span, .return .return-text span, .return .review-text span, .return .qna-text span, .product-review .detail-view-text span, .product-review .delivery-text span, .product-review .return-text span, .product-review .review-text span, .product-review .qna-text span, .qna .detail-view-text span, .qna .delivery-text span, .qna .return-text span, .qna .review-text span, .qna .qna-text span {
+  color: #ccc; }
 
 .detail-view .detail-img-wrap img, .delivery .detail-img-wrap img, .return .detail-img-wrap img, .product-review .detail-img-wrap img, .qna .detail-img-wrap img {
   margin-top: 30px;
@@ -1611,31 +1610,36 @@ html, body {
         font-weight: bold; }
 
 .product-review {
-  margin-top: 97px;
-  width: 100%; }
+  margin-top: 97px; }
   .product-review .board-wrap {
     margin-top: 29px;
     padding: 0 50px; }
-    .product-review .board-wrap .board-row .board-table {
-      width: 100%; }
-      .product-review .board-wrap .board-row .board-table ul li {
+    .product-review .board-wrap .board-row .board-table .board-title {
+      background-color: #fff; }
+      .product-review .board-wrap .board-row .board-table .board-title span {
+        padding: inherit;
         line-height: 39px; }
-      .product-review .board-wrap .board-row .board-table ul.board-title {
-        background-color: #fff; }
-        .product-review .board-wrap .board-row .board-table ul.board-title li {
-          padding: inherit; }
-      .product-review .board-wrap .board-row .board-table ul.board-contents li {
+    .product-review .board-wrap .board-row .board-table .board-contents {
+      font-weight: 400; }
+      .product-review .board-wrap .board-row .board-table .board-contents span {
         padding: inherit;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        text-align: center; }
-        .product-review .board-wrap .board-row .board-table ul.board-contents li:first-child {
+        text-align: center;
+        line-height: 39px; }
+        .product-review .board-wrap .board-row .board-table .board-contents span:first-child {
           text-align: left;
           padding-left: 40px; }
-        .product-review .board-wrap .board-row .board-table ul.board-contents li:last-child {
-          line-height: inherit;
-          margin-top: 10px; }
+      .product-review .board-wrap .board-row .board-table .board-contents .star {
+        height: 26px; }
+        .product-review .board-wrap .board-row .board-table .board-contents .star span {
+          background: url(../img/icon/star.png) repeat-x;
+          width: 40px;
+          height: 100%;
+          padding: inherit; }
+      .product-review .board-wrap .board-row .board-table .board-contents:nth-child(2) span:nth-child(4) {
+        width: 35px; }
 
 .product-review .btn-wrap, .qna .btn-wrap {
   font-size: 1.2rem;
@@ -1665,8 +1669,6 @@ html, body {
 
 /* tablet */
 @media screen and (max-width: 1024px) {
-  html {
-    font-size: 0.6rem; }
   .container {
     padding: 0 20px; }
   .swiper-slide {
@@ -1680,10 +1682,10 @@ html, body {
   .guid ul li.guid-list {
     height: 180px;
     padding: 16px 28px 18px 23px; }
+  .guid .cscenter .tel span {
+    font-size: 1.4rem; }
   .guid .cscenter .time p {
     line-height: 19px; }
-  .guid .bankinfo .banklist em {
-    font-size: 1.8rem; }
   .review .review-slider-btn-wrap .swiper-button-prev {
     left: 10px; }
   .review .review-slider-btn-wrap .swiper-button-next {
@@ -1715,8 +1717,6 @@ html, body {
 
 /* mobile */
 @media screen and (max-width: 768px) {
-  html {
-    font-size: 0.55rem; }
   .popup img {
     display: none; }
   .header-info .header-top .header-top-short-menu .bookmark, .header-info .header-top .header-top-short-menu .shortcut,
@@ -1751,10 +1751,14 @@ html, body {
     width: 100%; }
   .guid ul li.guid-list:last-child {
     margin-bottom: 0; }
+  .guid .banklist {
+    margin-top: 10px; }
   .guid .cscenter .tel a {
-    margin-left: 2px; }
+    margin-left: 2px;
+    font-size: 2.5rem; }
   .guid .bankinfo .banklist em {
-    text-align: right; }
+    text-align: right;
+    font-size: 1.4rem; }
   .footer .footer-short ul li {
     line-height: 27px; }
   .footer .footer-info-wrap .footer-info .about {
@@ -1801,10 +1805,10 @@ html, body {
     margin-top: 17px; }
   .delivery .delivery-contents, .return .return-contents {
     padding: 0 15px; }
-  .board-table ul.board-title li:nth-child(4), .board-table ul.board-title li:nth-child(5),
-  .board-table ul.board-contents li:nth-child(4), .board-table ul.board-contents li:nth-child(5) {
+  .board-table .board-title span:nth-child(4), .board-table .board-title span:nth-child(5),
+  .board-table .board-contents span:nth-child(4), .board-table .board-contents span:nth-child(5) {
     display: none; }
-  .board-table ul.board-title li:nth-child(3), .board-table ul.board-contents li:nth-child(3) {
+  .board-table .board-title span:nth-child(3), .board-table .board-contents span:nth-child(3) {
     width: 30%; }
   .notice .btn-write {
     top: -50px;

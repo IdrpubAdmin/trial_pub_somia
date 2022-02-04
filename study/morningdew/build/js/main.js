@@ -1,4 +1,4 @@
-//cookie
+//popup cookie
 function setCookie( name, value, expiredays ) {
   var todayDate = new Date();
   todayDate.setDate( todayDate.getDate() + expiredays );
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+//swiper
 document.addEventListener('DOMContentLoaded', function() { 
   var swiper = new Swiper('.main-slide', {
     navigation: {
@@ -124,10 +125,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const bars = document.querySelector(".xi-bars");
   const momenu = document.querySelector("#moMenu");
   const moBg = document.querySelector("#mo-bg");
+  const mScroll = document.querySelector('body');
 
   function onClick() {
     momenu.classList.toggle("l100");
     moBg.classList.toggle("mo-bg");
+    mScroll.classList.toggle("scroll-disable");
   }
 
   bars.addEventListener("click", onClick);
@@ -135,4 +138,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// mobile gnb scroll 
+document.addEventListener('DOMContentLoaded', function() {
+  function mScroll() {
+    if(document.querySelector("l100") ) {
+      divpop1.classList.add("din");
+    }
+  }  
+});
 

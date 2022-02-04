@@ -150,13 +150,7 @@
             font-size: 1.2rem;
             em {
                 color: #999;
-                display: block;
                 line-height: 36px;
-            }
-            em.attention {
-                width: 20px;
-                height: 20px; 
-                background: url(../img/icon/attention.png) no-repeat 100% bottom;
             }
             strong {
                 color: #ed1c24;
@@ -164,7 +158,14 @@
                 display: inline-block;
             }
             .product-notice-option-alert {
-                display: flex;
+                span.attention {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    vertical-align: middle; 
+                    background-color: lawngreen;
+                    background: url(../img/icon/attention.png) no-repeat 100% bottom;
+                }
             }
         }
         .product-select {
@@ -313,11 +314,6 @@
 //title 공통클래스
 .detail-view, .delivery, .return, .product-review, .qna {
     .detail-view-text, .delivery-text, .return-text, .review-text, .qna-text {
-        font-family: "nanum";
-        border-bottom: 1px solid #ddd;
-        font-size: 1.8rem;
-        line-height: 40px; 
-        background-color: rgb(241, 241, 241);
         em {            
             font-size: 1.8rem;
             color: #555;
@@ -391,38 +387,54 @@
 // product-review
 .product-review {
     margin-top: 97px; 
-    width: 100%;
     .board-wrap {
         margin-top: 29px;
         padding: 0 50px; 
         .board-row {
             .board-table {
-                width: 100%;
                 ul {
                     li {
-                        line-height: 39px;
                     }
                 }
-                ul.board-title {  
+                .board-title {  
                     background-color: #fff;
-                    li {
+                    span {
                         padding: inherit;
+                        line-height: 39px; 
                     }              
                 }
-                ul.board-contents {
-                    li {
+                .board-contents {
+                    font-weight: 400;
+                    span, a {
+                    }
+                    span {
                         padding: inherit;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
                         text-align: center;
+                        line-height: 39px; 
                         &:first-child {
                             text-align: left;
                             padding-left: 40px; 
                         }
                         &:last-child {
-                            line-height: inherit;
-                            margin-top: 10px;
+                        }
+                    }
+                    .star {
+                        height: 26px;
+                        span {
+                            background: url(../img/icon/star.png) repeat-x;
+                            width: 40px;
+                            height: 100%; 
+                            padding: inherit;
+                        }
+                    }
+                    &:nth-child(2) {
+                        span {
+                            &:nth-child(4) {
+                                width: 35px;
+                            }
                         }
                     }
                 }
