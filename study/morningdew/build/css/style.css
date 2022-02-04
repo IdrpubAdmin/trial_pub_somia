@@ -526,7 +526,6 @@ html, body {
       width: 20px;
       height: 20px;
       border: none;
-      text-align: center;
       margin-right: 14px;
       cursor: pointer;
       background: url(../img/icon/ico-search.png) no-repeat;
@@ -589,7 +588,6 @@ html, body {
     .header-main .container .header-logo .text-area {
       margin: 20px 0px 0px 15px; }
       .header-main .container .header-logo .text-area span {
-        display: block;
         font-family: "nanum"; }
         .header-main .container .header-logo .text-area span:first-child {
           color: #74a901;
@@ -1175,10 +1173,9 @@ html, body {
       font-family: "nanum";
       font-weight: 700;
       font-size: 1.8rem;
-      display: block;
+      display: inline-block;
       margin: 17px auto 0 0;
-      margin-top: 17px;
-      display: block; }
+      margin-top: 17px; }
   .notice .search-wrap {
     height: 50px; }
     .notice .search-wrap .search {
