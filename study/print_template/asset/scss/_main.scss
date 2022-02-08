@@ -1,0 +1,24 @@
+html { font-size: 62.5%; }
+
+.contents {
+    position: relative;
+}
+
+//main-btn
+.main-btn {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn-tax-open {
+        margin-right: 50px; 
+    }
+}
+
+.tax {
+    p {
+        width: 400px;
+        height: 400px;
+        background-color: red;
+    }
+}
