@@ -147,3 +147,48 @@ document.addEventListener('DOMContentLoaded', function() {
   }  
 });
 
+//jqGrid 
+document.addEventListener('DOMContentLoaded', function() { 
+
+jQuery("#grid").jqGrid({
+	  datatype: "local",
+    height: 200,
+    autowidth: true,
+   	colNames: ['제목','작성자', '작성일', '별점'],
+   	colModel: [
+      {name:'title', index:'title', align:'left', width:'50%', formatter:link},
+      {name:'writer', index:'writer', align:'center', width:'16.6666%'},
+      {name:'date', index:'date', align:'center', width:'16.6666%'},
+      {name:'star', index:'star', align:'center', width:'16.6666%'},
+   	],
+    pager: "pager",
+    rowNum : 10,
+    loadtext : '로딩중이에용...',
+});
+
+//title a링크 추가
+function link(cellvalue, options, rowObject)
+{
+     url = '<a href="#none='+cellvalue+'">'+cellvalue+'</a>';
+     return url;
+}
+
+var mydata = [
+		{title : "후기 올려봐용 ㅎㅎ 갠적으로 좋은 제품 같애요 후기 올려봐용 ㅎㅎ 갠적으로 좋은 제품 같애요 후기 올려봐용 ㅎㅎ 갠적으로 좋은 제품 같애요 후기 올려봐용 ㅎㅎ 갠적으로 좋은 제품 같애요", writer : "하지수", date : "2022-02-08", star : "한개"},
+		{title : "후기 올려봐용 ㅎㅎ 갠적으로 좋은 제품 같애요", writer : "하지수", date : "2022-02-08", star : "한개"},
+		{title : "후기 올려봐용 ㅎㅎ 갠적으로 좋은 제품 같애요", writer : "하지수", date : "2022-02-08", star : "한개"},
+		{title : "후기 올려봐용 ㅎㅎ 갠적으로 좋은 제품 같애요", writer : "하지수", date : "2022-02-08", star : "한개"},
+
+		];
+for(var i=0;i<=mydata.length;i++)
+	jQuery("#grid").jqGrid('addRowData',i+1,mydata[i]);
+
+// 반응형 설정
+  $(window).on('resize.jqGrid', function () {
+    jQuery("#grid").jqGrid( 'setGridWidth', $(".grid-wrap").width())
+  })
+
+});
+
+
+

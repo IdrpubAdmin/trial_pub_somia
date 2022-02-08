@@ -46,9 +46,9 @@ html, body { font-size: 62.5%; }
 
 //header-info
 .header-info {
-    .header-top {
+    .header-service {
         position: relative;
-        .header-top-short-menu {
+        .header-service-short-menu {
             overflow: hidden; 
             display: flex;
             justify-content: flex-start;
@@ -85,7 +85,7 @@ html, body { font-size: 62.5%; }
                 }
             }
         }
-        .header-top-util {
+        .header-service-util {
             .user {
                 display: none;
                 i {

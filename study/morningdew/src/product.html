@@ -5,16 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
+
     <title>morningdew</title>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- plugin css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/ispin/dist/ispin.css">
-    
+    <link rel="stylesheet" href="plugin/jqGrid/css/ui.jqgrid.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css">
+
     <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+    <!-- plugin js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script defer src="https://unpkg.com/ispin"></script>
+    <script src="plugin/jqGrid/js/grid.locale-kr.js"></script>
+    <script src="plugin/jqGrid/js/jquery.jqGrid.min.js"></script>
+
+    <!-- my js -->
     <script src="js/main.js"></script>
+
 </head>
 <body>
 <div class="wrapper">
@@ -208,7 +219,22 @@
             </div>
         </div>
         <!-- //return -->
-        
+
+        <!-- jqGrid 연습 -->
+        <div class="jqGrid-practice">
+            <h2 class="blind">jqGrid 연습 게시판</h2>
+            <div class="jqGrid-text product-title-bg">
+                <em>jqGrid 연습 게시판</em>
+                <span>practice</span>
+            </div>
+            <div class="grid-wrap">
+                <table id="grid">
+                </table>
+                <div id="pager"></div>
+            </div>
+        </div>
+        <!-- // jqGrid 연습 -->
+
         <!-- product-review -->
         <div class="product-review clear">
             <h2 class="blind">게시판</h2>
@@ -254,7 +280,7 @@
                 <a href="#none">모두보기</a>
             </div>
         </div>
-        <!-- //producy-review -->
+        <!-- //product-review -->
 
         <!-- qna -->
         <div class="qna">

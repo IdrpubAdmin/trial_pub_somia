@@ -34,6 +34,11 @@ const routes = {
         watch:"src/fonts/*.{ttf,woff2,woff,eot}",
         src: "src/fonts/*.{ttf,woff2,woff,eot}",
         dest: "build/fonts"
+    },
+    plugIn : {
+        watch:"src/plugin/**/*.{js,css}",
+        src: "src/plugin/**/*.{js,css}",
+        dest: "build/plugin"
     }
 };
 
@@ -83,6 +88,10 @@ const fonts = () =>
     gulp.src(routes.font.src)
         .pipe(gulp.dest(routes.font.dest));
 
+const plugIn = () =>
+    gulp.src(routes.plugIn.src)
+        .pipe(gulp.dest(routes.plugIn.dest));
+
 const watch = () => {
     gulp.watch(routes.html.watch, html);
     gulp.watch(routes.img.src, img);
@@ -93,7 +102,7 @@ const watch = () => {
          
 const prepare = gulp.series([clean, img, fonts]); 
 
-const assets = gulp.series([html, styles, js]);
+const assets = gulp.series([html, styles, js, plugIn]);
 
 const live = gulp.parallel([webserver, watch]);
 

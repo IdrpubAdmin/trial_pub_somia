@@ -477,3 +477,58 @@
         }
     }
 }
+
+
+/////////////////////////////
+
+
+// jqGrid 연습 게시판
+.jqGrid-practice {
+    margin-top: 100px; 
+    .jqGrid-text {
+        margin-bottom: 29px;
+        em {
+            margin-left: 20px;
+        }
+        span {
+            color: #ccc;
+        }
+    }
+    .grid-wrap {
+        padding: 0 50px;
+    }
+}
+
+//jqGrid css 수정사항
+.ui-jqgrid {
+    .ui-jqgrid-htable {
+        th {
+            div {
+                height: 39px;
+                line-height: 39px;
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.ui-jqgrid-labels { 
+    border-bottom: 1px solid #aaa;
+    border-top: 2px solid #444; 
+}
+.ui-jqgrid {
+    tr.jqgrow {
+        td {
+            height: 39px;
+            line-height: 39px;
+            border: none;
+            border-bottom: 1px solid #aaa;
+            font-size: 1.2rem;
+            text-overflow: ellipsis;
+        }
+        td:first-child {
+            padding-left: 40px ;
+        }
+    }
+}

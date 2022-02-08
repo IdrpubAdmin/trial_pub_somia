@@ -38,6 +38,10 @@
      .product-review .board-wrap .board-row .board-table ul.board-contents li:nth-child(2n+0) { width: 30%; }
     // end product
 
+    //jqGrid 
+
+    .jqGrid-practice .grid-wrap { padding: 0 20px; }
+
 } // other tablet display
 
 /* mobile */
@@ -47,12 +51,12 @@
 
     // index
     .popup img { display: none; }
-    .header-info .header-top .header-top-short-menu .bookmark, .header-info .header-top .header-top-short-menu .shortcut,
-    .header-info .header-top .header-top-util ul, .header-main .container .header-logo .text-area { display: none; }
-    .header-info .header-top .header-top-util .user { display: block; }
-    .header-info .header-top .header-top-short-menu .search .search-term { font-size: 1.3rem;}
+    .header-info .header-service .header-service-short-menu .bookmark, .header-info .header-service .header-service-short-menu .shortcut,
+    .header-info .header-service .header-service-util ul, .header-main .container .header-logo .text-area { display: none; }
+    .header-info .header-service .header-service-util .user { display: block; }
+    .header-info .header-service .header-service-short-menu .search .search-term { font-size: 1.3rem;}
 
-    .header-info .header-top .header-top-short-menu { margin-left: 50px; }
+    .header-info .header-service .header-service-short-menu { margin-left: 50px; }
     .header-main .container .header-logo { top: 60px; }
 
     .gnb .mo-hamburger { display: block; }
@@ -109,4 +113,5 @@
     .notice .btn-write { top: -50px; left: 0; width: 23%; height: 38px; text-align: center; }
     .notice .btn-write a { line-height: 38px; }
     // end notice
+
 }

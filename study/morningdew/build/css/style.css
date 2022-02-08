@@ -499,9 +499,9 @@ html, body {
           vertical-align: sub;
           display: inline-block; }
 
-.header-info .header-top {
+.header-info .header-service {
   position: relative; }
-  .header-info .header-top .header-top-short-menu {
+  .header-info .header-service .header-service-short-menu {
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -512,17 +512,17 @@ html, body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .header-info .header-top .header-top-short-menu .search {
+    .header-info .header-service .header-service-short-menu .search {
       position: relative;
       position: relative;
       border-right: 1px solid #ccc;
       border-left: 1px solid #ccc; }
-      .header-info .header-top .header-top-short-menu .search .search-term {
+      .header-info .header-service .header-service-short-menu .search .search-term {
         border: none;
         padding: 10px 7px;
         height: 20px;
         outline: none; }
-    .header-info .header-top .header-top-short-menu .search-button {
+    .header-info .header-service .header-service-short-menu .search-button {
       width: 20px;
       height: 20px;
       border: none;
@@ -532,32 +532,32 @@ html, body {
       background-size: 100%;
       vertical-align: middle;
       background-color: none; }
-    .header-info .header-top .header-top-short-menu .bookmark, .header-info .header-top .header-top-short-menu .shortcut {
+    .header-info .header-service .header-service-short-menu .bookmark, .header-info .header-service .header-service-short-menu .shortcut {
       font-size: 1.2rem;
       padding: 14px 11px;
       border-right: 1px solid #ccc; }
-      .header-info .header-top .header-top-short-menu .bookmark span.aster, .header-info .header-top .header-top-short-menu .shortcut span.aster {
+      .header-info .header-service .header-service-short-menu .bookmark span.aster, .header-info .header-service .header-service-short-menu .shortcut span.aster {
         color: #74a901; }
-  .header-info .header-top .header-top-util .user {
+  .header-info .header-service .header-service-util .user {
     display: none; }
-    .header-info .header-top .header-top-util .user i {
+    .header-info .header-service .header-service-util .user i {
       font-size: 2.7rem;
       position: absolute;
       top: 9px;
       right: 0;
       color: #9e9e9e; }
-  .header-info .header-top .header-top-util ul {
+  .header-info .header-service .header-service-util ul {
     position: absolute;
     top: 0;
     right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .header-info .header-top .header-top-util ul li {
+    .header-info .header-service .header-service-util ul li {
       font-size: 1.2rem;
       margin-right: 7px;
       line-height: 40px; }
-      .header-info .header-top .header-top-util ul li:not(:last-child):after {
+      .header-info .header-service .header-service-util ul li:not(:last-child):after {
         content: "";
         display: inline-block;
         width: 1px;
@@ -565,9 +565,9 @@ html, body {
         background-color: #ccc;
         vertical-align: -1px;
         margin: 0 4px; }
-      .header-info .header-top .header-top-util ul li a {
+      .header-info .header-service .header-service-util ul li a {
         line-height: 38px; }
-    .header-info .header-top .header-top-util ul li.bold {
+    .header-info .header-service .header-service-util ul li.bold {
       font-weight: bold; }
 
 .header-main {
@@ -1154,21 +1154,21 @@ html, body {
     font-size: 12px;
     display: block;
     text-align: right; }
-  .notice .notice-top-text {
+  .notice .notice-text {
     text-align: center;
     margin: 39px 0 34px; }
-    .notice .notice-top-text h2 {
+    .notice .notice-text h2 {
       font-family: "nanum";
       font-weight: 900;
       letter-spacing: -0.9px;
       font-size: 36px;
       margin-bottom: 27px; }
-    .notice .notice-top-text .green-line {
+    .notice .notice-text .green-line {
       width: 4%;
       height: 2px;
       background-color: #74a901;
       margin: 0 auto; }
-    .notice .notice-top-text span {
+    .notice .notice-text span {
       color: #959595;
       font-family: "nanum";
       font-weight: 700;
@@ -1664,6 +1664,38 @@ html, body {
       color: #555;
       line-height: 38px; }
 
+.jqGrid-practice {
+  margin-top: 100px; }
+  .jqGrid-practice .jqGrid-text {
+    margin-bottom: 29px; }
+    .jqGrid-practice .jqGrid-text em {
+      margin-left: 20px; }
+    .jqGrid-practice .jqGrid-text span {
+      color: #ccc; }
+  .jqGrid-practice .grid-wrap {
+    padding: 0 50px; }
+
+.ui-jqgrid .ui-jqgrid-htable th div {
+  height: 39px;
+  line-height: 39px;
+  font-weight: 700;
+  font-size: 1.2rem; }
+
+.ui-jqgrid-labels {
+  border-bottom: 1px solid #aaa;
+  border-top: 2px solid #444; }
+
+.ui-jqgrid tr.jqgrow td {
+  height: 39px;
+  line-height: 39px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  font-size: 1.2rem;
+  text-overflow: ellipsis; }
+
+.ui-jqgrid tr.jqgrow td:first-child {
+  padding-left: 40px; }
+
 /* tablet */
 @media screen and (max-width: 1024px) {
   .container {
@@ -1710,20 +1742,22 @@ html, body {
   .product-review .board-wrap .board-row .board-table ul.board-contents li:first-child {
     width: 70%; }
   .product-review .board-wrap .board-row .board-table ul.board-contents li:nth-child(2n+0) {
-    width: 30%; } }
+    width: 30%; }
+  .jqGrid-practice .grid-wrap {
+    padding: 0 20px; } }
 
 /* mobile */
 @media screen and (max-width: 768px) {
   .popup img {
     display: none; }
-  .header-info .header-top .header-top-short-menu .bookmark, .header-info .header-top .header-top-short-menu .shortcut,
-  .header-info .header-top .header-top-util ul, .header-main .container .header-logo .text-area {
+  .header-info .header-service .header-service-short-menu .bookmark, .header-info .header-service .header-service-short-menu .shortcut,
+  .header-info .header-service .header-service-util ul, .header-main .container .header-logo .text-area {
     display: none; }
-  .header-info .header-top .header-top-util .user {
+  .header-info .header-service .header-service-util .user {
     display: block; }
-  .header-info .header-top .header-top-short-menu .search .search-term {
+  .header-info .header-service .header-service-short-menu .search .search-term {
     font-size: 1.3rem; }
-  .header-info .header-top .header-top-short-menu {
+  .header-info .header-service .header-service-short-menu {
     margin-left: 50px; }
   .header-main .container .header-logo {
     top: 60px; }
