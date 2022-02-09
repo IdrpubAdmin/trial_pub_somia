@@ -4,7 +4,6 @@ html { font-size: 62.5%; }
     position: relative;
 }
 
-//main-btn
 .main-btn {
     height: 100vh;
     display: flex;
@@ -15,10 +14,23 @@ html { font-size: 62.5%; }
     }
 }
 
-.tax {
-    p {
-        width: 400px;
-        height: 400px;
-        background-color: red;
+.tax-contents {
+    position: relative;
+}
+
+// tax-table
+.tax-contents {
+    #bodyTable {
+        position: absolute;
+        top: 0px;
     }
+    .supply {
+        line-height: 31px;
+    }
+    .supply2 {
+        height: 47px;
+        td {
+            vertical-align: middle; 
+        }
+    } 
 }

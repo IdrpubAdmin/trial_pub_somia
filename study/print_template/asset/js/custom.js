@@ -1,11 +1,24 @@
-var taxBtn = document.querySelector(".btn-tax-open");
-var cashBtn = document.querySelector(".btn-cash-open");
-var close = document.querySelector(".close");
+document.addEventListener('DOMContentLoaded', function() { 
 
-function popupOpen (){
+var target = document.querySelectorAll('.btn-open');
+var popClose = document.querySelectorAll('.popup .btn-close')
+var targetID;
 
-};
+// 팝업 열기
+for(var i = 0; i < target.length; i++){
+  target[i].addEventListener('click', function(){
+    targetID = this.getAttribute('href');
+    document.querySelector(targetID).classList.remove("dn");
+    document.querySelector(targetID).classList.add("db");
+  });
+}
 
-function popupClose () {
+// 팝업 닫기
+for(var j = 0; j < target.length; j++){
+  popClose[j].addEventListener('click', function(){
+    document.querySelector(targetID).classList.remove("db");
+    document.querySelector(targetID).classList.add("dn");
+  });
+}
 
-};
+});
