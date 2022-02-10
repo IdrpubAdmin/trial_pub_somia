@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelector(targetID).classList.add("dn");
     });
   }
-  
 });
 
 
