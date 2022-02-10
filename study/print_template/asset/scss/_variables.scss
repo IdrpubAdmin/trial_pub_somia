@@ -1,1 +1,8 @@
 $pink : #ffa3a3;
+
+@mixin btn {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding: 0;
+}

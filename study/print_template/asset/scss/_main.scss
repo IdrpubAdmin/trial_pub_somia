@@ -4,6 +4,7 @@ html { font-size: 62.5%; }
     position: relative;
 }
 
+// index
 .main-btn {
     height: 100vh;
     display: flex;
@@ -14,8 +15,23 @@ html { font-size: 62.5%; }
     }
 }
 
+// tax
+.tax {
+    .tax-footer-text {
+        margin-top: 24px;
+        margin-bottom: 32px;
+        line-height: 20px;
+        font-size: 1.2rem;
+    }
+}
+
 .tax-contents {
     position: relative;
+    .img-wrap {
+        img {
+            max-width: 640px;
+        }
+    }
 }
 
 // tax-table
@@ -32,5 +48,14 @@ html { font-size: 62.5%; }
         td {
             vertical-align: middle; 
         }
-    } 
+    }
 }
+
+// cash
+
+
+
+// print
+@media print {
+    h1, .tax-footer-text, .footer-btn { display: none; }
+};
