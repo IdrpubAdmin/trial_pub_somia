@@ -404,19 +404,8 @@ img {
   vertical-align: top;
 }
 
-.blind {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  margin: -1px;
-}
-
-.clear::after {
-  content: "";
-  display: block;
-  clear: both;
+button {
+  margin-left: -4px;
 }
 
 .db {
@@ -488,12 +477,11 @@ img {
   padding: 0;
 }
 
-.btn-footer-close {
+.btn-common-close {
   position: inherit;
   color: #000;
   line-height: 50px;
   border: 2px solid #000;
-  width: 312px;
   margin-right: 16px;
   background-color: transparent;
   cursor: pointer;
@@ -501,9 +489,8 @@ img {
   padding: 0;
 }
 
-.btn-footer-print {
+.btn-common-print {
   line-height: 54px;
-  width: 312px;
   border: none;
   background-color: #000 !important;
   color: #fff;
@@ -513,8 +500,17 @@ img {
   padding: 0;
 }
 
+.cash-common {
+  height: 36px;
+  line-height: 36px;
+}
+
 .tac {
   text-align: center;
+}
+
+.tar {
+  text-align: right;
 }
 
 .ti9999 {
@@ -530,6 +526,14 @@ img {
   line-height: 23px;
 }
 
+.lh35 {
+  line-height: 35px;
+}
+
+.lh37 {
+  line-height: 37px;
+}
+
 .lh40 {
   line-height: 40px;
 }
@@ -538,8 +542,16 @@ img {
   padding-left: 5px;
 }
 
+.pt3 {
+  padding-top: 3px;
+}
+
 .w14 {
   width: 13px;
+}
+
+.w17 {
+  width: 17px;
 }
 
 .w18 {
@@ -562,8 +574,16 @@ img {
   width: 40px;
 }
 
+.w45 {
+  width: 45px;
+}
+
 .w50 {
   width: 50px;
+}
+
+.w53 {
+  width: 53px;
 }
 
 .w62 {
@@ -574,8 +594,24 @@ img {
   width: 80px;
 }
 
+.w85 {
+  width: 85px;
+}
+
+.w73 {
+  width: 73px;
+}
+
 .w90 {
   width: 90px;
+}
+
+.w92 {
+  width: 92px;
+}
+
+.w95 {
+  width: 95px;
 }
 
 .w100 {
@@ -590,9 +626,33 @@ img {
   width: 110px;
 }
 
+.w140 {
+  width: 140px;
+}
+
+.w155 {
+  width: 155px;
+}
+
+.w173 {
+  width: 173px;
+}
+
 .w215 {
   padding-left: 5px;
   width: 215px;
+}
+
+.w222 {
+  width: 222px;
+}
+
+.w230 {
+  width: 230px;
+}
+
+.w242 {
+  width: 242px;
 }
 
 .w493 {
@@ -605,6 +665,14 @@ img {
 
 .h30 {
   height: 30px;
+}
+
+.h35 {
+  height: 35px;
+}
+
+.h37 {
+  height: 37px;
 }
 
 .h30-lh30 {
@@ -649,6 +717,14 @@ html {
   font-size: 1.2rem;
 }
 
+.tax .tax-btn-wrap .tax-footer-close {
+  width: 312px;
+}
+
+.tax .tax-btn-wrap .tax-footer-print {
+  width: 312px;
+}
+
 .tax-contents {
   position: relative;
 }
@@ -672,6 +748,37 @@ html {
 
 .tax-contents .supply2 td {
   vertical-align: middle;
+}
+
+.cash .cash-btn-wrap {
+  margin-top: 37px;
+}
+
+.cash .cash-btn-wrap .cash-footer-close {
+  width: 168px;
+}
+
+.cash .cash-btn-wrap .cash-footer-print {
+  width: 168px;
+}
+
+.cash-contents {
+  position: relative;
+}
+
+.cash-contents .img-wrap img {
+  max-width: 351px;
+}
+
+.cash-contents #bodyTable {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  max-width: 332px;
+}
+
+.cash-contents #bodyTable tr td table tr td {
+  text-indent: 5px;
 }
 
 @media print {

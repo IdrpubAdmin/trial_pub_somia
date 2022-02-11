@@ -23,8 +23,16 @@ html { font-size: 62.5%; }
         line-height: 20px;
         font-size: 1.2rem;
     }
+    .tax-btn-wrap {
+        .tax-footer-close {
+            width: 312px;
+        }
+        
+        .tax-footer-print {
+            width: 312px;
+        }
+    }
 }
-
 
 .tax-contents {
     position: relative;
@@ -53,6 +61,47 @@ html { font-size: 62.5%; }
 }
 
 // cash
+.cash {
+    .cash-btn-wrap {
+        margin-top: 37px; 
+        .cash-footer-close {
+            width: 168px;
+        }
+        .cash-footer-print {
+            width: 168px;
+        }
+    }
+}
+
+.cash-contents {
+    position: relative;
+    .img-wrap {
+        img {
+            max-width: 351px;
+        }
+    }
+}
+
+// cash-table 
+.cash-contents {
+    #bodyTable {
+        position: absolute;
+        top: 14px;
+        left: 10px;
+        max-width: 332px;
+        tr {
+            td {
+                table {
+                    tr {
+                        td {
+                            text-indent: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
