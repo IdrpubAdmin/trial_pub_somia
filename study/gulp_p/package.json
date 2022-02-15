@@ -1,0 +1,45 @@
+{
+  "name": "yarn",
+  "version": "1.0.0",
+  "description": "learn gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "repository": "https://github.com/IdrpubAdmin/trial_pub_somia.git",
+  "keywords": [
+    "gulp"
+  ],
+  "author": "ha jisoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IdrpubAdmin/trial_pub_somia/issues"
+  },
+  "homepage": "https://github.com/IdrpubAdmin/trial_pub_somia#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/register": "^7.16.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-image": "^6.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "babelify": "^10.0.0",
+    "del": "^6.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-bro": "^2.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "node-sass": "^7.0.1",
+    "uglifyify": "^5.0.2"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

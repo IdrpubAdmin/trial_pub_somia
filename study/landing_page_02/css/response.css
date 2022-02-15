@@ -1,0 +1,43 @@
+/* pc */
+@media screen and (max-width: 1300px) {
+    .middle .gagebar, .middle .gagebar .gage { height: 12px; width: 93.5%; }
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+    .middle .gagebar, .middle .gagebar .gage { height: 12px; width: 93.5%; }
+}
+
+
+/* mobile */
+@media screen and (max-width: 767px) {
+
+    body { min-width: 360px; font-size: inherit; background: #fff; }
+    
+    .pop { width: inherit; transform: inherit; position: inherit; top: inherit; left: inherit; padding: 0 40px; }
+
+    .content p { line-height: 1.31; margin-top: 7%; }
+    .content p .mobile { display: inline-block; }
+    .content > span { font-size: 1.125em; }
+
+    .middle .gagebar, .middle .gagebar .gage { height: 12px; width: 93.5%; }
+    .middle .percent { margin-left: inherit; display: inline-block; vertical-align: top; }
+    .middle .percent span {}
+    .middle .gagebar .percent { font-size: 1.313em; line-height: 19px; right: -66px;}
+
+    .bottom .wait em.roughly { font-size: 30px; }
+    .bottom .wait span { margin-top: 25px; }
+
+    .count em { width: 99%; }
+    .count em + span { display: inline-block; width: 176px; margin-top: inherit; line-height: 15.75px;}
+}
+
+
+@media screen and (max-width: 572px) {
+    .content p br.mobile { display: inline-block; }
+}
+
+@media screen and (max-width: 562px) {
+    .middle .percent { margin-left: inherit; display: inherit; vertical-align: inherit; padding-left: inherit; } 
+    .middle .gagebar, .middle .gagebar .gage { height: 12px; width: 89%; }
+}
