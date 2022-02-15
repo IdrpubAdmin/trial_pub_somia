@@ -3,7 +3,7 @@
   <div class="menu">
     <a href="#none" v-for="메뉴목록 in menuList" :key="메뉴목록">{{ 메뉴목록 }}</a>
   </div>
-
+  hello
   <img alt="Vue logo" src="./assets/logo.png">
 
 
