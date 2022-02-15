@@ -3,7 +3,7 @@
   <div class="menu">
     <a href="#none" v-for="메뉴목록 in menuList" :key="메뉴목록">{{ 메뉴목록 }}</a>
   </div>
-  hello
+  
   <img alt="Vue logo" src="./assets/logo.png">
 
 
@@ -17,7 +17,7 @@
     <p>{{ price [1] }} 만원</p>
   </div>
 
-    <div>
+  <div>
     <h4 :style="bold">{{ products [2] }}</h4>
     <p>{{ price [2] }} 만원</p>
   </div>
