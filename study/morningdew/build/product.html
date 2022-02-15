@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>morningdew</title>
+    
+    <!-- plugin css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="plugin/jqGrid/css/ui.jqgrid.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+    <!-- plugin js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="plugin/jqGrid/js/grid.locale-kr.js"></script>
+    <script src="plugin/jqGrid/js/jquery.jqGrid.min.js"></script>
+
+    <!-- my js -->
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+<div class="wrapper">
+<!-- start header.html-->
+<!-- header -->
+<header>
+
+    <div class="header">
+        <!-- popup -->
+        <div id="divpop1" class="popup divpop">
+            <img src="img/pop/popup.jpg" alt="모닝듀에서는 유통마진 없이 온라인에서만 판매합니다 상단 팝업 광고">
+            <div class="btn-pop-wrap container">
+                <ul class="clear">
+                    <li>
+                        <input type='checkbox' name='chkbox' id='doNotOpen'>
+                    </li>
+                    <li>
+                        <span>오늘그만보기</span>
+                    </li>
+                    <li>
+                        <a href="javascript:closeWin();" class="pop-close"><i class="xi-close"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //popup -->
+
+        <!-- header-info -->
+        <div class="header-wrap">
+            <div class="header-info container">
+                <div class="header-service clear">
+                    <div class="header-service-short-menu clear">
+                        <div class="search">
+                            <input type="text" class="search-term" placeholder="SEARCH">
+                            <button type="submit" class="search-button"></button>
+                        </div>
+                        <div class="bookmark">
+                            <a href="#none">
+                                <span><span class="aster">★</span> 즐겨찾기</span>
+                            </a>
+                        </div>
+                        <div class="shortcut">
+                            <a href="#none">
+                                <span><span class="aster">▤</span> 바로가기</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-service-util">
+                        <a href="#none" class="user"><i class="xi-user"></i></a>
+                        <ul>
+                            <li class="bold">
+                                <a href="#none">로그인</a>
+                            </li>
+                            <li>
+                                <a href="#none">회원가입</a>
+                            </li>
+                            <li>
+                                <a href="#none">장바구니</a>
+                            </li>
+                            <li>
+                                <a href="#none">주문내역</a>
+                            </li>
+                            <li>
+                                <a href="#none">마이페이지</a>
+                            </li>
+                            <li class="line-not">
+                                <a href="#none">고객센터</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main">
+                <div class="container">
+                    <div class="header-logo clear">
+                        <h1>
+                            <a href="index.html"><img src="img/logo/logo.png" alt="모닝듀"></a>
+                        </h1>
+                        <div class="text-area">
+                            <span class="green">순수 100% 천연펄프 화장지</span>
+                            <span>중간마진 없는 모닝듀에서 바로 직구하세요!</span>
+                        </div>
+                    </div>
+                    <div class="sns">
+                        <ul>
+                            <li class="on">
+                                <a href="#none"><i class="xi-facebook-official"></i></a>
+                            </li>
+                            <li>
+                                <a href="#none"><i class="xi-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#none"><i class="xi-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#none"><i class="xi-blogger"></i></a>
+                            </li>
+                            <li>
+                                <a href="#none"><i class="xi-kakaostory"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //header-info  -->
+    </div>
+
+
+</header>
+<!-- //header -->
+<!-- end header.html-->
+<!-- start gnb.html-->
+<!-- gnb -->
+ <nav class="gnb clear">
+        <div class="gnb-line">
+            <h2 class="blind">메뉴</h2>
+            <div class="mo-hamburger">
+                <i class="xi-bars"></i>
+            </div>
+            <div id="moMenu">
+                <ul>
+                    <li><a href="#none">매일매일 이벤트</a></li>
+                    <li><a href="#none">천연펄프 화장지</a></li>
+                    <li><a href="#none">디스펜서·케이스</a></li>
+                    <li><a href="#none">친환경해충포획퇴치기</a></li>
+                    <li><a href="notice.html">고객센터</a></li>
+                </ul>
+            </div>
+            <div id="mo-bg">
+            </div>
+            <ul class="dept01 container">
+                <li class="menuhover">
+                    <a class="hover-green" href="#none">매일매일 이벤트</a>
+                    <ul class="dropdown gnb0" >
+                        <li><a href="#none">공지사항0</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="menuhover">
+                    <a href="#none">천연펄프 화장지</a>
+                    <ul class="dropdown gnb1" >
+                        <li><a href="#none">공지사항1</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="menuhover">
+                    <a href="#none">디스펜서·케이스</a>
+                    <ul class="dropdown gnb2" >
+                        <li><a href="#none">공지사항2</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="menuhover">
+                    <a href="#none">친환경해충포획퇴치기</a>
+                    <ul class="dropdown gnb3" >
+                        <li><a href="#none">공지사항3</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="menuhover">
+                    <a href="notice.html">고객센터</a>
+                    <ul class="dropdown gnb4" >
+                        <li><a href="#none">공지사항4</a></li>
+                        <li><a href="#none">이벤트</a></li>
+                        <li><a href="#none">상품후기</a></li>
+                        <li><a href="#none">QNA</a></li>
+                        <li><a href="#none">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="dep2-bg">
+            </div>
+        </div>
+</nav>
+<!-- //gnb -->
+    
+<!-- end gnb.html-->
+
+<!-- @@block content -->
+
+<!-- main -->
+<main>
+    
+    <!-- product -->
+    <div class="contents product container">
+        <h2 class="blind">상품페이지</h2>
+        <span>Home > 매일매일이벤트</span>
+
+        <!-- product-order -->
+        <div class="product-order">
+            <div class="product-img">
+                <div class="img-wrap">
+                    <img src="img/content/product_list_big.png" alt="모닝듀 점보롤 화장지">
+                </div>
+                <div class="img-list">
+                    <img src="img/content/product_list.png" alt="화장지 디테일 이미지">
+                    <img src="img/content/product_list.png" alt="화장지 디테일 이미지">
+                    <img src="img/content/product_list.png" alt="화장지 디테일 이미지">
+                    <img src="img/content/product_list.png" alt="화장지 디테일 이미지">
+                    <img src="img/content/product_list.png" alt="화장지 디테일 이미지">
+                </div>
+                <div class="img-list-btn">
+                    <a href="#none" class="btn prev"><i class="xi-angle-left"></i>이전상품</a>
+                    <a href="#none" class="btn extension"><i class="xi-search"></i>확대보기</a>
+                    <a href="#none" class="btn next">다음상품<i class="xi-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="product-option">
+                <h3>모닝듀 점보롤 화장지 [컬러케이스 무료증정]</h3>
+                <div class="product-option-price">
+                    <ul>
+                        <li>
+                            <span>판매가</span>
+                            <span>39,000 원</span>
+                        </li>
+                        <li>
+                            <span>소비자가</span>
+                            <span>65,000 원</span>
+                        </li>
+                        <li>
+                            <span>제조사</span>
+                            <span>(주)모닝듀</span>
+                        </li>
+                        <li>
+                            <span>원산지</span>
+                            <span>국내생산</span>
+                        </li>
+                        <li>
+                            <span>배송방법</span>
+                            <span>택배</span>
+                        </li>
+                        <li>
+                            <span>배송비</span>
+                            <span>무료</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="product-color-option">
+                    <span>케이스색상</span>
+                    <div class="select-box">
+                        <select>
+                            <option>- [필수] 옵션을 선택해 주세요 -</option> 
+                            <option>Value 2</option>
+                            <option>Value 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="product-notice">
+                    <em>최소주문수량 1개 이상</em>
+                    <div class="product-notice-option-alert">
+                         <span class="attention"></span>
+                         <strong>위 옵션 선택박스를 선택하시면, 아래에 상품이 추가됩니다.</strong>
+                    </div>    
+                </div>
+                <div class="product-select">
+                    <div class="product-first">
+                        <div class="select1-name">
+                            <span>모닝듀 점보롤 화장지<span class="color">색상 : 바닐라옐로우</span></span>
+                        </div>
+                        <div class="select2-quantity">
+                            <input type="text" class="form-control" value="42">
+                            <div class="select-quantity-updown">
+                                <button type="button" class="btn up"><i class="xi-caret-up-min"></i></button>
+                                <button type="button" class="btn down"><i class="xi-caret-down-min"></i></button>
+                            </div>
+                            <a href="#none" class="del"><i class="xi-close-min"></i></a>
+                        </div>
+
+                        <div class="select3-price">
+                            <em>39,000 원</em>
+                        </div>
+                    </div>
+                    <div class="product-second">
+                        <div class="select1-name">
+                            <span>모닝듀 점보롤 화장지<span class="color">색상 : 바닐라옐로우</span></span>
+                        </div>
+                        <div class="select2-quantity">
+                            <input type="text" class="form-control" value="42">
+                            <div class="select-quantity-updown">
+                                <button type="button" class="up"><i class="xi-caret-up-min"></i></button>
+                                <button type="button" class="down"><i class="xi-caret-down-min"></i></button>
+                            </div>
+                            <a href="#none" class="del"><i class="xi-close-min"></i></a>
+                        </div>
+
+                        <div class="select3-price">
+                            <em>39,000 원</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-btn">
+                    <div class="btn-total">
+                        <a href="#none">총 상품금액(수량):<span>78,000</span>(2개)</a>
+                    </div>
+                    <div class="btn-other">
+                        <a href="#none" class="on">바로 구매하기</a>
+                        <a href="#none">장바구니 담기</a>
+                        <a href="#none">관심상품 등록</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //product-order -->
+    
+        <div class="detail-view">
+            <div class="detail-view-text product-title-bg">
+                <em>상품상세</em>
+                <span>Detail View</span>
+            </div>
+            <div class="detail-img-wrap">
+                <img src="img/content/detail_view.jpg" alt="모닝듀 점보롤 화장지 상품상세 안내">
+            </div>
+        </div>
+
+        <!-- delivery -->
+        <div class="delivery">
+            <div class="delivery-text product-title-bg">
+                <em>배송안내</em>
+                <span>Delivery</span>
+            </div>
+            <div class="delivery-contents">
+                <em>배송정보</em>
+                <p>배송 방법 : 택배<br>
+                    배송 지역 : 전국지역<br>
+                    배송 비용 : 무료<br>
+                    배송 기간 : 3일 ~ 7일<br>
+                    배송 안내 : - 산간벽지나 도서지방은 별도의 추가금액을 지불하셔야 하는 경우가 있습니다.<br>
+                    고객님께서 주문하신 상품은 입금 확인후 배송해 드립니다. 다만, 상품종류에 따라서 상품의 배송이 다소 지연될 수 있습니다.</p>
+            </div>
+        </div>
+        <!-- //delivery -->
+
+        <!-- return -->
+        <div class="return">
+            <div class="return-text product-title-bg">
+                <em>교환 및 반품정보</em>
+                <span>Return</span>
+            </div>
+            <div class="return-contents">
+                <em>교환 및 반품정보</em>
+                <p>
+                    <span>교환 및 반품이 가능한 경우</span><br>
+                    - 상품을 공급 받으신 날로부터 7일이내 단, 가전제품의<br>
+                    경우 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우에는 교환/반품이 불가능합니다.<br>
+                    - 공급받으신 상품 및 용역의 내용이 표시.광고 내용과<br>
+                    다르거나 다르게 이행된 경우에는 공급받은 날로부터 3월이내, 그사실을 알게 된 날로부터 30일이내<br><br>
+
+                    <span>교환 및 반품이 불가능한 경우</span><br>
+                    - 고객님의 책임 있는 사유로 상품등이 멸실 또는 훼손된 경우. 단, 상품의 내용을 확인하기 위하여<br>
+                    포장 등을 훼손한 경우는 제외
+                    - 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우<br>
+                    (예 : 가전제품, 식품, 음반 등, 단 액정화면이 부착된 노트북, LCD모니터, 디지털 카메라 등의 불량화소에<br>
+                    따른 반품/교환은 제조사 기준에 따릅니다.)<br>
+                    - 고객님의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우 단, 화장품등의 경우 시용제품을<br>
+                    제공한 경우에 한 합니다.<br>
+                    - 시간의 경과에 의하여 재판매가 곤란할 정도로 상품등의 가치가 현저히 감소한 경우<br>
+                    - 복제가 가능한 상품등의 포장을 훼손한 경우<br>
+                    (자세한 내용은 고객만족센터 1:1 E-MAIL상담을 이용해 주시기 바랍니다.)<br><br>
+
+                    ※ 고객님의 마음이 바뀌어 교환, 반품을 하실 경우 상품반송 비용은 고객님께서 부담하셔야 합니다.<br>
+                    (색상 교환, 사이즈 교환 등 포함)
+                </p>
+            </div>
+        </div>
+        <!-- //return -->
+
+        <!-- jqGrid 연습 -->
+        <div class="jqGrid-practice">
+            <h2 class="blind">jqGrid 연습 게시판</h2>
+            <div class="jqGrid-text product-title-bg">
+                <em>jqGrid 연습 게시판</em>
+                <span>practice</span>
+            </div>
+            <div class="grid-wrap">
+                <table id="grid">
+                </table>
+                <div id="pager"></div>
+            </div>
+        </div>
+        <!-- // jqGrid 연습 -->
+
+        <!-- product-review -->
+        <div class="product-review clear">
+            <h2 class="blind">게시판</h2>
+            <div class="review-text product-title-bg">
+                <em>사용후기</em>
+                <span>Review</span>
+            </div>
+            <div class="board-wrap">
+                <div class="board-row">
+                    <div class="board-table">
+                        <h2 class="blind">사용후기 게시판</h2>
+                        <ul>
+                            <li>
+                                <div class="board-title">
+                                    <span class="w-product-title">제목</span>
+                                    <span class="w-product-title-other">작성자</span>
+                                    <span class="w-product-title-other">작성일</span>
+                                    <span class="w-product-title-other">별점</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="board-contents">
+                                    <a href="#none"><span class="w-product-title">적극 추천합니다.적극 추천합니다.적극 추천합니다.적극 추천합니다.적극 추천합니다.적극 추천합니다.적극 추천합니다.</span></a>
+                                    <span class="w-product-title-other">손선**</span>
+                                    <span class="w-product-title-other">2016-12-31</span>
+                                    <span class="w-product-title-other star"><span></span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="board-contents">
+                                    <a href="#none"><span class="w-product-title">적극 추천합니다.</span></a>
+                                    <span class="w-product-title-other">손선**</span>
+                                    <span class="w-product-title-other">2016-12-31</span>
+                                    <span class="w-product-title-other star"><span></span></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <a href="#none">상품후기쓰기</a>
+                <a href="#none">모두보기</a>
+            </div>
+        </div>
+        <!-- //product-review -->
+
+        <!-- qna -->
+        <div class="qna">
+            <div class="qna-text product-title-bg">
+                <em>상품문의</em>
+                <span>Q&A</span>
+            </div>
+            <ul>
+                <li>
+                    <div class="board-title">
+                        <span class="blind">제목</span>
+                        <span class="blind">작성자</span>
+                        <span class="blind">작성일</span>
+                        <span class="blind">별점</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="board-contents">
+                        <a href="#none"><span class="blind">제목</span></a>
+                        <span class="blind">손선**</span>
+                        <span class="blind">2016-12-31</span>
+                        <span class="blind">별</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="board-contents">
+                        <a href="#none"><span class="blind">제목</span></a>
+                        <span class="blind">손선**</span>
+                        <span class="blind">2016-12-31</span>
+                        <span>게시물이 없습니다</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="btn-wrap">
+                <a href="#none">상품문의하기</a>
+                <a href="#none">모두보기</a>
+            </div>
+        </div>
+        <!-- //qna -->
+
+    </div>
+    <!-- //product -->
+
+</main>
+<!-- //main -->
+
+<!-- @@close-->
+
+<!-- start footer.html-->
+<!-- footer -->
+<footer> 
+    <div class="footer">
+
+        <!-- guid -->
+        <div class="guid container">
+            <h2 class="blind">가이드 안내</h2>
+            <ul>
+                <li class="guid-list">
+                    <div class="cscenter">
+                        <h3><span class="underline">고객</span>센터<span class="en-name"> CS CENTER</span></h3>
+                        <div class="tel">
+                            <span>전화상담</span>
+                            <a href='tel:010-0000-0000'>070.4245.0511</a>
+                        </div>
+                        <div class="time">
+                            <p>상담시간 : 09:00 ~ 17:00 <span>점심시간 : 12:30 ~ 13:30</span><br>토, 일, 공휴일은 휴무입니다.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="guid-list">
+                    <div class="bankinfo">
+                        <h3><span class="underline">입금</span>정보<span class="en-name"> BANK INFO</span></h3>
+                        <div class="banklist">
+                            <span>기업은행</span><em class= "industrial">492-016854-01-010</em><br>
+                            <span>농협은행</span><em class="nh">317000-21-70061</em><br>
+                            <span>예금주</span><em class="account">(주)모닝듀</em>
+                        </div>
+                    </div>
+                </li>
+                <li class="guid-list">
+                    <div class="faq">
+                        <h3><span class="underline">자주</span> 묻는 질문<span class="en-name"> FAQ</span></h3>
+                        <ul class="faq-list">
+                            <li>
+                                <a href="#none">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <span class="time">2016-12-31</span>
+                            </li>
+                            <li>
+                                <a href="#none">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <span class="time">2016-12-31</span>
+                            </li>
+                            <li>
+                                <a href="#none">· 세금계산서를 발급 받고 싶습니다.</a>
+                                <span class="time">2016-12-31</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- //guid -->
+        
+        <!-- footer-short -->
+        <div class="footer-short">
+            <ul class="container">
+                <li><a href="#none">홈 </a></li>
+                <li><a href="#none">회사소개 </a></li>
+                <li><a href="#none">이용약관 </a></li>
+                <li class="bold"><a href="#none">개인정보취급방침 </a></li>
+                <li><a href="#none">이용안내 </a></li>
+            </ul>
+        </div>
+        <!-- //footer-short -->
+
+        <!-- footer-info -->
+        <div class="footer-info-wrap">
+            <div class="footer-info container">
+                <div class="about">
+                    <img src="img/logo/logo_g.png" alt="모닝듀 로고">
+                    <p>(주)모닝듀 | 대표 : 김영효(김기준) <span class="footer-db"></span> | 소재지 : 72852 경기도 남양주시 수동면 비룡로 654-38 주식회사 모닝듀<br>
+                        전화 : 070-4245-0511 | 팩스 : 031-592-2263 <span class="footer-db"></span> | 개인정보관리책임자 : 김영효(kkkj0511@naver.com)<br>
+                        사업자등록번호 : 132-81-89238 <span class="footer-db"></span> | 통신판매업신고 : 제2010-경기남양주-0486호 [사업자정보확인]<br>
+                        Copyright © 2015 기본 쇼핑몰. All rights reserved.
+                    </p>
+                </div>
+                <div class="lg-service">
+                    <img src="img/banner/lg_service.png" alt="LG U+ 매매보호(에스크로) 서비스">
+                </div>
+            </div>
+        </div>
+        <!-- //footer-info -->
+        
+    </div>
+</footer>
+<!-- //footer -->
+<!-- end footer.html-->
+<!-- @@close-->
+</div>
+</body>
+</html>

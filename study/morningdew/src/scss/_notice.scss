@@ -1,0 +1,181 @@
+//notice
+.notice {
+    margin-top: 97px;
+    color: #555;
+    overflow: hidden;
+    >span {
+
+        line-height: 28px;
+        font-size: 12px; 
+        display: block;
+        text-align: right;
+    }
+    .notice-text {
+        text-align: center; 
+        margin: 39px 0 34px;
+        h2 {
+            font-family: "nanum";
+            font-weight: 900;
+            letter-spacing: -0.9px;
+            font-size: 36px; 
+            margin-bottom: 27px;
+        }
+        .green-line {
+            width: 4%;
+            height: 2px;
+            background-color: $green;
+            margin: 0 auto;
+
+        }
+        span {
+            color: #959595;
+            font-family: "nanum";
+            font-weight: 700;
+            font-size: 1.8rem; 
+            display: inline-block;
+            margin: 17px auto 0 0;
+            margin-top: 17px;
+        }
+    }
+    .search-wrap {
+        height: 50px;
+        .search {
+            border: 1px solid #ccc;
+            width: 150px;
+            float: right;
+            .search-term {
+                border: none;
+                padding: 8px 11px;
+                height: 20px;
+                outline: none;
+                width: 59%;
+                &::placeholder {
+                    color: #ccc;
+                    font-family: "Dotum";
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+            }
+            .search-button {
+                width: 20px;
+                height: 20px;
+                border: none; 
+                text-align: center;
+                cursor: pointer;
+                background: url(../img/icon/ico-notice-search.png) no-repeat;
+                background-size: 16px;
+                vertical-align: middle;
+                background-color: none;
+
+            }
+        }
+    }
+}
+
+
+
+// notice board-wrap
+.board-wrap {
+    background: #fff;
+    position: relative;
+    .board-row {
+        .board-table {
+            caption {
+            }
+        }
+    }
+}
+
+// notice board-table detail
+.board-table {
+    .board-title, .board-contents {
+        font-size: 0.813rem;
+        text-align: center;
+        font-weight: bold;
+        overflow: hidden;
+    }
+    .board-title {
+        color: #555;
+        background: rgb(241, 241, 241);
+        border-top: 2px solid #444;
+        border-bottom: 1px solid #aaa;
+        font-size: 0;
+        span {
+            font-size: 1.2rem;
+            padding: 1.125rem 0;
+            display: inline-block;
+            vertical-align: top; 
+        }
+    }
+    .board-contents, a {
+        color: #333;
+    }
+    .board-contents {
+        border-bottom: 1px solid #aaa;
+        font-size: 0;
+        span {
+             padding: 1.375rem 0;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;    
+            text-overflow: ellipsis;
+            &:last-child {
+                img {
+                    width: 16px;
+                    height: 14px;
+                    object-fit: cover;
+                }
+            } 
+        }
+        a {
+            span {
+                text-align: left;
+            }
+        }
+    }
+}
+
+// notice board-post-num
+.board-post-num {
+    position: relative;
+    .num-list {
+    text-align: center;
+    margin-top: 20px;
+        a {
+            display: inline-block;
+            font-size: 0.813rem;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ccc;
+            color: #ccc;
+            transition: all 0.2s;
+            &:hover {
+                border: 1px solid #666;
+                color: #555;
+                font-weight: bold;
+            } 
+        }
+    }
+}
+
+.notice {
+    .btn-write {
+        background-color: #333;
+        display: inline-block;
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        a {
+            padding: 0 15px;
+            display: block;
+            height: 100%;
+            font-size: 1.2rem;
+            color: #fff;
+            font-family: "Dotum";
+            line-height: 30px; 
+
+        }
+    }
+}
