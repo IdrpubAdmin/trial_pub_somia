@@ -101,6 +101,7 @@
 
 import data from './assets/post.js';
 
+
 export default {
   name: 'App',
   data(){
