@@ -45,7 +45,6 @@ export default {
       value: ['', ''],
       result: ['', ''],
       word: '칼국수',
-      change : ['nooooo', 'yessssss']
     }
   },
   methods: {
