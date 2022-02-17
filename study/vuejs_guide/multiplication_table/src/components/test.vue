@@ -1,21 +1,20 @@
 <template>
     <div class="title">
-      <h1>{{ title }}</h1>
-      <p>{{ subTitle }}</p>
+      <button>{{btnText}}</button>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'title',
+    name: 'top',
     data () {
       return {
-        prop: ['title', 'subTitle']
+        prop : ['btnText']
       }
-    }
+    },
 }
 </script>
 
 <style scoped>
-    h1 { color:aqua; }
+    h1 { color:rgb(209, 28, 28); }
 </style>

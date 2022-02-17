@@ -1,8 +1,5 @@
 <template>
 
-<compo-test />
-<compo-test start-word="우앵" />
-<compo-test start-word="웨앵" />
 
 <div id="root">
   <h2>구구단</h2>
@@ -28,14 +25,10 @@
 
 <script>
 
-import compoTest from "./components/test";
 
 export default {
   name: 'app',
   el :[ "#root", "#root1" ],
-  components : {
-    compoTest
-  },
   props: ['startWord'],
   data() {
     console.log(this);
@@ -45,6 +38,7 @@ export default {
       value: ['', ''],
       result: ['', ''],
       word: '칼국수',
+      text: 'hi from data'
     }
   },
   methods: {
