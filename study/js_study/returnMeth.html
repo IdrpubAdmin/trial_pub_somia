@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+let arr = [ 3, 5, 104, 533, 212, 645 ];
+
+// forEach 연습
+// arr.forEach(function(count, index){
+//     console.log(index, count)
+// });
+
+// filter 연습
+// arr = arr.filter(function(value){
+//     return value >= 200;
+// });
+
+// filter 연습 -> arrList라는 새로운 변수로 변환
+// let arrList = arr.filter(function(value){
+//     return value >= 200;
+// });
+// console.log(arrList);
+
+// filter 연습 -> 화살표 사용해보기
+// arr = arr.filter((value) => value >= 200 );
+
+// console.log(arr);
+
+// ********************************************
+
+let words = [ 'pork', 'egg', 'pizza', 'hamburger', 'coffee', 'orangeJuice'];
+
+// filter 연습 - length를 사용해서 단어 길이 필터링 해보기 - fucntion 안의 매개변수 까먹지 말고 쓰기
+// let couUp = words.filter(function(words, index){
+//     return words.length > 5
+// });
+// console.log(couUp)
+
+// map 연습 
+arr = arr.map(function(value){
+    return value * 2
+});
+
+console.log(arr);
+
+</script>
+
+<body>
+    
+</body>
+</html>

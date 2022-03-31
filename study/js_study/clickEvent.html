@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // createElement로 h1 태그 생성
+        const header = document.createElement('h1')
+        // header에 생성한 h1 가져다 붙임
+        document.body.appendChild(header)
+
+        // count의 초기값 설정
+        let count = 0
+        header.style.userSelect = 'none'
+        // 텍스트 출력 + 변수
+        header.textContent = `클릭횟수: ${count}`
+        // 클릭이벤트 생성
+        header.addEventListener('click', () => {
+            // 하나씩 더함
+            count++
+            // 하나씩 더한거를 출력
+            header.textContent = `클릭횟수: ${count}`
+        })
+    })
+</script>
+<body>
+</body>
+</html>

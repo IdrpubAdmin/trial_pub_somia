@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script>
+    // 정렬 sortBy 
+    const books = [{
+            name:'혼자 공부하는 파이썬',
+            price:18000,
+            publisher:'한빛 미디어'
+        },{
+            name: 'HTML5 웹 프로그래밍 입문',
+            price:26000,
+            publisher:'한빛아카데미'
+        } ,{
+            name:'머신러닝 딥러닝 실전 개발 입문',
+            price:30000,
+            publisher:'위키북스'
+        },{
+            name:'딥러닝을 위한 수학',
+            price:25000,
+            publisher:'위키북스'
+        }]
+
+        // 언더스코어 식별자로 사용할 수 있는 기호 : $ or _(객체)  
+        const output = _.sortBy(books, ['publisher', 'price'])
+        console.log(output)
+
+
+</script>

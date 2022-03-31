@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        counter = 0
+        const listener = () => {
+            header.textContent = `클릭 횟수: ${++counter}`
+        }
+        const header = document.createElement('h1')
+        header.textContent = `클릭 횟수: 0`
+
+        const p = document.createElement('p')
+        p.textContent = `이벤트 연결 상태: 해제`
+
+        const connectButton = document.createElement('button')
+        connectButton.textContent = `이벤트 연결 버튼`
+        // connectButton 클릭을 할때 header에 click 이벤트를 연결한다.
+        connectButton.addEventListener('click', () => {
+            header.addEventListener('click',listener)
+                p.textContent = '이벤트 연결 상태: 연결'
+            })
+
+        const disconnectButton = document.createElement('button')
+        disconnectButton.textContent = `이벤트 해제 버튼`
+        // disconnectButton 클릭을 할때 header에 click 이벤트를 연결한다.
+        disconnectButton.addEventListener('click', () => {
+        // removeEventListener 등장~ remove를 사용하기 위해서는 클릭을 연결할때 사용했던 이벤트 리스너를 별도의 변수로 만들어줘야함 ( listener 연결 )
+            header.removeEventListener('click',listener)
+                p.textContent = '이벤트 연결 상태: 해제'
+            })
+
+        // 내가 추가로 작성해보기
+        // reset 버튼 추가
+        const reset = document.createElement('button')
+        reset.textContent = `이벤트 리셋 버튼`
+        reset.addEventListener('click', () => {
+            header.addEventListener('click', listener)
+            })
+        
+
+        document.body.appendChild(header)
+        document.body.appendChild(connectButton)
+        document.body.appendChild(disconnectButton) 
+        document.body.appendChild(reset)
+        document.body.appendChild(p)
+    </script>
+</body>
+</html>

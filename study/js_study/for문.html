@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    let output = ''; //초기화
+
+    for (let i = 0; i < 9; i++) { //반복문 내부를 n번 반복
+        for ( let j = 0; j < i + 1; j++ ) { //내부적으로 1번 반복 
+            output += '*'
+        }
+        output += '\n' // 반복문 벗어난 뒤에 줄바꿈 출력
+    }
+
+    console.log(output) 
+</script>
+
+<body>
+    
+</body>
+</html>

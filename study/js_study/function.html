@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+const isLeapYear = function (연도) {
+    return  ( 연도 % 4 === 0 ) //윤년 ===: 완전일치 
+        && ( 연도 % 100 !== 0 ) //윤년아님 &&: 함수일치(양쪽다 true 여야함) / != or !== : 같지않다 
+        || ( 연도 % 400 === 0 ) //윤년 ||: 또는
+}
+
+</script>
+
+<body>
+    
+</body>
+</html>

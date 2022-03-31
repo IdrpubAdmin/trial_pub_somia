@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 태그 생성중..
+        const header = document.createElement('h1')
+        header.textContent = 'createElement로 만든 태그'
+        header.style.color = 'red' 
+
+        // 태그 출력중.. 어디 밑에다가 출력할 것인지
+        const body = document.querySelector('body')
+        // header가 body 태그 아래에 붙는다 
+        body.appendChild(header)
+        // remove로 지운다
+        // body.removeChild(header)
+        // removeChild보다 더 많이 쓰는 방식 : 현재 header 태그의 부모노드가 바디이기 때문에 body와 같은 뜻으로 해석됨
+        header.parentNode.replaceChild(header)
+    })
+</script>
+<body>
+    
+</body>
+</html>

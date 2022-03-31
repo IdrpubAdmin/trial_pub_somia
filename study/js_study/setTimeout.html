@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    setTimeout (function(){
+        console.log('1초마다 글씨가 나온다')
+    },1000);
+
+    setInterval(function(){
+        console.log('1초마다 글씨가 나온다')
+    },1000);
+
+    // 객체 연습문제
+    const a = {
+        name : '혼자 공부하는 파이썬',
+        price : 18000,
+        publisher : '한빛미디어'
+    }
+
+    a.name = '자스 공부하는 지수'
+
+    console.log(a.name)
+</script>
+<body>
+</body>
+</html>
