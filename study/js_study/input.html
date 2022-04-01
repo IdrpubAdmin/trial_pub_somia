@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const input = document.querySelector('input')
+        const button = document.querySelector('button')
+        const p = document.querySelector('p')
+
+        // value : 값 추출
+        // keydown -> keypress -> 입력양식에 값이 들어감 -> keyup
+        // change 이벤트 : 입력 양식 전체에 값 입력을 마쳤을 때 -> 값을 입력하고 엔터를 눌렀을 때
+        input.addEventListener('keyup', () => {
+            // input의 값
+            p.textContent = `${Number(input.value) *  2.54}cm로 변환되었습니다.`
+        })
+        
+    })
+</script>
+<body>
+    <input type="text"  name="" id=""> inch<br>
+    <button>계산</button>
+    <p></p>
+</body>
+</html>
