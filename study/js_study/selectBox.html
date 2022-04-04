@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const select = document.querySelector('select')
+        const p = document.querySelector('p')
+        
+        select.addEventListener('change', (event) => {
+
+            const options = event.currentTarget.options
+            // 위에 options를 만들어줬으므로 밑에는 options
+            const index = options.selectedIndex
+            // options 중에서 index에 있는거 : 하나만 선택할 경우
+            // p.textContent = `선택: ${options[index].textContent}`
+            // 다중선택의 예 : multiple
+            const list = []
+            for (const option of options) {
+                // option에서 selected가 되어있는지 확인
+                if (option.selected) {
+                    // selected가 되어있는 것들을 push로 list에다가 올림 
+                    list.push(option.textContent)
+                }
+            }
+            // 요소들을 쉼표로 붙여서 출력
+            p.textContent = `선택 : ${list.join(',')}`
+
+            console.log(options)            
+            console.log(index)            
+        })
+
+    })
+</script>
+<body>
+    <select name="" id="" multiple>
+        <option value="">칼국수</option>
+        <option value="">떡볶이</option>
+        <option value="">햄버거</option>
+        <option value="">쌀국수</option>
+    </select>
+
+    <p>선택 :</p>
+</body>
+</html>
