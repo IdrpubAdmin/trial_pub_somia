@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 현재 시간
+        let seconds = 0
+        // 타이머를 시작 및 정지
+        let timerId = 0
+        // seconds와 timerID를 아래와 같이 배열로 만들어 적을 수도 있음 : 다중할당연산
+        // let [seconds, timerId] = [0, 0]
+        const checkbox = document.querySelector('input[type=checkbox]')
+        const checkboxResult = document.querySelector('h1#checkbox')
+        const btn = document.querySelector('button')
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                // timerId를 정지시켜야하기 때문에 따로 빼기
+                document.body.style.backgroundColor = 'red';
+                timerId = setInterval(() => {
+                    // 그럼 여기엔 왜 1을 적었지
+                    seconds += 1
+                    checkboxResult.textContent = `${seconds}초`
+                }, 1000);
+            } else {
+                document.body.style.backgroundColor = 'white';
+                clearInterval(timerId)
+            }
+        })
+
+        // 추가 작성해보기 리셋
+        btn.addEventListener('click', () => {
+            seconds = 0;
+            checkboxResult.textContent = `0초`
+        })
+    });
+</script>
+<body>
+    <input type="checkbox">타이머 활성화<br>
+    <h1 id="checkbox">0초</h1>
+    <button class="clear">리셋</button>
+</body>
+</html>

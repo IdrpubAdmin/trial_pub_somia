@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const checkbox = document.querySelector('input[type=checkbox]')
+        const checkboxResult = document.querySelector('h1#checkbox')
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                checkboxResult.textContent = '체크'
+            } else {
+                checkboxResult.textContent = '해제'
+            }
+        })
+        const radios = document.querySelectorAll('input[type=radio][name=gender]')
+        const radioResult = document.querySelector('h1#radiobutton')
+        radios.forEach((radio) => {
+            // 라디오 버튼을 선택했을 때 선택된 것의 값을 textContent에 출력함
+            radio.addEventListener('change', () => {
+                event.currentTarget.value
+                radioResult.textContent = event.currentTarget.value
+            })
+        })
+    });
+</script>
+<body>
+    <!-- 어떠한 대상의 true or false : change 이벤트 활용 -->
+    <input type="checkbox"><br>
+    <h1 id="checkbox"></h1>
+    <!-- 여러 대상 중에서 하나를 선택 -->
+    <input type="radio" name="gender" value="여성">여성<br>
+    <input type="radio" name="gender" value="남성">남성<br>
+    <input type="radio" name="gender" value="직접 지정">직접 지정<br>
+    <h1 id="radiobutton"></h1>
+</body>
+</html>
