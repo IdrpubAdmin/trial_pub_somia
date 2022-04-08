@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 타입에러 - null
+        const h1 = document.querySelector('h1')
+
+        // 고급 예외 처리 : 아래와 같이 작성할 경우 하단의 기본 예외 처리와 같은 실행결과를 보여줌
+        try {
+            //예외가 발생할 가능성이 있는 코드
+            h1.textContent = '변경!'
+        } catch (error) {
+            // 예외가 발생했을 때 실행할 코드
+            console.log('오류가 발생함')
+        } finally {
+            // 무조건적으로 실행되는 코드
+        }  
+
+        // 오류 태그 해결 : if
+        // 기본 예외 처리 : 조건문을 사용하여 오류가 날 경우, 아닐 경우를 나누어서 작성할 수 있음  
+        // if ( h1 === null ) {
+        //     console.lof('오류가 발생함')
+        // } else {
+        //     h1.textContent = '변경!'
+        // }
+    })
+</script>
+<body>
+    
+</body>
+</html>

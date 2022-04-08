@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const getPerimeter =  (r) => {
+            
+            // throw : 강제로 예외 상황을 발생시킴
+            if ( r < 0) {
+                throw '길이는 음수가 될 수 없습니다.'
+            }
+            const pi = 3.14
+            return 2 * pi * r
+        } 
+        
+        try {
+            console.log(getPerimeter(-10))     
+        } catch (e) {
+            console.log('어떤 문제가 발생했습니다.')
+        }
+        // 오류는 발생하지 않지만 특정상황이 되어서는 안되는 경우 : ex) 음수가 나와서는 안됨 
+        console.log('프로그램이 정상적으로 종료되었습니다.')
+    </script> 
+</head>
+<body>
+    
+</body>
+</html>
