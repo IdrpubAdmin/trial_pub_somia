@@ -1,0 +1,31 @@
+// base
+
+html { 
+}
+
+body {
+    width: 100%;
+    color: #222;
+    line-height: 1.4;
+}
+
+.inner { 
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+.blind { 
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
