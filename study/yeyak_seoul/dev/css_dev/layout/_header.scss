@@ -76,11 +76,28 @@
 .reser-gnb-wrap {
     position: relative;
     .logo {
-        a {
+        a.pc-logo {
             display: block;
             height: 100%;
             img {
                 height: 20px;
+            }
+            @include tab {
+                display: none;
+            }
+        }
+        a.mo-menu {
+            display: none;
+            @include tab {
+                position: absolute;
+                display: block;
+                left: 0;
+                top: 0;
+                z-index: 10;
+                width: 70px;
+                height: 60px;
+                background: url(../../assets/images/icon/m_menu.png) no-repeat center;
+                background-size: 40px auto;
             }
         }
     }
@@ -122,87 +139,17 @@
                 }
             }
         }
+        @include tab {
+            display: none;
+        }
     }
     .search {
         background: url(../../assets/images/icon/search.png) no-repeat center;
         width: 56px;
         height: 60px;
-    }
-}
-
-
-//gnb 
-
-.gnb {
-    height: 60px;
-    position: relative;
-    .dept-wrap {
-        .dept {
-            display: flex;
-            justify-content: space-between;
-            >li {
-                >a{
-                    display: block;
-                    font-family: 'Noto Sans KR';
-                    font-size: 18px;
-                    font-weight: 500;
-                    line-height: 60px;
-                    text-align: center;
-                }
-            }
+        @include tab {
+            background: url(../../assets/images/icon/m_search.png) no-repeat center;
         }
     }
 }
 
-.gnb {
-    font-family: 'Noto Sans KR';
-    .sub-dept {
-        background-color: #fff;
-        display: flex;
-        top: 60px;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        min-height: 250px;
-        overflow: hidden;
-        .gnb-text {
-            position: absolute;
-            height: 400px;
-            width: calc(30% - 20px);
-            padding: 30px 30px 0 0;
-            text-align: right;
-            color: #fff;
-            background: #eee url(../../assets/images/content/nav_sub.jpg) no-repeat;
-            h3 {
-                font-size: 24px;
-            }
-            span {
-                font-size: 14px;
-                display: block;
-                padding-top: 10px;
-            }
-        }
-        >ul {
-            overflow: hidden;
-            padding: 25px 25px 25px 30%;
-            min-height: 250px;
-            border-top: 1px solid #ddd;
-            li {
-                float: left;
-                width: 180px;
-                margin: 8px;
-                a {
-                    display: block;
-                    line-height: 40px;
-                    border: 1px solid #ddd;
-                    color: #444;
-                    text-align: center;
-                    &:hover {
-                        border-color: #0379d5;
-                        color: #0379d5;
-                    }
-                }
-            }
-        }
-    }
-}

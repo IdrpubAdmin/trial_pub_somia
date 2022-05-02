@@ -142,6 +142,10 @@ body { width: 100%; color: #222; line-height: 1.4; }
 
 .clear::after { content: ""; display: block; clear: both; }
 
+.dn { display: none !important; }
+
+.h310 { height: 310px !important; }
+
 .news-gnb { font-family: 'Nanum Gothic'; font-size: 14px; height: 48px; position: relative; overflow: hidden; }
 
 .news-gnb .logo-wrap { float: left; margin-top: 8px; }
@@ -164,9 +168,15 @@ body { width: 100%; color: #222; line-height: 1.4; }
 
 .reser-gnb-wrap { position: relative; }
 
-.reser-gnb-wrap .logo a { display: block; height: 100%; }
+.reser-gnb-wrap .logo a.pc-logo { display: block; height: 100%; }
 
-.reser-gnb-wrap .logo a img { height: 20px; }
+.reser-gnb-wrap .logo a.pc-logo img { height: 20px; }
+
+@media only screen and (max-width: 1180px) { .reser-gnb-wrap .logo a.pc-logo { display: none; } }
+
+.reser-gnb-wrap .logo a.mo-menu { display: none; }
+
+@media only screen and (max-width: 1180px) { .reser-gnb-wrap .logo a.mo-menu { position: absolute; display: block; left: 0; top: 0; z-index: 10; width: 70px; height: 60px; background: url(../../assets/images/icon/m_menu.png) no-repeat center; background-size: 40px auto; } }
 
 .reser-gnb-wrap .reservation { display: block; }
 
@@ -182,25 +192,33 @@ body { width: 100%; color: #222; line-height: 1.4; }
 
 .reser-gnb-wrap .reser-state .lang span::after { content: ''; display: inline-block; width: 14px; height: 13px; vertical-align: middle; background: url(../../assets/images/icon/icon_down.png) no-repeat right center; }
 
+@media only screen and (max-width: 1180px) { .reser-gnb-wrap .reser-state { display: none; } }
+
 .reser-gnb-wrap .search { background: url(../../assets/images/icon/search.png) no-repeat center; width: 56px; height: 60px; }
+
+@media only screen and (max-width: 1180px) { .reser-gnb-wrap .search { background: url(../../assets/images/icon/m_search.png) no-repeat center; } }
 
 .gnb { height: 60px; position: relative; }
 
 .gnb .dept-wrap .dept { display: flex; justify-content: space-between; }
 
+.gnb .dept-wrap .dept > li { width: 16.6666%; }
+
 .gnb .dept-wrap .dept > li > a { display: block; font-family: 'Noto Sans KR'; font-size: 18px; font-weight: 500; line-height: 60px; text-align: center; }
+
+.gnb .dept-wrap .dept > li > a:hover span { color: #0379d5; border-bottom: 4px solid #0379d5; }
 
 .gnb { font-family: 'Noto Sans KR'; }
 
-.gnb .sub-dept { background-color: #fff; display: flex; top: 60px; left: 0; position: absolute; width: 100%; min-height: 250px; overflow: hidden; }
+.gnb .sub-dept { background-color: #fff; top: 60px; left: 0; position: absolute; width: 100%; transition: .5s; height: 0; overflow: hidden; }
 
-.gnb .sub-dept .gnb-text { position: absolute; height: 400px; width: calc(30% - 20px); padding: 30px 30px 0 0; text-align: right; color: #fff; background: #eee url(../../assets/images/content/nav_sub.jpg) no-repeat; }
+.gnb .sub-dept .gnb-text { position: absolute; height: 400px; width: calc(30% - 20px); padding: 30px 30px 0 0; margin-right: 20px; text-align: right; color: #fff; background: #eee url(../../assets/images/content/nav_sub.jpg) no-repeat; }
 
 .gnb .sub-dept .gnb-text h3 { font-size: 24px; }
 
 .gnb .sub-dept .gnb-text span { font-size: 14px; display: block; padding-top: 10px; }
 
-.gnb .sub-dept > ul { overflow: hidden; padding: 25px 25px 25px 30%; min-height: 250px; border-top: 1px solid #ddd; }
+.gnb .sub-dept > ul { width: 100%; overflow: hidden; padding: 25px 25px 25px 30%; min-height: 250px; border-top: 1px solid #ddd; }
 
 .gnb .sub-dept > ul li { float: left; width: 180px; margin: 8px; }
 
