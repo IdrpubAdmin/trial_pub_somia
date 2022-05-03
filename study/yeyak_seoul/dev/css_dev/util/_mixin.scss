@@ -181,21 +181,15 @@
 	#{$property}:calc(constant(safe-area-inset-right) + #{$value});
 	#{$property}:calc(env(safe-area-inset-right) + #{$value});
 }
-@mixin mdq-mo {
-	@media only screen and (max-width:#{$mini-mo-w}){
-		@content;
-	}
-}
-@mixin mdq-pc {
-	@media only screen and (min-width:#{$mini-pc-w}){
-		@content;
-		.fixed-action-sheet.seet-fixed{border-left: 1px solid #e8e8e8;border-right: 1px solid #e8e8e8;}
-		.fixed-action-sheet.expand-right{right:50% !important;margin-right:-320px;transform: translateX(0) !important;}
-	}
-}
 
 @mixin tab {
 	@media only screen and (max-width: 1180px){
+	   @content;
+   }
+}
+
+@mixin mo {
+	@media only screen and (max-width: 1024px){
 	   @content;
    }
 }

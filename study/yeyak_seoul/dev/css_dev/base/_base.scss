@@ -7,6 +7,7 @@ body {
     width: 100%;
     color: #222;
     line-height: 1.4;
+    letter-spacing: -0.02em;
 }
 
 .inner { 
@@ -36,4 +37,77 @@ body {
 
 .h310 {
     height: 310px !important;
+}
+
+.login {
+    background: url(../../assets/images/icon/login.png) no-repeat 16px center;
+    padding: 0 15px 0 38px;
+    float: left;
+    border-radius: 17px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 32px;
+    &:hover {
+        color: #0379d5;
+        background: url(../../assets/images/icon/login_hover.png) no-repeat 16px center #fff;
+    }
+}
+
+.lang {
+    background: url(../../assets/images/icon/lang.png) no-repeat 13px center;
+    padding: 0 15px 0 38px;
+    font-size: 13px;
+    float: left;
+    position: relative;
+    color: #fff;
+    font-size: 13px;
+    line-height: 32px;
+    >span {
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 13px;
+            vertical-align: middle;
+            background: url(../../assets/images/icon/icon_down.png) no-repeat right center;
+        }
+    }
+    .lang-active-wrap {
+        display: none;
+        position: absolute;
+        left: 0px;
+        top: 32px;
+        z-index: 5;
+        width: 100%;
+        background: #fff;
+        border-radius: 0 0 17px 17px;
+        padding: 5px 10px 10px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,.1);
+        a {
+            display: block;
+            text-align: center;
+            color: #000;
+            padding-left: 7px;
+            line-height: 30px;
+            &:nth-child(2) {
+                color: #777;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+    &:hover > span{
+        color: #7107ef;
+        &::after {
+            background: url(../../assets/images/icon/icon_up.png) no-repeat right center;
+        }
+    }
+    &:hover .lang-active-wrap {
+        display: block;
+    }
+    &:hover {
+        background: #fff url(../../assets/images/icon/lang_hover.png) no-repeat 13px center;
+        border-radius: 15px 15px 0 0 ;
+    }
 }

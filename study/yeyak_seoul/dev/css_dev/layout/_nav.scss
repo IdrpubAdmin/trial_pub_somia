@@ -3,9 +3,12 @@
 .gnb {
     height: 60px;
     position: relative;
+    background-color: #fff;
     .dept-wrap {
         .dept {
+            margin: 0 -78px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             >li {
                 width: 16.6666%;
@@ -19,6 +22,11 @@
                     &:hover span{
                         color: #0379d5;
                         border-bottom: 4px solid #0379d5;
+                    }
+                    @include tab { 
+                        text-align: left;
+                        padding: 0 30px 0 15px;
+                        line-height: 48px;
                     }
                 }
             }
@@ -81,5 +89,119 @@
                 }
             }
         }
+    }
+}
+
+
+// gnb mobile
+
+.mo-menu {
+    font-family: 'Noto Sans KR';
+    @include tab {
+    }
+    .mo-menu-open {
+        @include tab {
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                content: "";
+                z-index: -1;
+                width: 100%;
+                height: 200px;
+                background: linear-gradient(to bottom right, #07a1b0, #269bce, #9948f9);
+            }
+        }
+        .mo-logo {
+            display: none;
+            @include tab {
+                display: block;
+                margin: 25px 15px;
+                background: url(../../assets/images/logo/service_logo.png) no-repeat left center;
+                background-size: auto 30px;
+                height: 34px;
+                width: 150px;
+                margin-bottom: 35px;
+            }
+        }
+        .mo-user {
+            display: none;
+            @include tab {
+                display: block;
+                margin-left: 10px;
+                height: 50px;
+            }
+        }
+        h3 {
+            display: none;
+            @include tab {
+                display: block;
+                background: #fff;
+                padding: 25px 20px;
+                border-radius: 15px 15px 0 0;
+                color: #555;
+            }
+        }
+        .mo-only {
+            display: none;
+            @include tab {
+                display: block;
+                .mo-quick {
+                    overflow: hidden;
+                    display: block;
+                    margin-bottom: 15px;
+                    border-top: 1px solid #ddd;
+                    border-bottom: 1px solid #ddd;
+                    li {
+                        float: left;
+                        width: 20%;
+                        text-align: center;
+                        font-size: 12px;
+                        border-right: 1px solid #ddd;
+                        font-weight: 500;
+                        a {
+                            display: block;
+                            padding: 15px 2px;
+                            img {
+                                display: block;
+                                margin: 0 auto 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .gnb {
+            .dept-wrap {
+                .dept {
+                    margin: inherit;
+                    @include tab {
+                        background: #fff;
+                        flex-direction: column;
+                        padding: 0 30px 0 15px;
+                        .dept-list {
+                            border-bottom: 1px solid #ccc;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mo-btn-close {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        background: url(../../assets/images/icon/btn_close.png) no-repeat center;
+        background-size: auto 20px;
     }
 }
