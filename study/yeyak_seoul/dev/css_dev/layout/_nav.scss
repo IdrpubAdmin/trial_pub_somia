@@ -22,6 +22,9 @@
                     &:hover span{
                         color: #0379d5;
                         border-bottom: 4px solid #0379d5;
+                        @include tab {
+                            border-bottom: none;
+                        }
                     }
                     @include tab { 
                         text-align: left;
@@ -139,7 +142,7 @@
                 height: 50px;
             }
         }
-        h3 {
+        >h3 {
             display: none;
             @include tab {
                 display: block;
@@ -189,6 +192,13 @@
                         .dept-list {
                             border-bottom: 1px solid #ccc;
                             width: 100%;
+                            a {
+                                padding: 0 30px 0 15px;
+                                text-align: left;
+                                background: url(../../assets/images/icon/gnb_down.png) no-repeat right center;
+                                background-size: 14px auto;
+                                margin-right: 15px;
+                            }
                         }
                     }
                 }
@@ -203,5 +213,26 @@
         height: 30px;
         background: url(../../assets/images/icon/btn_close.png) no-repeat center;
         background-size: auto 20px;
+    }
+}
+
+// chat-bot
+.chat-bot {
+    display: none;
+    @include tab {
+        display: block;
+        position: fixed;
+        bottom: 15px;
+        right: 10px;
+        width: 85px;
+        height: 28px;
+        line-height: 28px;
+        margin: 0 auto;
+        font-size: 14px;
+        border-radius: 15px;
+        color: #fff;
+        background-color: #007ae3;
+        text-align: center;
+        box-shadow: 0 0 16px rgba(0,0,0,.3);
     }
 }
