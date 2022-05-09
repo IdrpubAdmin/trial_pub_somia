@@ -244,13 +244,24 @@ body { width: 100%; color: #222; line-height: 1.4; letter-spacing: -0.02em; }
 
 .gnb .sub-dept .gnb-text span { font-size: 14px; display: block; padding-top: 10px; }
 
+@media only screen and (max-width: 1180px) { .gnb .sub-dept .gnb-text { display: none; } }
+
 .gnb .sub-dept > ul { width: 100%; overflow: hidden; padding: 25px 25px 25px 30%; min-height: 250px; border-top: 1px solid #ddd; }
 
 .gnb .sub-dept > ul li { float: left; width: 180px; margin: 8px; }
 
+@media only screen and (max-width: 1180px) { .gnb .sub-dept > ul li { margin: inherit; padding-left: 10px; position: relative; width: calc(50% - 8px); }
+  .gnb .sub-dept > ul li:after { display: block; content: ""; width: 3px; height: 3px; position: absolute; left: 0; top: 14px; background: #555; } }
+
 .gnb .sub-dept > ul li a { display: block; line-height: 40px; border: 1px solid #ddd; color: #444; text-align: center; }
 
 .gnb .sub-dept > ul li a:hover { border-color: #0379d5; color: #0379d5; }
+
+@media only screen and (max-width: 1180px) { .gnb .sub-dept > ul li a { border: inherit; font-size: 16px; line-height: 30px; text-align: left; } }
+
+@media only screen and (max-width: 1180px) { .gnb .sub-dept > ul { padding: 20px; background: #f8f8f8; min-height: auto; } }
+
+@media only screen and (max-width: 1180px) { .gnb .sub-dept { position: inherit; height: 0; overflow: hidden; transition: .3s; } }
 
 .mo-menu { font-family: 'Noto Sans KR'; }
 
@@ -265,9 +276,9 @@ body { width: 100%; color: #222; line-height: 1.4; letter-spacing: -0.02em; }
 
 @media only screen and (max-width: 1180px) { .mo-menu .mo-menu-open .mo-user { display: block; margin-left: 10px; height: 50px; } }
 
-.mo-menu .mo-menu-open > h3 { display: none; }
+.mo-menu .mo-menu-open h3.mo-login-text { display: none; }
 
-@media only screen and (max-width: 1180px) { .mo-menu .mo-menu-open > h3 { display: block; background: #fff; padding: 25px 20px; border-radius: 15px 15px 0 0; color: #555; } }
+@media only screen and (max-width: 1180px) { .mo-menu .mo-menu-open h3.mo-login-text { display: block; background: #fff; padding: 25px 20px; border-radius: 15px 15px 0 0; color: #555; } }
 
 .mo-menu .mo-menu-open .mo-only { display: none; }
 
@@ -281,13 +292,17 @@ body { width: 100%; color: #222; line-height: 1.4; letter-spacing: -0.02em; }
 
 @media only screen and (max-width: 1180px) { .mo-menu .mo-menu-open .gnb .dept-wrap .dept { background: #fff; flex-direction: column; padding: 0 30px 0 15px; }
   .mo-menu .mo-menu-open .gnb .dept-wrap .dept .dept-list { border-bottom: 1px solid #ccc; width: 100%; }
-  .mo-menu .mo-menu-open .gnb .dept-wrap .dept .dept-list a { padding: 0 30px 0 15px; text-align: left; background: url(../../assets/images/icon/gnb_down.png) no-repeat right center; background-size: 14px auto; margin-right: 15px; } }
+  .mo-menu .mo-menu-open .gnb .dept-wrap .dept .dept-list > a.dept-header { padding: 0 30px 0 15px; text-align: left; background: url(../../assets/images/icon/gnb_down.png) no-repeat right center; background-size: 14px auto; margin-right: 15px; }
+  .mo-menu .mo-menu-open .gnb .dept-wrap .dept .dept-list > .dept-header.active { background: url(../../assets/images/icon/gnb_up.png) no-repeat right center; background-size: 14px auto; height: auto; }
+  .mo-menu .mo-menu-open .gnb .dept-wrap .dept .dept-list > .dept-header.active span { color: #0379d5; } }
+
+@media only screen and (max-width: 1180px) { .mo-menu .mo-menu-open .gnb .dept-wrap .dept { box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1); } }
 
 .mo-menu .mo-btn-close { position: absolute; right: 15px; top: 20px; width: 30px; height: 30px; background: url(../../assets/images/icon/btn_close.png) no-repeat center; background-size: auto 20px; }
 
 .chat-bot { display: none; }
 
-@media only screen and (max-width: 1180px) { .chat-bot { display: block; position: fixed; bottom: 15px; right: 10px; width: 85px; height: 28px; line-height: 28px; margin: 0 auto; font-size: 14px; border-radius: 15px; color: #fff; background-color: #007ae3; text-align: center; box-shadow: 0 0 16px rgba(0, 0, 0, 0.3); } }
+@media only screen and (max-width: 1180px) { .chat-bot { display: block; position: fixed; z-index: 10; bottom: 15px; right: 10px; width: 85px; height: 28px; line-height: 28px; margin: 0 auto; font-size: 14px; border-radius: 15px; color: #fff; background-color: #007ae3; text-align: center; box-shadow: 0 0 16px rgba(0, 0, 0, 0.3); } }
 
 footer { text-align: center; }
 

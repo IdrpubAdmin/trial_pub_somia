@@ -1,47 +1,55 @@
 'use strict';
 
-    const dept = document.querySelector('.dept-list');
+
+function dropdown() {
+
+    const dept = document.querySelectorAll('.dept-list');
     const subDept = document.querySelectorAll('.sub-dept');
+    const deptHeader = document.querySelectorAll('.dept-header');
 
-    console.log(subDept);
+    // 1180px 이하일때
+    if ( matchMedia("screen and (max-width: 1180px)").matches) {
 
-    // function test() {
+        for ( let i = 0; i < deptHeader.length; i++ ) {
 
-    //     for ( var i = 0; i < dept.length; i++ ) {
+            deptHeader[i].onclick = function() {
+                for (let j = 0; j < deptHeader.length; j++) {
+                    deptHeader[j].classList.remove("active");
+                    if ( this !== deptHeader[j]) {
+                        deptHeader[j].nextElementSibling.style.height = null;
+                    }        
+                }
 
-    //         dept[i].addEventListener('mouseover', () => {
-    //             subDept[i].classList.add('h310')
-    //         });
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.height){
+                    this.classList.remove("active");
+                    panel.style.height = null;
+                } else {
+                    panel.style.height = panel.scrollHeight + "px";
+                }
 
-    //         dept[i].addEventListener('mouseout', () => {
-    //             subDept[i].classList.remove('h310')
-    //         })
-    //     }
-    // }
+            }    
+            
+        }
+
+
+    } else {
+
+        //시작
+        for ( let i=0; i<dept.length; i++ ) {
+            dept[i].addEventListener('mouseover', () => {
+                subDept[i].classList.add('h310')
+            })
     
-    // subDept 안되는 이유 찾기
+            dept[i].addEventListener('mouseout', () => {
+                subDept[i].classList.remove('h310')
+            })
+        }
+        //끝
 
-    for ( let i=0; i<dept.length; i++ ) {
-        dept[i].addEventListener('mouseover', () => {
-            subDept[i].classList.add('h310')
-        });
     }
+}
 
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-        
-    }
-
-// function dropdown(i) {
-//     dept[i].addEventListener('mouseover', () => {
-//         subDept[i].classList.add('h310')
-//     });
-
-//     dept[i].addEventListener('mouseout', () => {
-//         subDept[i].classList.remove('h310')
-//     })
-// };
-
-// for (var i = 0; i <6; i++) {
-//     dropdown(i); 
-// }
+dropdown();
+window.onresize = function(){ document.location.reload(); };

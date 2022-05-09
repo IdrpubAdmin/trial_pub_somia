@@ -68,6 +68,9 @@
                 display: block;
                 padding-top: 10px;
             }
+            @include tab {
+                display: none;
+            }
         }
         >ul {
             width: 100%;
@@ -79,6 +82,22 @@
                 float: left;
                 width: 180px;
                 margin: 8px;
+                @include tab {
+                    margin: inherit;
+                    padding-left: 10px;
+                    position: relative;
+                    width: calc(50% - 8px);
+                    &:after { 
+                        display: block;
+                        content: "";
+                        width: 3px;
+                        height: 3px;
+                        position: absolute;
+                        left: 0;
+                        top: 14px;
+                        background: #555;
+                    }
+                }
                 a {
                     display: block;
                     line-height: 40px;
@@ -89,8 +108,25 @@
                         border-color: #0379d5;
                         color: #0379d5;
                     }
+                    @include tab {
+                        border: inherit;
+                        font-size: 16px;
+                        line-height: 30px;
+                        text-align: left;
+                    }
                 }
             }
+            @include tab {
+                padding: 20px;
+                background: #f8f8f8;
+                min-height: auto;
+            }
+        }
+        @include tab {
+            position: inherit;
+            height: 0;
+            overflow: hidden;
+            transition: .3s;
         }
     }
 }
@@ -142,7 +178,7 @@
                 height: 50px;
             }
         }
-        >h3 {
+        h3.mo-login-text {
             display: none;
             @include tab {
                 display: block;
@@ -192,14 +228,25 @@
                         .dept-list {
                             border-bottom: 1px solid #ccc;
                             width: 100%;
-                            a {
+                            >a.dept-header {
                                 padding: 0 30px 0 15px;
                                 text-align: left;
                                 background: url(../../assets/images/icon/gnb_down.png) no-repeat right center;
                                 background-size: 14px auto;
                                 margin-right: 15px;
                             }
+                            >.dept-header.active {
+                                background: url(../../assets/images/icon/gnb_up.png) no-repeat right center;
+                                background-size: 14px auto;
+                                height: auto;
+                                span {
+                                    color: #0379d5;
+                                }
+                            }
                         }
+                    }
+                    @include tab {
+                        box-shadow: 0 20px 20px rgba(0,0,0,.1)
                     }
                 }
             }
@@ -222,6 +269,7 @@
     @include tab {
         display: block;
         position: fixed;
+        z-index: 10;
         bottom: 15px;
         right: 10px;
         width: 85px;

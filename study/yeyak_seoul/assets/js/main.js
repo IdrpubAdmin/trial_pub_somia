@@ -1,39 +1,53 @@
 'use strict';
 
-var dept = document.querySelector('.dept-list');
-var subDept = document.querySelectorAll('.sub-dept');
-console.log(subDept); // function test() {
-//     for ( var i = 0; i < dept.length; i++ ) {
-//         dept[i].addEventListener('mouseover', () => {
-//             subDept[i].classList.add('h310')
-//         });
-//         dept[i].addEventListener('mouseout', () => {
-//             subDept[i].classList.remove('h310')
-//         })
-//     }
-// }
-// subDept 안되는 이유 찾기
+function dropdown() {
+  var dept = document.querySelectorAll('.dept-list');
+  var subDept = document.querySelectorAll('.sub-dept');
+  var deptHeader = document.querySelectorAll('.dept-header'); // 1180px 이하일때
 
-var _loop = function _loop(i) {
-  dept[i].addEventListener('mouseover', function () {
-    subDept[i].classList.add('h310');
-  });
-};
+  if (matchMedia("screen and (max-width: 1180px)").matches) {
+    for (var i = 0; i < deptHeader.length; i++) {
+      deptHeader[i].onclick = function () {
+        for (var j = 0; j < deptHeader.length; j++) {
+          deptHeader[j].classList.remove("active");
 
-for (var i = 0; i < dept.length; i++) {
-  _loop(i);
+          if (this !== deptHeader[j]) {
+            deptHeader[j].nextElementSibling.style.height = null;
+          }
+        }
+
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+
+        if (panel.style.height) {
+          this.classList.remove("active");
+          panel.style.height = null;
+        } else {
+          panel.style.height = panel.scrollHeight + "px";
+        }
+      };
+    }
+  } else {
+    var _loop = function _loop(_i) {
+      dept[_i].addEventListener('mouseover', function () {
+        subDept[_i].classList.add('h310');
+      });
+
+      dept[_i].addEventListener('mouseout', function () {
+        subDept[_i].classList.remove('h310');
+      });
+    };
+
+    //시작
+    for (var _i = 0; _i < dept.length; _i++) {
+      _loop(_i);
+    } //끝
+
+  }
 }
 
-for (var index = 0; index < array.length; index++) {
-  var element = array[index];
-} // function dropdown(i) {
-//     dept[i].addEventListener('mouseover', () => {
-//         subDept[i].classList.add('h310')
-//     });
-//     dept[i].addEventListener('mouseout', () => {
-//         subDept[i].classList.remove('h310')
-//     })
-// };
-// for (var i = 0; i <6; i++) {
-//     dropdown(i); 
-// }
+dropdown();
+
+window.onresize = function () {
+  document.location.reload();
+};
