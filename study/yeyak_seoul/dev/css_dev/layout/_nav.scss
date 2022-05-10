@@ -47,10 +47,14 @@
         left: 0;
         position: absolute;
         width: 100%;
+        box-shadow: 0 20px 20px rgba(0,0,0,.1);
         // min-height: 250px;
         transition: .5s;
         height: 0;
         overflow: hidden;
+        @include tab {
+            box-shadow: inherit;
+        }
         .gnb-text {
             position: absolute;
             height: 400px;
@@ -141,11 +145,14 @@
     .mo-menu-open {
         @include tab {
             position: absolute;
+            right: -100%;
             top: 0;
             z-index: 10;
             width: 100%;
             height: 100%;
+            min-height: 100%;
             background-color: #fff;
+            transition: all .5s;
             &::before {
                 position: absolute;
                 left: 0;
@@ -244,9 +251,6 @@
                                 }
                             }
                         }
-                    }
-                    @include tab {
-                        box-shadow: 0 20px 20px rgba(0,0,0,.1)
                     }
                 }
             }

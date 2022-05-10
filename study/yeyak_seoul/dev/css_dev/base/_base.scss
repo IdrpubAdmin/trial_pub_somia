@@ -1,6 +1,7 @@
 // base
 
 html { 
+    overflow-x: hidden;
 }
 
 body {
@@ -35,8 +36,20 @@ body {
     display: none !important;
 }
 
+.db {
+    display: block !important;
+}
+
 .h310 {
     height: 310px !important;
+}
+
+.r0 {
+    right: 0 !important;
+}
+
+.r100 {
+    left: 100%;
 }
 
 .login {

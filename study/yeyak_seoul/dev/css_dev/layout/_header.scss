@@ -92,7 +92,7 @@
                 display: none;
             }
         }
-        a.mo-menu {
+        a.mo-hamburger {
             display: none;
             @include tab {
                 position: absolute;
@@ -127,23 +127,73 @@
 }
 
 .reser-gnb-wrap {
-    .reser-user {
-        display: flex;
-        align-items: center;
-        font-weight: 500;
-        font-family: 'Noto Sans KR';
-    }
-    .reser-state {
-        @include tab {
-            display: none;
+    .reser-content-wrap {
+        .reser-user {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-family: 'Noto Sans KR';
         }
-    }
-    .search {
-        background: url(../../assets/images/icon/search.png) no-repeat center;
-        width: 56px;
-        height: 60px;
-        @include tab {
-            background: url(../../assets/images/icon/m_search.png) no-repeat center;
+        .reser-state {
+            @include tab {
+                display: none;
+            }
+        }
+        .search-wrap {
+            position: relative;
+            .search {
+                background: url(../../assets/images/icon/search.png) no-repeat center;
+                width: 56px;
+                height: 60px;
+                display: inline-block;
+                vertical-align: top;
+                @include tab {
+                    background: url(../../assets/images/icon/m_search.png) no-repeat center;
+                }
+            }
+            .search-on {
+                display: none;
+                position: absolute;
+                top: 60px;
+                z-index: 10;
+                right: 0;
+                width: 380px;
+                border-width: 0;
+                background: #d6e0ea;
+                padding: 9px 13px;
+                height: 60px;
+                border-radius: 0;
+                box-shadow: 12px 12px 26px rgba(0,0,0,.2);
+                input {
+                    border : none;
+                    line-height: 42px;
+                    width: 100%;
+                    font-size: 16px;
+                    text-indent: 10px;
+                }
+                button {
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    border: none;
+                    margin-top: -22px;
+                    width: 44px;
+                    height: 44px;
+                    background: url(../../assets/images/icon/search_on.png) center no-repeat;
+                }
+                &::before {
+                    position: absolute;
+                    bottom: 100%;
+                    right: 18px;
+                    display: block;
+                    border-bottom: 10px solid #d6e0ea;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    content: '';
+                }
+                @include tab {
+                }
+            }
         }
     }
 }

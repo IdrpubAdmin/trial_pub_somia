@@ -9,39 +9,32 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // const kg = document.querySelector('kg')
-        // const g = document.querySelector('g')
-        // const percent = document.querySelector('percent')
-        const dha = document.querySelector('.dha')
-        const epa = document.querySelector('.epa')
-        const button = document.querySelector('button')
-        const dailyDose = document.querySelector('.dailyDose')
+            // dha의 값을 받아옴
+            const dha = parseInt(document.querySelector('.dha').value)
+            // epa의 값을 받아옴
+            const epa = parseInt(document.querySelector('.epa').value)
+            // 그냥 버튼임
+            const button = document.querySelector('button')
+            // 출력할 곳
+            let dailyDose = document.querySelector('.dailyDose');
+            dailyDose = dha + epa * 10;
 
-        // 1. 계산식 써보기 / 기본값도 지정해두기
-        // dha + epa * 10
-
-        
-        // button을 클릭했을 때, dailyDose에 출력
-        button.addEventListener('click', () => {
-            dailyDose.textContent = `사료 100g의 DHA + EPA 함량은: ${dailyDoseCal}`
-        });
+            button.addEventListener('click', () => {
+            
+               document.querySelector('.dailyDose').value = dailyDose;
+            })
         
     });
 </script>
 <style>
-    input {  margin-top: 30px; }
-    input.percent {  margin-top: 30px; }
-    input.g {  margin-top: 20px;}
+    input {  margin-top: 20px; }
     button { display: block; margin-top: 20px;}
 </style>
 <body>
-     <!-- <input type="text"> kg
-    <input type="text" class="g"> g
-    <input type="text" class="percent"> % -->
+    <h1>사료 100g의 DHA + EPA 함량 계산</h1>
     <input type="text" class="dha"> dha
     <input type="text" class="epa"> epa
-    <button>계산</button>
-    <p class="dailyDose"></p>
-    <p></p>   
-</body>
+
+    <button type="button">계산</button>
+    <input type="text" class="dailyDose">
 </html>
