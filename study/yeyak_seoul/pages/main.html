@@ -72,10 +72,12 @@
                         <div class="search-wrap">
                             <a href="#none" class="search"><span class="blind">검색</span></a>
                             <div class="search-on">
-                                <input type="text" placeholder="어떤 서비스를 찾고 계신가요?" title="검색창">
-                                <button type="button"><span class="blind">검색</span></button>
+                                <input type="text" placeholder="어떤 서비스를 찾고 계신가요?" title="검색창" onkeyup="searchBlank(this)"; onchange="searchBlank(this);">
+                                <button type="button" class="search-input-icon"><span class="blind">검색</span></button>
                             </div>
+                            <div class="active-bg"></div>
                         </div>
+
 
                     </div>
                 </div>

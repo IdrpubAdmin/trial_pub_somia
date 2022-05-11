@@ -33,6 +33,9 @@
                     }
                 }
             }
+            @include tab {
+                margin: inherit;
+            }
         }
     }
 }
@@ -140,16 +143,18 @@
 
 .mo-menu {
     font-family: 'Noto Sans KR';
+    position: relative;
+    z-index: 10;
     @include tab {
     }
     .mo-menu-open {
         @include tab {
             position: absolute;
             right: -100%;
-            top: 0;
+            top: -48px;
             z-index: 10;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             min-height: 100%;
             background-color: #fff;
             transition: all .5s;
@@ -197,6 +202,7 @@
         }
         .mo-only {
             display: none;
+            background-color: #fff;
             @include tab {
                 display: block;
                 .mo-quick {
@@ -227,7 +233,6 @@
         .gnb {
             .dept-wrap {
                 .dept {
-                    margin: inherit;
                     @include tab {
                         background: #fff;
                         flex-direction: column;
@@ -257,13 +262,15 @@
         }
     }
     .mo-btn-close {
-        position: absolute;
-        right: 15px;
-        top: 20px;
-        width: 30px;
-        height: 30px;
-        background: url(../../assets/images/icon/btn_close.png) no-repeat center;
-        background-size: auto 20px;
+        @include tab {
+            position: absolute;
+            right: 15px;
+            top: 20px;
+            width: 30px;
+            height: 30px;
+            background: url(../../assets/images/icon/btn_close.png) no-repeat center;
+            background-size: auto 20px;
+        }
     }
 }
 

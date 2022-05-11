@@ -1,19 +1,25 @@
 'use strict';
+/*---------------------------------------------------------------------------------------------------------------------------
+ * 	 dropdown
+ *--------------------------------------------------------------------------------------------------------------------------*/
 
 function dropdown() {
-  let dept = document.querySelectorAll('.dept-list');
-  let subDept = document.querySelectorAll('.sub-dept');
-  let deptHeader = document.querySelectorAll('.dept-header'); // 1180px 이하일때
-  let moHam = document.querySelector('.mo-hamburger');
-  let moMenuOpen = document.querySelector('.mo-menu-open');
-  let moClose = document.querySelector('.mo-btn-close');
+  var dept = document.querySelectorAll('.dept-list');
+  var subDept = document.querySelectorAll('.sub-dept');
+  var deptHeader = document.querySelectorAll('.dept-header'); // 1180px 이하일때
+
+  var moHam = document.querySelector('.mo-hamburger');
+  var moMenuOpen = document.querySelector('.mo-menu-open');
+  var moClose = document.querySelector('.mo-btn-close'); //   덜컥거리는거 예시 찾기 : innerheight? auto?
+  // 현대 캐피탈 / lg bestshop https://bestshop.lge.co.kr/
+
+  var deptH = subDept.innerHeight(); //   let num = deptH + 101; 
 
   if (matchMedia("screen and (max-width: 1180px)").matches) {
-
     // mobile accordion menu
-    for (let i = 0; i < deptHeader.length; i++) {
+    for (var i = 0; i < deptHeader.length; i++) {
       deptHeader[i].onclick = function () {
-        for (let j = 0; j < deptHeader.length; j++) {
+        for (var j = 0; j < deptHeader.length; j++) {
           deptHeader[j].classList.remove("active");
 
           if (this !== deptHeader[j]) {
@@ -30,59 +36,60 @@ function dropdown() {
         } else {
           panel.style.height = panel.scrollHeight + "px";
         }
-        
       };
-    }
+    } // mobile hambuger menu click
 
-    // mobile hambuger menu click
-    moHam.addEventListener('click', () => {
+
+    moHam.addEventListener('click', function () {
       moMenuOpen.classList.add('r0');
     });
-
-    moClose.addEventListener('click', () => {
+    moClose.addEventListener('click', function () {
       moMenuOpen.classList.remove('r0');
     });
-
   } else {
-
     //pc
-
-
     // pc menu hover
-    let _loop = function _loop(_i) {
-      dept[_i].addEventListener('mouseover', () =>  {
+    var _loop = function _loop(_i) {
+      dept[_i].addEventListener('mouseover', function () {
         subDept[_i].classList.add('h310');
       });
 
-      dept[_i].addEventListener('mouseout', () => {
+      dept[_i].addEventListener('mouseout', function () {
         subDept[_i].classList.remove('h310');
       });
     };
 
-    for (let _i = 0; _i < dept.length; _i++) {
+    for (var _i = 0; _i < dept.length; _i++) {
       _loop(_i);
     }
-
   }
-  
 }
 
-dropdown();
-// reload 하는거 말고 다른거 생각해보기 : 깜빡임 문제
+dropdown(); // reload 하는거 말고 다른거 생각해보기 : 깜빡임 문제
+
 window.onresize = function () {
   document.location.reload();
 };
+/*---------------------------------------------------------------------------------------------------------------------------
+ * 	 search
+ *--------------------------------------------------------------------------------------------------------------------------*/
+
 
 function search() {
+  var search = document.querySelector('.search');
+  var searchOn = document.querySelector('.search-on');
+  var activeBg = document.querySelector('.active-bg');
+  var searchInput = document.querySelector('.search-input-icon'); // search click
 
-  let search = document.querySelector('.search');
-  let searchOn = document.querySelector('.search-on');
+  search.addEventListener('click', function () {
+    search.classList.toggle('search-active');
+    searchOn.classList.toggle('db');
+    activeBg.classList.toggle('db');
+  });
+  searchInput.addEventListener('click', function () {
+    alert('검색어를 입력해주세요.');
+  });
+}
 
-    // search click
-    search.addEventListener('click', () => {
-      searchOn.classList.toggle('db');
-    });
-
-};
-
+;
 search();

@@ -52,6 +52,25 @@ body {
     left: 100%;
 }
 
+.search-active {
+    background: url(../../assets/images/icon/m_search_close.png) center no-repeat !important;
+    background-size: 40px auto !important;
+}
+
+@include tab {
+    .active-bg {
+        background-color: rgba(0,0,0,.7);
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        display: none;
+    }
+}
+
 .login {
     background: url(../../assets/images/icon/login.png) no-repeat 16px center;
     padding: 0 15px 0 38px;
