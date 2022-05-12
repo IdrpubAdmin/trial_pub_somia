@@ -148,7 +148,7 @@ body { width: 100%; color: #222; line-height: 1.4; letter-spacing: -0.02em; }
 
 .db { display: block !important; }
 
-.h310 { height: 310px !important; }
+@media only screen and (min-width: 1181px) { .h310 { height: 310px !important; } }
 
 .r0 { right: 0 !important; }
 

@@ -40,8 +40,10 @@ body {
     display: block !important;
 }
 
-.h310 {
-    height: 310px !important;
+@include pc {
+    .h310 {
+        height: 310px !important;
+    }
 }
 
 .r0 {

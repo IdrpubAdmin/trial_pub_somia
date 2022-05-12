@@ -13,9 +13,12 @@ function dropdown() {
   let moMenuOpen = document.querySelector('.mo-menu-open');
   let moClose = document.querySelector('.mo-btn-close');
 
+  // test
+  let body = document.querySelector('body');
+
 //   덜컥거리는거 예시 찾기 : innerheight? auto?
 // 현대 캐피탈 / lg bestshop https://bestshop.lge.co.kr/
-  let deptH = subDept.innerHeight();
+  // let deptH = subDept.innerHeight();
 //   let num = deptH + 101; 
 
   if (matchMedia("screen and (max-width: 1180px)").matches) {
@@ -53,10 +56,10 @@ function dropdown() {
       moMenuOpen.classList.remove('r0');
     });
 
+
   } else {
 
     //pc
-
 
     // pc menu hover
     let _loop = function _loop(_i) {
@@ -82,6 +85,8 @@ dropdown();
 window.onresize = function () {
   document.location.reload();
 };
+// window.addEventListener('resize', dropdown);
+
 
 /*---------------------------------------------------------------------------------------------------------------------------
  * 	 search
