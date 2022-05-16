@@ -12,14 +12,7 @@ function dropdown() {
   let moHam = document.querySelector('.mo-hamburger');
   let moMenuOpen = document.querySelector('.mo-menu-open');
   let moClose = document.querySelector('.mo-btn-close');
-
-  // test
-  let body = document.querySelector('body');
-
-//   덜컥거리는거 예시 찾기 : innerheight? auto?
-// 현대 캐피탈 / lg bestshop https://bestshop.lge.co.kr/
-  // let deptH = subDept.innerHeight();
-//   let num = deptH + 101; 
+  let activeBg = document.querySelector('.active-bg');
 
   if (matchMedia("screen and (max-width: 1180px)").matches) {
 
@@ -49,11 +42,12 @@ function dropdown() {
 
     // mobile hambuger menu click
     moHam.addEventListener('click', () => {
-      moMenuOpen.classList.add('r0');
+      moMenuOpen.classList.add('l0');
+      activeBg.classList.remove('dn');
     });
 
     moClose.addEventListener('click', () => {
-      moMenuOpen.classList.remove('r0');
+      moMenuOpen.classList.remove('l0');
     });
 
 
@@ -65,6 +59,7 @@ function dropdown() {
     let _loop = function _loop(_i) {
       dept[_i].addEventListener('mouseover', () =>  {
         subDept[_i].classList.add('h310');
+        
       });
 
       dept[_i].addEventListener('mouseout', () => {
@@ -81,12 +76,23 @@ function dropdown() {
 }
 
 dropdown();
-// reload 하는거 말고 다른거 생각해보기 : 깜빡임 문제
-window.onresize = function () {
-  document.location.reload();
-};
-// window.addEventListener('resize', dropdown);
+window.addEventListener('resize', dropdown, false);
 
+/*---------------------------------------------------------------------------------------------------------------------------
+ * 	 lang-active
+ *--------------------------------------------------------------------------------------------------------------------------*/
+
+function langAct() {
+  let langAct = document.querySelectorAll('.lang');
+
+  for (let i = 0; i < langAct.length; i++) {
+    langAct[i].addEventListener('click', () => {
+      langAct[i].classList.toggle('lang-active')
+    })
+  }
+}
+
+langAct();
 
 /*---------------------------------------------------------------------------------------------------------------------------
  * 	 search

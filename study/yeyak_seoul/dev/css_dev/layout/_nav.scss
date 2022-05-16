@@ -52,9 +52,10 @@
         width: 100%;
         box-shadow: 0 20px 20px rgba(0,0,0,.1);
         // min-height: 250px;
-        transition: .5s;
+        transition: .2s;
         height: 0;
         overflow: hidden;
+        opacity: 0;
         @include tab {
             box-shadow: inherit;
         }
@@ -134,6 +135,7 @@
             height: 0;
             overflow: hidden;
             transition: .3s;
+            opacity: 1;
         }
     }
 }
@@ -150,7 +152,7 @@
     .mo-menu-open {
         @include tab {
             position: absolute;
-            right: -100%;
+            left: 100%;
             top: -48px;
             z-index: 10;
             width: 100%;
@@ -274,13 +276,13 @@
     }
 }
 
-// chat-bot
+// 원래는 content에 : chat-bot
 .chat-bot {
     display: none;
     @include tab {
         display: block;
         position: fixed;
-        z-index: 10;
+        z-index: 20;
         bottom: 15px;
         right: 10px;
         width: 85px;
