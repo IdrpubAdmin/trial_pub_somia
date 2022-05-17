@@ -53,22 +53,17 @@ function dropdown() {
 
   } else {
 
-    //pc
-
     // pc menu hover
-    let _loop = function _loop(_i) {
-      dept[_i].addEventListener('mouseover', () =>  {
-        subDept[_i].classList.add('h310');
+
+    for (let i = 0; i < dept.length; i++) {
+      dept[i].addEventListener('mouseover', () =>  {
+        subDept[i].classList.add('h310');
         
       });
 
-      dept[_i].addEventListener('mouseout', () => {
-        subDept[_i].classList.remove('h310');
+      dept[i].addEventListener('mouseout', () => {
+        subDept[i].classList.remove('h310');
       });
-    };
-
-    for (let _i = 0; _i < dept.length; _i++) {
-      _loop(_i);
     }
 
   }

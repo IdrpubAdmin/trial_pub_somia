@@ -46,8 +46,6 @@ function dropdown() {
       moMenuOpen.classList.remove('l0');
     });
   } else {
-    //pc
-    // pc menu hover
     var _loop = function _loop(_i) {
       dept[_i].addEventListener('mouseover', function () {
         subDept[_i].classList.add('h310');
@@ -58,6 +56,7 @@ function dropdown() {
       });
     };
 
+    // pc menu hover
     for (var _i = 0; _i < dept.length; _i++) {
       _loop(_i);
     }
